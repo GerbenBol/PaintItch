@@ -6,13 +6,22 @@ using UnityEngine;
 public class PlayerPainting : MonoBehaviour
 {
     [SerializeField] private List<Color> colors;
+    [SerializeField] private Transform startPoint;
+    [SerializeField] private GameObject gun;
+    [SerializeField] private ParticleSystem shootParticle;
+    [SerializeField] private Texture texture;
 
     private int activeColor = 0;
+
+    private void Start()
+    {
+        colors = new() { Color.red }; 
+    }
 
     private void Update()
     {
         // Shooting
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
             Shoot();
 
         // Color scroll
@@ -24,7 +33,20 @@ public class PlayerPainting : MonoBehaviour
 
     private void Shoot()
     {
+        //shootParticle.Play();
+        if (Physics.Raycast(startPoint.position, gun.transform.forward, out RaycastHit hit, 10))
+        {
+            PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
+            Vector2 textureCoord = hit.textureCoord;
 
+            Texture tex = obj.ColorTexture;
+            int pixelX = (int)(textureCoord.x * tex.width);
+            int pixelY = (int)(textureCoord.y * tex.height);
+            Vector2Int paintPosition = new(pixelX, pixelY);
+
+            Debug.Log("UV: " + textureCoord + ", Pixels: " + paintPosition);
+            obj.ChangeTexture(paintPosition, colors[activeColor]);
+        }
     }
 
     private void NextColor()

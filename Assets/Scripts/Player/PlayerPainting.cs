@@ -23,6 +23,8 @@ public class PlayerPainting : MonoBehaviour
         // Shooting
         if (Input.GetMouseButton(0))
             Shoot();
+        else
+            shootParticle.Stop();
 
         // Color scroll
         if (Input.mouseScrollDelta.y > 0)
@@ -33,20 +35,21 @@ public class PlayerPainting : MonoBehaviour
 
     private void Shoot()
     {
-        //shootParticle.Play();
-        if (Physics.Raycast(startPoint.position, gun.transform.forward, out RaycastHit hit, 10))
-        {
-            PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
-            Vector2 textureCoord = hit.textureCoord;
+        shootParticle.Play();
+        Debug.Log("Shooting");
+        //if (Physics.Raycast(startPoint.position, gun.transform.forward, out RaycastHit hit, 10))
+        //{
+        //    PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
+        //    Vector2 textureCoord = hit.textureCoord;
 
-            Texture tex = obj.ColorTexture;
-            int pixelX = (int)(textureCoord.x * tex.width);
-            int pixelY = (int)(textureCoord.y * tex.height);
-            Vector2Int paintPosition = new(pixelX, pixelY);
+        //    Texture tex = obj.ColorTexture;
+        //    int pixelX = (int)(textureCoord.x * tex.width);
+        //    int pixelY = (int)(textureCoord.y * tex.height);
+        //    Vector2Int paintPosition = new(pixelX, pixelY);
 
-            Debug.Log("UV: " + textureCoord + ", Pixels: " + paintPosition);
-            obj.ChangeTexture(paintPosition, colors[activeColor]);
-        }
+        //    Debug.Log("UV: " + textureCoord + ", Pixels: " + paintPosition);
+        //    obj.ChangeTexture(paintPosition, colors[activeColor]);
+        //}
     }
 
     private void NextColor()

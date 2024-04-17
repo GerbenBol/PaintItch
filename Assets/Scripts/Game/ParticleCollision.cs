@@ -7,42 +7,18 @@ using UnityEngine.UIElements;
 
 public class ParticleCollision : MonoBehaviour
 {
-    [SerializeField] GameObject tempPaintBlock;
+    [SerializeField] private GameObject tempPaintBlock;
 
-    private Vector3 collisionLocation;
     private Quaternion rotation;
-
 
     public ParticleSystem part;
     public List<ParticleCollisionEvent> collisionEvents;
+
     void Start()
     {
         part = GetComponent<ParticleSystem>();
         collisionEvents = new List<ParticleCollisionEvent>();
     }
-
-    void Update()
-    {
-        
-    }
-    //private void OnParticleCollision(GameObject other)
-    //{
-    //    if (other.CompareTag("Paintable"))
-    //    {
-    //        collisionLocation = transform.position;
-    //        GameObject paint = Instantiate(tempPaintBlock, collisionLocation, transform.rotation);
-    //    }
-    //}
-    //private void OnParticleCollision(GameObject other)
-    //{
-    //    if (!other.CompareTag("Player"))
-    //    {
-    //        ContactPoint _contact = other.GetComponent<ContactPoint>();
-    //        Quaternion _rotation = Quaternion.FromToRotation(Vector3.up, _contact.normal);
-    //        Vector3 _position = _contact.point;
-    //        Instantiate(tempPaintBlock, _position, _rotation);
-    //    }
-    //}
 
     void OnParticleCollision(GameObject other)
     {
@@ -52,7 +28,7 @@ public class ParticleCollision : MonoBehaviour
 
         while (i < numCollisionEvents)
         {
-            if (other.CompareTag("Paintable"))
+            if (other.layer == 6)
             {
                 Vector3 pos = collisionEvents[i].intersection;
                 Instantiate(tempPaintBlock, pos, rotation);

@@ -36,7 +36,7 @@ public class PlayerPainting : MonoBehaviour
     private void Shoot()
     {
         if (shootParticle.isStopped)
-        shootParticle.Play();
+            shootParticle.Play();
 
         if (Physics.Raycast(startPoint.position, gun.transform.forward, out RaycastHit hit, 10) && hit.transform.gameObject.layer == 6)
         {
@@ -48,7 +48,6 @@ public class PlayerPainting : MonoBehaviour
             int pixelY = (int)(textureCoord.y * tex.height);
             Vector2Int paintPosition = new(pixelX, pixelY);
 
-            Debug.Log("UV: " + textureCoord + ", Pixels: " + paintPosition);
             obj.ChangeTexture(paintPosition, colors[activeColor]);
         }
     }

@@ -15,7 +15,7 @@ public class PlayerPainting : MonoBehaviour
 
     private void Start()
     {
-        colors = new() { Color.red }; 
+        colors = new() { Color.red, Color.cyan, Color.blue }; 
     }
 
     private void Update()
@@ -23,7 +23,7 @@ public class PlayerPainting : MonoBehaviour
         // Shooting
         if (Input.GetMouseButton(0))
             Shoot();
-        else
+        else if (shootParticle.isPlaying)
             shootParticle.Stop();
 
         // Color scroll
@@ -35,6 +35,7 @@ public class PlayerPainting : MonoBehaviour
 
     private void Shoot()
     {
+        if (shootParticle.isStopped)
         shootParticle.Play();
 
         if (Physics.Raycast(startPoint.position, gun.transform.forward, out RaycastHit hit, 10) && hit.transform.gameObject.layer == 6)
@@ -56,7 +57,7 @@ public class PlayerPainting : MonoBehaviour
     {
         activeColor++;
 
-        if (activeColor > colors.Count)
+        if (activeColor > colors.Count - 1)
             activeColor = 0;
     }
 

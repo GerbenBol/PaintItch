@@ -245,6 +245,50 @@ MonoBehaviour:
   BaseTexture: {fileID: 2800000, guid: 6c9d0e8040d6d9b40a49467e05910dca, type: 3}
   GreyTexture: {fileID: 2800000, guid: 6c9d0e8040d6d9b40a49467e05910dca, type: 3}
   ColorTexture: {fileID: 2800000, guid: 6c9d0e8040d6d9b40a49467e05910dca, type: 3}
+--- !u!1 &370907454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 370907456}
+  - component: {fileID: 370907455}
+  m_Layer: 0
+  m_Name: TextureControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &370907455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370907454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882d5d1e1d52bbb49bd339a897c07177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &370907456
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370907454}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.6734447, y: -4.400406, z: 22.609303}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &670673192
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +395,10 @@ PrefabInstance:
       propertyPath: paint
       value: 
       objectReference: {fileID: 1381096238}
+    - target: {fileID: 797325188597286342, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+      propertyPath: paintableMask.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4807391992715850710, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
       propertyPath: m_Name
       value: Player
@@ -541,3 +589,4 @@ SceneRoots:
   - {fileID: 173656294}
   - {fileID: 1063871305}
   - {fileID: 1776357610}
+  - {fileID: 370907456}

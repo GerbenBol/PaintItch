@@ -11,6 +11,6 @@ public class PaintableObject : MonoBehaviour
     public void ChangeTexture(Vector2Int coords, Color color)
     {
         ColorTexture.SetPixel(coords.x, coords.y, color);
-        ColorTexture.Apply();
+        TextureControl.ToUpdate.Add(ColorTexture);
     }
 }

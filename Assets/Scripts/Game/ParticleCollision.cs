@@ -1,8 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using UnityEditor.Experimental.GraphView;
-using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -45,7 +42,6 @@ public class ParticleCollision : MonoBehaviour
                     int pixelX = (int)(textureCoord.x * tex.width);
                     int pixelY = (int)(textureCoord.y * tex.height);
                     Vector2Int paintPosition = new(pixelX, pixelY);
-
                     obj.ChangeTexture(paintPosition, paint.Colors[paint.ActiveColor]);
                 }
             }

@@ -37,19 +37,6 @@ public class PlayerPainting : MonoBehaviour
     {
         if (shootParticle.isStopped)
             shootParticle.Play();
-
-        /*if (Physics.Raycast(startPoint.position, gun.transform.forward, out RaycastHit hit, 10) && hit.transform.gameObject.layer == 6)
-        {
-            PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
-            Vector2 textureCoord = hit.textureCoord;
-
-            Texture tex = obj.ColorTexture;
-            int pixelX = (int)(textureCoord.x * tex.width);
-            int pixelY = (int)(textureCoord.y * tex.height);
-            Vector2Int paintPosition = new(pixelX, pixelY);
-
-            obj.ChangeTexture(paintPosition, colors[activeColor]);
-        }*/
     }
 
     private void NextColor()

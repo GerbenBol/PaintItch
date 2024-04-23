@@ -117,7 +117,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4844,6 +4844,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tempPaintBlock: {fileID: 8228453155752560297, guid: 367383485c517514db16840d588b5ffd, type: 3}
+  paint: {fileID: 0}
+  paintableMask:
+    serializedVersion: 2
+    m_Bits: 0
   part: {fileID: 104423307131160708}
 --- !u!1 &4807391992715850710
 GameObject:
@@ -5034,11 +5038,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef16b66a988234240a9522fa1a09cfb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors: []
+  Colors: []
+  ActiveColor: 0
   startPoint: {fileID: 3533924039656455020}
   gun: {fileID: 5919339614769361945}
   shootParticle: {fileID: 104423307131160708}
   texture: {fileID: 0}
+  ammo: 0
 --- !u!1 &7772674866525584216
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,11 @@ public class PaintableObject : MonoBehaviour
     public Texture2D GreyTexture;
     public Texture2D ColorTexture;
 
-    private readonly int brushSize = 15;
+    private readonly int[] circleRows = new int[21]
+    {
+        7, 11, 13, 17, 17, 19, 21, 23, 23, 23, 23, 23,
+        23, 23, 21, 19, 17, 17, 13, 11, 7
+    };
     private Texture2D texture;
     private readonly Dictionary<Vector2Int, Color> updateList = new();
 
@@ -29,8 +33,8 @@ public class PaintableObject : MonoBehaviour
     {
         foreach (KeyValuePair<Vector2Int, Color> kvp in updateList)
         {
-            for (int x = -brushSize; x <= brushSize; x++)
-                for (int y = -brushSize; y <= brushSize; y++)
+            for (int x = 0; x < circleRows.Length; x++)
+                for (int y = -circleRows[x]; y <= circleRows[x]; y++)
                     texture.SetPixel(kvp.Key.x + x, kvp.Key.y + y, kvp.Value);
 
             TextureControl.ToUpdate.Add(texture);

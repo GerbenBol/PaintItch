@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 
 public class ParticleCollision : MonoBehaviour
 {
-    [SerializeField] private GameObject tempPaintBlock;
     [SerializeField] private PlayerPainting paint;
     [SerializeField] private LayerMask paintableMask;
 

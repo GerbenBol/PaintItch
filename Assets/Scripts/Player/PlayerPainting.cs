@@ -74,7 +74,7 @@ public class PlayerPainting : MonoBehaviour
     private IEnumerator Reload()
     {
         reloading = true;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         ammo = maxAmmo;
         reloading = false;
     }

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PaintableObject : MonoBehaviour
 {
-    public Texture2D ColorTexture;
-    public Texture2D texture;
+    public Texture2D MainTexture;
 
     private readonly Dictionary<int, int> circle = new()
     {
@@ -19,8 +18,8 @@ public class PaintableObject : MonoBehaviour
     private void Start()
     {
         Renderer rend = GetComponent<Renderer>();
-        texture = Instantiate(rend.material.mainTexture) as Texture2D;
-        rend.material.mainTexture = texture;
+        MainTexture = Instantiate(rend.material.mainTexture) as Texture2D;
+        rend.material.mainTexture = MainTexture;
     }
 
     public void ChangeTexture(Vector2Int coords, Color color)
@@ -35,9 +34,10 @@ public class PaintableObject : MonoBehaviour
         {
             foreach (KeyValuePair<int, int> coords in circle)
                 for (int y = -coords.Value; y <= coords.Value; y++)
-                    texture.SetPixel(kvp.Key.x + coords.Key, kvp.Key.y + y, kvp.Value);
+                    MainTexture.SetPixel(kvp.Key.x + coords.Key, kvp.Key.y + y, kvp.Value);
 
-            TextureControl.ToUpdate.Add(texture);
+            if (!TextureControl.ToUpdate.Contains(MainTexture))
+                TextureControl.ToUpdate.Add(MainTexture);
         }
         updateList.Clear();
         yield return null;

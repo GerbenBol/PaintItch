@@ -37,7 +37,7 @@ public class ParticleCollision : MonoBehaviour
                     PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
                     Vector2 textureCoord = hit.textureCoord;
 
-                    Texture tex = obj.ColorTexture;
+                    Texture tex = obj.MainTexture;
                     int pixelX = (int)(textureCoord.x * tex.width);
                     int pixelY = (int)(textureCoord.y * tex.height);
                     Vector2Int paintPosition = new(pixelX, pixelY);

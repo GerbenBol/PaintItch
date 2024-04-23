@@ -50,8 +50,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fac1902763992654c8bb7c6852785e43, type: 3}
       propertyPath: m_Name
-      value: boom
+      value: Tree2
       objectReference: {fileID: 0}
+    - target: {fileID: 6052431083895809534, guid: fac1902763992654c8bb7c6852785e43, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 934d585a30d73a446885283bf14525e7, type: 2}
+    - target: {fileID: 6052431083895809534, guid: fac1902763992654c8bb7c6852785e43, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 934d585a30d73a446885283bf14525e7, type: 2}
     - target: {fileID: 7071182760956848314, guid: fac1902763992654c8bb7c6852785e43, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

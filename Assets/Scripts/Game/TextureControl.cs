@@ -6,7 +6,7 @@ public class TextureControl : MonoBehaviour
 {
     public static List<Texture2D> ToUpdate = new();
 
-    private readonly float maxTimer = .3f;
+    private readonly float maxTimer = .1f;
     private float timer = .0f;
     private bool running = false;
 

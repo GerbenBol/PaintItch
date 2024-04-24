@@ -17,7 +17,7 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private float ammo;
     private bool reloading;
 
-    private float ammoBar;
+    public float ammoBar;
 
     private void Start()
     {
@@ -43,8 +43,8 @@ public class PlayerPainting : MonoBehaviour
         else if (Input.mouseScrollDelta.y < 0)
             PrevColor();
 
-        // Update visuals for ammo bar
-        ammoBar = maxAmmo / ammo;
+        // Update float for visuals for ammo bar
+        ammoBar = ammo / maxAmmo;
     }
 
     private void Shoot()

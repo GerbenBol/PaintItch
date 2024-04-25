@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class PaintableObject : MonoBehaviour
 {
+    [SerializeField] private float completionPercentage = .95f;
+
     public Texture2D MainTexture;
+
+    private bool completed = false;
+    private float completedPercentage = .0f;
+    private int index;
 
     private readonly Dictionary<int, int> circle = new()
     {
@@ -20,6 +26,7 @@ public class PaintableObject : MonoBehaviour
         Renderer rend = GetComponent<Renderer>();
         MainTexture = Instantiate(rend.material.mainTexture) as Texture2D;
         rend.material.mainTexture = MainTexture;
+        index = GameManagerScript.AddObject();
     }
 
     public void ChangeTexture(Vector2Int coords, Color color)
@@ -32,9 +39,25 @@ public class PaintableObject : MonoBehaviour
     {
         foreach (KeyValuePair<Vector2Int, Color> kvp in updateList)
         {
+            float changedPixels = 0;
+
             foreach (KeyValuePair<int, int> coords in circle)
                 for (int y = -coords.Value; y <= coords.Value; y++)
+                {
                     MainTexture.SetPixel(kvp.Key.x + coords.Key, kvp.Key.y + y, kvp.Value);
+                    changedPixels++;
+                }
+
+            float totalPixels = MainTexture.width * MainTexture.height;
+            Debug.Log(changedPixels);
+            completedPercentage += changedPixels / totalPixels;
+
+            if (completedPercentage >= completionPercentage && !completed)
+            {
+                completed = true;
+                GameManagerScript.CompleteObject(index);
+                AudioSource.PlayClipAtPoint(TextureControl.CompletedDing, transform.position);
+            }
 
             if (!TextureControl.ToUpdate.Contains(MainTexture))
                 TextureControl.ToUpdate.Add(MainTexture);

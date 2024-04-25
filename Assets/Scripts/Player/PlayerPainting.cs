@@ -13,7 +13,7 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private ParticleSystem shootParticle;
     [SerializeField] private Texture texture;
 
-    private float maxAmmo = 8;
+    private float maxAmmo = 90000;
     [SerializeField] private float ammo;
     private bool reloading;
 

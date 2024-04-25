@@ -6,9 +6,9 @@ public class TextureControl : MonoBehaviour
 {
     public static List<Texture2D> ToUpdate = new();
 
-    private readonly float maxTimer = .3f;
+    private readonly float maxTimer = .1f;
     private float timer = .0f;
-    private static bool running = false;
+    private bool running = false;
 
     private void Update()
     {
@@ -26,11 +26,15 @@ public class TextureControl : MonoBehaviour
     {
         running = true;
 
-        for (int i = 0; i < ToUpdate.Count; i++)
+        while (true)
         {
-            ToUpdate[i].Apply();
-            ToUpdate.Remove(ToUpdate[i]);
-            yield return new WaitForSeconds(.1f);
+            ToUpdate[0].Apply();
+            ToUpdate.Remove(ToUpdate[0]);
+
+            if (ToUpdate.Count != 0)
+                yield return new WaitForSeconds(.1f);
+            else
+                break;
         }
      
         running = false;

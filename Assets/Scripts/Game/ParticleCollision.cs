@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,6 +8,7 @@ public class ParticleCollision : MonoBehaviour
 {
     [SerializeField] private PlayerPainting paint;
     [SerializeField] private LayerMask paintableMask;
+    [SerializeField] private TextMeshProUGUI text;
 
     public ParticleSystem part;
     public List<ParticleCollisionEvent> collisionEvents;
@@ -37,11 +39,12 @@ public class ParticleCollision : MonoBehaviour
                     PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
                     Vector2 textureCoord = hit.textureCoord;
 
-                    Texture tex = obj.ColorTexture;
+                    Texture tex = obj.MainTexture;
                     int pixelX = (int)(textureCoord.x * tex.width);
                     int pixelY = (int)(textureCoord.y * tex.height);
                     Vector2Int paintPosition = new(pixelX, pixelY);
                     obj.ChangeTexture(paintPosition, paint.Colors[paint.ActiveColor]);
+                    text.text = textureCoord.ToString();
                 }
             }
             i++;

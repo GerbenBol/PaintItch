@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+//using UnityEngine.UIElements;
 
 public class AmmoBar : MonoBehaviour
 {
-    [SerializeField] Image _Bar;
-    GameObject _Player;
+    [SerializeField] Image bar;
+    [SerializeField] GameObject meter;
+    GameObject player;
     private PlayerPainting ammo;
     void Start()
     {
-        _Player = GameObject.Find("Player");
-        ammo = _Player.GetComponent<PlayerPainting>();
+        player = GameObject.Find("Player");
+        ammo = player.GetComponent<PlayerPainting>();
     }
 
     void Update()
     {
-        _Bar.fillAmount = ammo.ammoBar;
+        bar.fillAmount = ammo.ammoBar;
+        //meter.transform.Rotate(0, 0, -90 + (180 * ammo.ammoBar));
+        meter.transform.localRotation = Quaternion.Euler(0, 0, 90 - (180 * ammo.ammoBar));
     }
 }

@@ -44,7 +44,6 @@ public class ParticleCollision : MonoBehaviour
                     int pixelY = (int)(textureCoord.y * tex.height);
                     Vector2Int paintPosition = new(pixelX, pixelY);
                     obj.ChangeTexture(paintPosition, paint.Colors[paint.ActiveColor]);
-                    text.text = textureCoord.ToString();
                 }
             }
             i++;

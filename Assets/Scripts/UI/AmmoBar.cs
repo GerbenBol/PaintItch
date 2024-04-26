@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//using UnityEngine.UIElements;
 
 public class AmmoBar : MonoBehaviour
 {
@@ -19,7 +18,6 @@ public class AmmoBar : MonoBehaviour
     void Update()
     {
         bar.fillAmount = ammo.ammoBar;
-        //meter.transform.Rotate(0, 0, -90 + (180 * ammo.ammoBar));
         meter.transform.localRotation = Quaternion.Euler(0, 0, 90 - (180 * ammo.ammoBar));
     }
 }

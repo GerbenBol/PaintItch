@@ -7,11 +7,15 @@ public class GameManagerScript : MonoBehaviour
 {
     [SerializeField] private GameObject canvas;
 
+    private static readonly Dictionary<int, bool> paintableObjects = new();
+    private static int index = 0;
+
     private void Start()
     {
         Time.timeScale = 1f;
     }
-    void Update()
+
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -25,5 +29,26 @@ public class GameManagerScript : MonoBehaviour
         {
             SceneManager.LoadScene("Win Screen");
         }
+    }
+
+    public static int AddObject()
+    {
+        paintableObjects.Add(index, false);
+        index++;
+        return index - 1;
+    }
+
+    public static void CompleteObject(int index)
+    {
+        paintableObjects[index] = true;
+
+        bool allCompleted = true;
+
+        foreach (KeyValuePair<int, bool> kvp in paintableObjects)
+            if (!kvp.Value)
+                allCompleted = false;
+
+        if (allCompleted)
+            SceneManager.LoadScene("Win Screen");
     }
 }

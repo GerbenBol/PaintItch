@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class TextureControl : MonoBehaviour
 {
+    [SerializeField] private AudioClip dingClip;
+
     public static List<Texture2D> ToUpdate = new();
+    public static AudioClip CompletedDing;
 
     private readonly float maxTimer = .1f;
     private float timer = .0f;
     private bool running = false;
+
+    private void Start()
+    {
+        CompletedDing = dingClip;
+    }
 
     private void Update()
     {

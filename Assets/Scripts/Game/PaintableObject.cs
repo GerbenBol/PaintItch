@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PaintableObject : MonoBehaviour
 {
-    [SerializeField] private float completionPercentage = .95f;
+    [SerializeField] private float completionPercentage = .85f;
 
     public Texture2D MainTexture;
 
     private bool completed = false;
-    private float completedPercentage = .0f;
+    [SerializeField] private float completedPercentage = .0f;
     private int index;
 
     private readonly Dictionary<int, int> circle = new()
@@ -20,12 +20,15 @@ public class PaintableObject : MonoBehaviour
         { 7, 12 }, { 8, 12 }, { 9, 10 }, { 10, 9 }, { 11, 7 }
     };
     private readonly Dictionary<Vector2Int, Color> updateList = new();
+    private bool[,] pixelsUpdated;
 
     private void Start()
     {
         Renderer rend = GetComponent<Renderer>();
         MainTexture = Instantiate(rend.material.mainTexture) as Texture2D;
         rend.material.mainTexture = MainTexture;
+        pixelsUpdated = new bool[MainTexture.width, MainTexture.height];
+
         index = GameManagerScript.AddObject();
     }
 
@@ -44,12 +47,18 @@ public class PaintableObject : MonoBehaviour
             foreach (KeyValuePair<int, int> coords in circle)
                 for (int y = -coords.Value; y <= coords.Value; y++)
                 {
-                    MainTexture.SetPixel(kvp.Key.x + coords.Key, kvp.Key.y + y, kvp.Value);
-                    changedPixels++;
+                    Vector2Int vec2 = new(kvp.Key.x + coords.Key, kvp.Key.y + y);
+                    MainTexture.SetPixel(vec2.x, vec2.y, kvp.Value);
+
+                    if (vec2.x <= MainTexture.width && vec2.x >= 0 && vec2.y <= MainTexture.height && vec2.y >= 0)
+                        if (!pixelsUpdated[vec2.x, vec2.y])
+                        {
+                            pixelsUpdated[vec2.x, vec2.y] = true;
+                            changedPixels++;
+                        }
                 }
 
             float totalPixels = MainTexture.width * MainTexture.height;
-            Debug.Log(changedPixels);
             completedPercentage += changedPixels / totalPixels;
 
             if (completedPercentage >= completionPercentage && !completed)

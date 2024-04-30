@@ -19,5 +19,7 @@ public class AmmoBar : MonoBehaviour
     {
         bar.fillAmount = ammo.ammoBar;
         meter.transform.localRotation = Quaternion.Euler(0, 0, 90 - (180 * ammo.ammoBar));
+
+
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerPainting : MonoBehaviour
 {
@@ -12,17 +13,21 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private GameObject gun;
     [SerializeField] private ParticleSystem shootParticle;
     [SerializeField] private Texture texture;
+    [SerializeField] Image fillBar;
 
-    private float maxAmmo = 90000;
+    private float maxAmmo = 9;
     [SerializeField] private float ammo;
+    private float preReloadAmmo;
     private bool reloading;
+    private bool barEmptyStart;
+    private bool barEmpty;
 
     public float ammoBar;
 
     private void Start()
     {
-        Colors = new() { Color.red, Color.cyan, Color.blue };
         ammo = maxAmmo;
+        fillBar.color = Color.white;
     }
 
     private void Update()
@@ -45,6 +50,28 @@ public class PlayerPainting : MonoBehaviour
 
         // Update float for visuals for ammo bar
         ammoBar = ammo / maxAmmo;
+
+        // Reloading visual
+        if (reloading)
+        {
+            if (!barEmpty)
+            {
+                barEmptyStart = true;
+            }
+            if (barEmptyStart)
+            {
+                ammo -= preReloadAmmo * Time.deltaTime / 1.5f;
+            }
+            if (ammo <= 0)
+            {
+                barEmpty = true;
+            }
+            if (barEmpty)
+            {
+                barEmptyStart = false;
+                ammo += maxAmmo * Time.deltaTime / 1.5f;
+            }
+        }
     }
 
     private void Shoot()
@@ -73,9 +100,12 @@ public class PlayerPainting : MonoBehaviour
 
     private IEnumerator Reload()
     {
+        preReloadAmmo = ammo;
         reloading = true;
         yield return new WaitForSeconds(3);
         ammo = maxAmmo;
         reloading = false;
+        barEmptyStart = false;
+        barEmpty = false;
     }
 }

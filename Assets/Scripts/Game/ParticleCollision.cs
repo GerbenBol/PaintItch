@@ -19,6 +19,12 @@ public class ParticleCollision : MonoBehaviour
         collisionEvents = new List<ParticleCollisionEvent>();
     }
 
+    private void Update()
+    {
+        var mainPart = part.main;
+        mainPart.startColor = Color.white;
+    }
+
     void OnParticleCollision(GameObject other)
     {
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);

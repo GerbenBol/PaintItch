@@ -90,6 +90,8 @@ public class PlayerPainting : MonoBehaviour
 
     private void NextColor()
     {
+        // ----------------------change to Coroutine or add timer to fix bug where already shot particles can still change color.----------------------------
+
         ActiveColor++;
 
         if (ActiveColor > Colors.Count - 1)
@@ -100,6 +102,8 @@ public class PlayerPainting : MonoBehaviour
 
     private void PrevColor()
     {
+        // ----------------------change to Coroutine or add timer to fix bug where already shot particles can still change color.----------------------------
+
         ActiveColor--;
 
         if (ActiveColor < 0)

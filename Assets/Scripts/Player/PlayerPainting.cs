@@ -8,6 +8,7 @@ public class PlayerPainting : MonoBehaviour
 {
     public List<Color> Colors;
     public int ActiveColor = 0;
+    public Color currentColor;
 
     [SerializeField] private Transform startPoint;
     [SerializeField] private GameObject gun;
@@ -21,19 +22,23 @@ public class PlayerPainting : MonoBehaviour
     private bool reloading;
     private bool barEmptyStart;
     private bool barEmpty;
+    private bool mustReload;
 
     public float ammoBar;
 
     private void Start()
     {
         ammo = maxAmmo;
-        fillBar.color = Color.white;
+        currentColor.a = 1;
     }
 
     private void Update()
     {
+        currentColor = Colors[ActiveColor];
+        currentColor.a = 1;
+
         // Shooting
-        if (Input.GetMouseButton(0) && ammo > 0 && !reloading)
+        if (Input.GetMouseButton(0) && ammo > 0 && !reloading && !mustReload)
             Shoot();
         else if (shootParticle.isPlaying)
             shootParticle.Stop();
@@ -43,9 +48,9 @@ public class PlayerPainting : MonoBehaviour
             StartCoroutine(nameof(Reload));
 
         // Color scroll
-        if (Input.mouseScrollDelta.y > 0)
+        if (Input.mouseScrollDelta.y > 0 && !reloading)
             NextColor();
-        else if (Input.mouseScrollDelta.y < 0)
+        else if (Input.mouseScrollDelta.y < 0 && !reloading)
             PrevColor();
 
         // Update float for visuals for ammo bar
@@ -68,6 +73,7 @@ public class PlayerPainting : MonoBehaviour
             }
             if (barEmpty)
             {
+                fillBar.color = currentColor;
                 barEmptyStart = false;
                 ammo += maxAmmo * Time.deltaTime / 1.5f;
             }
@@ -88,6 +94,8 @@ public class PlayerPainting : MonoBehaviour
 
         if (ActiveColor > Colors.Count - 1)
             ActiveColor = 0;
+
+        mustReload = true;
     }
 
     private void PrevColor()
@@ -96,6 +104,8 @@ public class PlayerPainting : MonoBehaviour
 
         if (ActiveColor < 0)
             ActiveColor = Colors.Count - 1;
+
+        mustReload = true;
     }
 
     private IEnumerator Reload()
@@ -105,6 +115,7 @@ public class PlayerPainting : MonoBehaviour
         yield return new WaitForSeconds(3);
         ammo = maxAmmo;
         reloading = false;
+        mustReload = false;
         barEmptyStart = false;
         barEmpty = false;
     }

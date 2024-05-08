@@ -4843,11 +4843,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be626b38e16ee2240a666a739eb4aad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempPaintBlock: {fileID: 8228453155752560297, guid: 367383485c517514db16840d588b5ffd, type: 3}
-  paint: {fileID: 0}
+  paint: {fileID: 4861099138357988166}
   paintableMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  text: {fileID: 0}
   part: {fileID: 104423307131160708}
 --- !u!1 &4807391992715850710
 GameObject:
@@ -5038,13 +5038,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef16b66a988234240a9522fa1a09cfb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Colors: []
+  Colors:
+  - {r: 0.9924528, g: 0.15542178, b: 0.15542178, a: 0}
+  - {r: 0.4641509, g: 0, b: 0, a: 0}
+  - {r: 1, g: 0.65445495, b: 0.16470587, a: 0}
+  - {r: 1, g: 0.47802198, b: 0, a: 0}
+  - {r: 0.7433963, g: 0.50505006, b: 0.27351362, a: 0}
+  - {r: 0.4490565, g: 0.28117275, b: 0.15166244, a: 0}
+  - {r: 1, g: 0.95580214, b: 0.16470587, a: 0}
+  - {r: 0.6830188, g: 0.6138367, b: 0, a: 0}
+  - {r: 0.35347626, g: 1, b: 0.28490567, a: 0}
+  - {r: 0.011816161, g: 0.4490565, b: 0, a: 0}
+  - {r: 0.216981, g: 1, b: 0.94230086, a: 0}
+  - {r: 0, g: 0.009183107, b: 0.6754716, a: 0}
+  - {r: 0.7254182, g: 0.27735847, b: 1, a: 0}
+  - {r: 0.45696238, g: 0.03062292, b: 0.7056604, a: 0}
+  - {r: 0.9924528, g: 0.4250694, b: 0.93050617, a: 0}
+  - {r: 0.79622644, g: 0.022534575, b: 0.6654617, a: 0}
+  - {r: 1, g: 1, b: 1, a: 0}
+  - {r: 0.6528301, g: 0.6528301, b: 0.6528301, a: 0}
+  - {r: 0.2830189, g: 0.2830189, b: 0.2830189, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
   ActiveColor: 0
+  currentColor: {r: 0, g: 0, b: 0, a: 0}
   startPoint: {fileID: 3533924039656455020}
   gun: {fileID: 5919339614769361945}
   shootParticle: {fileID: 104423307131160708}
   texture: {fileID: 0}
+  fillBar: {fileID: 0}
   ammo: 0
+  ammoBar: 0
 --- !u!1 &7772674866525584216
 GameObject:
   m_ObjectHideFlags: 0

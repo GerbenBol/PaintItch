@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ColorWheelGun : MonoBehaviour
 {
-    PlayerPainting playerPainting;
     [SerializeField] GameObject wheel;
-    void Start()
-    {
-        playerPainting = GetComponent<PlayerPainting>();
-    }
 
     void Update()
     {
-        wheel.transform.Rotate(0f, (365 / 20) * (1 + 1), 0f);
+        //wheel.transform.Rotate(0f, (365 / 20) * (1), 0f);
+    }
+
+    public void RotateWheel(int newColor)
+    {
+        wheel.transform.Rotate(0, (365 / 20) * newColor, 0f);
     }
 }

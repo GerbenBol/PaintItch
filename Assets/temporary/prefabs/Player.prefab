@@ -5065,6 +5065,7 @@ MonoBehaviour:
   gun: {fileID: 5919339614769361945}
   shootParticle: {fileID: 104423307131160708}
   texture: {fileID: 0}
+  wheel: {fileID: 9194334288345857396}
   fillBar: {fileID: 0}
   ammo: 0
   ammoBar: 0
@@ -5244,6 +5245,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5604322209049156731, guid: d46862a40bbde98409e51cd35bff3f77, type: 3}
   m_PrefabInstance: {fileID: 2297738919947315298}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9194334288345857396 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6952400098995262742, guid: d46862a40bbde98409e51cd35bff3f77, type: 3}
+  m_PrefabInstance: {fileID: 2297738919947315298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05b2eeae1feebe54b8f82b8ad7711c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3660448461759942827
 PrefabInstance:
   m_ObjectHideFlags: 0

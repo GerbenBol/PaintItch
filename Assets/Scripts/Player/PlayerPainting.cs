@@ -14,10 +14,11 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private GameObject gun;
     [SerializeField] private ParticleSystem shootParticle;
     [SerializeField] private Texture texture;
+    [SerializeField] private ColorWheelGun wheel;
     [SerializeField] Image fillBar;
 
-    private float maxAmmo = 9;
     [SerializeField] private float ammo;
+    private float maxAmmo = 9;
     private float preReloadAmmo;
     private bool reloading;
     private bool barEmptyStart;
@@ -98,6 +99,7 @@ public class PlayerPainting : MonoBehaviour
             ActiveColor = 0;
 
         mustReload = true;
+        wheel.RotateWheel(1);
     }
 
     private void PrevColor()
@@ -110,6 +112,7 @@ public class PlayerPainting : MonoBehaviour
             ActiveColor = Colors.Count - 1;
 
         mustReload = true;
+        wheel.RotateWheel(-1);
     }
 
     private IEnumerator Reload()

@@ -14,15 +14,17 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private GameObject gun;
     [SerializeField] private ParticleSystem shootParticle;
     [SerializeField] private Texture texture;
+    [SerializeField] private ColorWheelGun wheel;
     [SerializeField] Image fillBar;
 
-    private float maxAmmo = 9;
     [SerializeField] private float ammo;
+    private float maxAmmo = 9;
     private float preReloadAmmo;
     private bool reloading;
     private bool barEmptyStart;
     private bool barEmpty;
     private bool mustReload;
+    private int upcomingColor = 0;
 
     public float ammoBar;
 
@@ -73,6 +75,8 @@ public class PlayerPainting : MonoBehaviour
             }
             if (barEmpty)
             {
+                currentColor = Colors[upcomingColor];
+                currentColor.a = 1;
                 fillBar.color = currentColor;
                 barEmptyStart = false;
                 ammo += maxAmmo * Time.deltaTime / 1.5f;
@@ -92,24 +96,26 @@ public class PlayerPainting : MonoBehaviour
     {
         // ----------------------change to Coroutine or add timer to fix bug where already shot particles can still change color.----------------------------
 
-        ActiveColor++;
+        upcomingColor++;
 
-        if (ActiveColor > Colors.Count - 1)
-            ActiveColor = 0;
+        if (upcomingColor > Colors.Count - 1)
+            upcomingColor = 0;
 
         mustReload = true;
+        wheel.RotateWheel(1);
     }
 
     private void PrevColor()
     {
         // ----------------------change to Coroutine or add timer to fix bug where already shot particles can still change color.----------------------------
 
-        ActiveColor--;
+        upcomingColor--;
 
-        if (ActiveColor < 0)
-            ActiveColor = Colors.Count - 1;
+        if (upcomingColor < 0)
+            upcomingColor = Colors.Count - 1;
 
         mustReload = true;
+        wheel.RotateWheel(-1);
     }
 
     private IEnumerator Reload()
@@ -117,6 +123,7 @@ public class PlayerPainting : MonoBehaviour
         preReloadAmmo = ammo;
         reloading = true;
         yield return new WaitForSeconds(3);
+        ActiveColor = upcomingColor;
         ammo = maxAmmo;
         reloading = false;
         mustReload = false;

@@ -9,6 +9,7 @@ public class AmmoBar : MonoBehaviour
     [SerializeField] GameObject meter;
     GameObject player;
     private PlayerPainting ammo;
+
     void Start()
     {
         player = GameObject.Find("Player");
@@ -19,7 +20,5 @@ public class AmmoBar : MonoBehaviour
     {
         bar.fillAmount = ammo.ammoBar;
         meter.transform.localRotation = Quaternion.Euler(0, 0, 90 - (180 * ammo.ammoBar));
-
-
     }
 }

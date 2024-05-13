@@ -50,7 +50,7 @@ public class PaintableObject : MonoBehaviour
                     Vector2Int vec2 = new(kvp.Key.x + coords.Key, kvp.Key.y + y);
                     MainTexture.SetPixel(vec2.x, vec2.y, kvp.Value);
 
-                    if (vec2.x <= MainTexture.width && vec2.x >= 0 && vec2.y <= MainTexture.height && vec2.y >= 0)
+                    if (vec2.x < MainTexture.width && vec2.x >= 0 && vec2.y < MainTexture.height && vec2.y >= 0)
                         if (!pixelsUpdated[vec2.x, vec2.y])
                         {
                             pixelsUpdated[vec2.x, vec2.y] = true;

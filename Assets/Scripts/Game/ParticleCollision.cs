@@ -8,7 +8,6 @@ public class ParticleCollision : MonoBehaviour
 {
     [SerializeField] private PlayerPainting paint;
     [SerializeField] private LayerMask paintableMask;
-    [SerializeField] private TextMeshProUGUI text;
 
     public ParticleSystem part;
     public List<ParticleCollisionEvent> collisionEvents;

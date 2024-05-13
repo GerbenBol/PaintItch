@@ -8,6 +8,7 @@ public class PlayerPainting : MonoBehaviour
 {
     public List<Color> Colors;
     public int ActiveColor = 0;
+    public int upcomingColor = 0;
     public Color currentColor;
 
     [SerializeField] private Transform startPoint;
@@ -16,15 +17,16 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private Texture texture;
     [SerializeField] private ColorWheelGun wheel;
     [SerializeField] Image fillBar;
-
     [SerializeField] private float ammo;
+
     private float maxAmmo = 9;
     private float preReloadAmmo;
     private bool reloading;
+    private bool reloadFirstFrame;
     private bool barEmptyStart;
     private bool barEmpty;
+    private bool startedEmpty;
     private bool mustReload;
-    private int upcomingColor = 0;
 
     public float ammoBar;
 
@@ -62,25 +64,32 @@ public class PlayerPainting : MonoBehaviour
         if (reloading)
         {
             if (!barEmpty)
-            {
                 barEmptyStart = true;
-            }
+            else if (!barEmptyStart && reloadFirstFrame)
+                startedEmpty = true;
+
             if (barEmptyStart)
-            {
                 ammo -= preReloadAmmo * Time.deltaTime / 1.5f;
-            }
+
             if (ammo <= 0)
             {
                 barEmpty = true;
+                barEmptyStart = false;
             }
+
             if (barEmpty)
             {
                 currentColor = Colors[upcomingColor];
                 currentColor.a = 1;
                 fillBar.color = currentColor;
-                barEmptyStart = false;
-                ammo += maxAmmo * Time.deltaTime / 1.5f;
+
+                if (!startedEmpty)
+                    ammo += maxAmmo * Time.deltaTime / 1.5f;
+                else
+                    ammo += maxAmmo * Time.deltaTime / 3f;
             }
+
+            reloadFirstFrame = false;
         }
     }
 
@@ -121,13 +130,15 @@ public class PlayerPainting : MonoBehaviour
     private IEnumerator Reload()
     {
         preReloadAmmo = ammo;
+        reloadFirstFrame = true;
         reloading = true;
+        barEmpty = ammo <= 0;
         yield return new WaitForSeconds(3);
         ActiveColor = upcomingColor;
         ammo = maxAmmo;
         reloading = false;
         mustReload = false;
         barEmptyStart = false;
-        barEmpty = false;
+        startedEmpty = false;
     }
 }

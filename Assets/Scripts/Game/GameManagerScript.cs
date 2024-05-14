@@ -27,7 +27,7 @@ public class GameManagerScript : MonoBehaviour
         //Temp win condition
         if (Input.GetKeyDown(KeyCode.P) && Time.timeScale == 1)
         {
-            SceneManager.LoadScene("Win Screen");
+            SceneManager.LoadScene("End Level");
         }
     }
 
@@ -49,6 +49,6 @@ public class GameManagerScript : MonoBehaviour
                 allCompleted = false;
 
         if (allCompleted)
-            SceneManager.LoadScene("Win Screen");
+            SceneManager.LoadScene("End Level");
     }
 }

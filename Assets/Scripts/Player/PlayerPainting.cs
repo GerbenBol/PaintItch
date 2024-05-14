@@ -8,36 +8,39 @@ public class PlayerPainting : MonoBehaviour
 {
     public List<Color> Colors;
     public int ActiveColor = 0;
+    public int upcomingColor = 0;
     public Color currentColor;
 
     [SerializeField] private Transform startPoint;
     [SerializeField] private GameObject gun;
     [SerializeField] private ParticleSystem shootParticle;
+    private ParticleSystem.MainModule mainPs;
     [SerializeField] private Texture texture;
     [SerializeField] private ColorWheelGun wheel;
     [SerializeField] Image fillBar;
-
     [SerializeField] private float ammo;
+
     private float maxAmmo = 9;
     private float preReloadAmmo;
     private bool reloading;
+    private bool reloadFirstFrame;
     private bool barEmptyStart;
     private bool barEmpty;
+    private bool startedEmpty;
     private bool mustReload;
-    private int upcomingColor = 0;
 
     public float ammoBar;
 
     private void Start()
     {
         ammo = maxAmmo;
-        currentColor.a = 1;
+        mainPs = shootParticle.main;
     }
 
     private void Update()
     {
         currentColor = Colors[ActiveColor];
-        currentColor.a = 1;
+        mainPs.startColor = new ParticleSystem.MinMaxGradient(currentColor);
 
         // Shooting
         if (Input.GetMouseButton(0) && ammo > 0 && !reloading && !mustReload)
@@ -62,25 +65,32 @@ public class PlayerPainting : MonoBehaviour
         if (reloading)
         {
             if (!barEmpty)
-            {
                 barEmptyStart = true;
-            }
+            else if (!barEmptyStart && reloadFirstFrame)
+                startedEmpty = true;
+
             if (barEmptyStart)
-            {
                 ammo -= preReloadAmmo * Time.deltaTime / 1.5f;
-            }
+
             if (ammo <= 0)
             {
                 barEmpty = true;
+                barEmptyStart = false;
             }
+
             if (barEmpty)
             {
                 currentColor = Colors[upcomingColor];
                 currentColor.a = 1;
                 fillBar.color = currentColor;
-                barEmptyStart = false;
-                ammo += maxAmmo * Time.deltaTime / 1.5f;
+
+                if (!startedEmpty)
+                    ammo += maxAmmo * Time.deltaTime / 1.5f;
+                else
+                    ammo += maxAmmo * Time.deltaTime / 3f;
             }
+
+            reloadFirstFrame = false;
         }
     }
 
@@ -121,13 +131,15 @@ public class PlayerPainting : MonoBehaviour
     private IEnumerator Reload()
     {
         preReloadAmmo = ammo;
+        reloadFirstFrame = true;
         reloading = true;
+        barEmpty = ammo <= 0;
         yield return new WaitForSeconds(3);
         ActiveColor = upcomingColor;
         ammo = maxAmmo;
         reloading = false;
         mustReload = false;
         barEmptyStart = false;
-        barEmpty = false;
+        startedEmpty = false;
     }
 }

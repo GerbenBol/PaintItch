@@ -147,7 +147,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: gun
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 879260990565350360, guid: 9aef621728745784090727773a8501cd, type: 3}
+    - {fileID: 6481074100721607200, guid: 9aef621728745784090727773a8501cd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

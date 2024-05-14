@@ -5,11 +5,12 @@ using UnityEngine;
 public class PaintableObject : MonoBehaviour
 {
     [SerializeField] private float completionPercentage = .85f;
+    [SerializeField] private float completedPercentage = .0f;
+    [SerializeField] private bool required;
 
     public Texture2D MainTexture;
 
     private bool completed = false;
-    [SerializeField] private float completedPercentage = .0f;
     private int index;
 
     private readonly Dictionary<int, int> circle = new()
@@ -29,7 +30,8 @@ public class PaintableObject : MonoBehaviour
         rend.material.mainTexture = MainTexture;
         pixelsUpdated = new bool[MainTexture.width, MainTexture.height];
 
-        index = GameManagerScript.AddObject();
+        if (required)
+            index = GameManagerScript.AddObject();
     }
 
     public void ChangeTexture(Vector2Int coords, Color color)
@@ -45,7 +47,7 @@ public class PaintableObject : MonoBehaviour
             float changedPixels = 0;
 
             foreach (KeyValuePair<int, int> coords in circle)
-                for (int y = -coords.Value; y <= coords.Value; y++)
+                for (int y = -coords.Value * 2; y <= coords.Value; y++)
                 {
                     Vector2Int vec2 = new(kvp.Key.x + coords.Key, kvp.Key.y + y);
                     MainTexture.SetPixel(vec2.x, vec2.y, kvp.Value);

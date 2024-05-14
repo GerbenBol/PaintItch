@@ -7,18 +7,19 @@ public class AmmoBar : MonoBehaviour
 {
     [SerializeField] Image bar;
     [SerializeField] GameObject meter;
-    GameObject player;
-    private PlayerPainting ammo;
 
-    void Start()
+    private GameObject player;
+    private PlayerPainting painting;
+
+    private void Start()
     {
         player = GameObject.Find("Player");
-        ammo = player.GetComponent<PlayerPainting>();
+        painting = player.GetComponent<PlayerPainting>();
     }
 
-    void Update()
+    private void Update()
     {
-        bar.fillAmount = ammo.ammoBar;
-        meter.transform.localRotation = Quaternion.Euler(0, 0, 90 - (180 * ammo.ammoBar));
+        bar.fillAmount = painting.ammoBar;
+        meter.transform.localRotation = Quaternion.Euler(0, 0, 90 - (180 * painting.ammoBar));
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PaintableObject : MonoBehaviour
@@ -12,6 +13,7 @@ public class PaintableObject : MonoBehaviour
 
     private bool completed = false;
     private int index;
+    private readonly int circleSize = 4;
 
     private readonly Dictionary<int, int> circle = new()
     {
@@ -45,11 +47,20 @@ public class PaintableObject : MonoBehaviour
         foreach (KeyValuePair<Vector2Int, Color> kvp in updateList)
         {
             float changedPixels = 0;
+            int firstIndex = 0, lastIndex = 0;
 
             foreach (KeyValuePair<int, int> coords in circle)
-                for (int y = -coords.Value * 20; y <= coords.Value * 20; y++)
+            {
+                if (firstIndex == 0)
+                    firstIndex = coords.Key;
+
+                lastIndex = coords.Key;
+            }
+
+            for (int x = firstIndex * circleSize; x < lastIndex * circleSize; x++)
+                for (int y = -circle[x / circleSize] * circleSize; y <= circle[x / circleSize] * circleSize; y++)
                 {
-                    Vector2Int vec2 = new(kvp.Key.x + coords.Key, kvp.Key.y + y);
+                    Vector2Int vec2 = new(kvp.Key.x + x, kvp.Key.y + y);
                     MainTexture.SetPixel(vec2.x, vec2.y, kvp.Value);
 
                     if (vec2.x < MainTexture.width && vec2.x >= 0 && vec2.y < MainTexture.height && vec2.y >= 0)

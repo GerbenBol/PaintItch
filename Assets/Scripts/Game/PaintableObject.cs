@@ -47,7 +47,7 @@ public class PaintableObject : MonoBehaviour
             float changedPixels = 0;
 
             foreach (KeyValuePair<int, int> coords in circle)
-                for (int y = -coords.Value * 2; y <= coords.Value; y++)
+                for (int y = -coords.Value * 20; y <= coords.Value * 20; y++)
                 {
                     Vector2Int vec2 = new(kvp.Key.x + coords.Key, kvp.Key.y + y);
                     MainTexture.SetPixel(vec2.x, vec2.y, kvp.Value);

@@ -66,18 +66,33 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8dddd0533e02dbf4c8e581fbefa88338, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8766633515161213279}
+      addedObject: {fileID: 6215564193133548052}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8dddd0533e02dbf4c8e581fbefa88338, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6215564193133548052}
+      addedObject: {fileID: 3083027184067977063}
   m_SourcePrefab: {fileID: 100100000, guid: 8dddd0533e02dbf4c8e581fbefa88338, type: 3}
 --- !u!1 &749055659568998006 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8dddd0533e02dbf4c8e581fbefa88338, type: 3}
   m_PrefabInstance: {fileID: 478586585476373287}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &8766633515161213279
-BoxCollider:
+--- !u!114 &6215564193133548052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749055659568998006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completionPercentage: 0.85
+  MainTexture: {fileID: 0}
+  completedPercentage: 0
+--- !u!64 &3083027184067977063
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -94,19 +109,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.4472166, y: 3.1, z: 0.10116436}
-  m_Center: {x: -0.67172533, y: 1.62, z: -0.002635084}
---- !u!114 &6215564193133548052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749055659568998006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainTexture: {fileID: 0}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5987156461645659686, guid: 8dddd0533e02dbf4c8e581fbefa88338, type: 3}

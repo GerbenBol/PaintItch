@@ -5659,7 +5659,8 @@ GameObject:
   - component: {fileID: 4530292560144471552}
   - component: {fileID: 680340970185595301}
   - component: {fileID: 3356863735000886639}
-  - component: {fileID: 1673871798265803364}
+  - component: {fileID: 5470145169147714610}
+  - component: {fileID: 2477624648357249512}
   m_Layer: 6
   m_Name: weg
   m_TagString: Untagged
@@ -5732,8 +5733,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1673871798265803364
-BoxCollider:
+--- !u!64 &5470145169147714610
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5750,9 +5751,26 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 370.40405, y: 0.24365574, z: 574.84827}
-  m_Center: {x: -1.4586182, y: 0.121816725, z: -72.71642}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6416302070336371891, guid: 63fb9ad2031d4f4459a53b457bbaa3f0, type: 3}
+--- !u!114 &2477624648357249512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3860998543954267322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completionPercentage: 0.85
+  completedPercentage: 0
+  required: 0
+  MainTexture: {fileID: 2800000, guid: d56730949d4ab7f46b2dec9350841b64, type: 3}
 --- !u!1 &3881599683879271926
 GameObject:
   m_ObjectHideFlags: 0

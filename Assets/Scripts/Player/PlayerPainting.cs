@@ -14,6 +14,7 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private Transform startPoint;
     [SerializeField] private GameObject gun;
     [SerializeField] private ParticleSystem shootParticle;
+    private ParticleSystem.MainModule mainPs;
     [SerializeField] private Texture texture;
     [SerializeField] private ColorWheelGun wheel;
     [SerializeField] Image fillBar;
@@ -33,13 +34,13 @@ public class PlayerPainting : MonoBehaviour
     private void Start()
     {
         ammo = maxAmmo;
-        currentColor.a = 1;
+        mainPs = shootParticle.main;
     }
 
     private void Update()
     {
         currentColor = Colors[ActiveColor];
-        currentColor.a = 1;
+        mainPs.startColor = new ParticleSystem.MinMaxGradient(currentColor);
 
         // Shooting
         if (Input.GetMouseButton(0) && ammo > 0 && !reloading && !mustReload)

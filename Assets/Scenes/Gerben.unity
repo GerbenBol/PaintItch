@@ -282,9 +282,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1554191351}
     - target: {fileID: 4861099138357988166, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+      propertyPath: mainCam
+      value: 
+      objectReference: {fileID: 1495860914}
+    - target: {fileID: 4861099138357988166, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4861099138357988166, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 478802494}
+    - target: {fileID: 4861099138357988166, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+      propertyPath: paintPrefab
+      value: 
+      objectReference: {fileID: 8228453155752560297, guid: 367383485c517514db16840d588b5ffd, type: 3}
     - target: {fileID: 7750963524730505290, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -342,7 +354,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 315599075}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814067758}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ef16b66a988234240a9522fa1a09cfb3, type: 3}
   m_Name: 
@@ -1691,6 +1703,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4056863719268092725, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
   m_PrefabInstance: {fileID: 315599075}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1495860914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7367132984253578729, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+  m_PrefabInstance: {fileID: 315599075}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1540568149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2087,13 +2104,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814067758}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54ee278c00ab8ac4fb89b153ff22a175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   paintPrefab: {fileID: 8228453155752560297, guid: 367383485c517514db16840d588b5ffd, type: 3}
   spawnPoint: {fileID: 478802494}
+  mainCam: {fileID: 0}
+  minimumDistance: 0
 --- !u!1 &1875808768 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3727709291478896447, guid: 89715196ec9779c47abfb8fd0b85a314, type: 3}

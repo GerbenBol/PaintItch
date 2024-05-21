@@ -13,12 +13,16 @@ public class PlayerPainting : MonoBehaviour
 
     [SerializeField] private Transform startPoint;
     [SerializeField] private GameObject gun;
-    [SerializeField] private ParticleSystem shootParticle;
-    private ParticleSystem.MainModule mainPs;
-    [SerializeField] private Texture texture;
     [SerializeField] private ColorWheelGun wheel;
     [SerializeField] Image fillBar;
     [SerializeField] private float ammo;
+    [SerializeField] private GameObject paintPrefab;
+    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private Transform mainCam;
+    [SerializeField] private float minimumDistance;
+
+    private readonly float maxTimer = .05f;
+    private float timer = .0f;
 
     private float maxAmmo = 9;
     private float preReloadAmmo;
@@ -34,19 +38,24 @@ public class PlayerPainting : MonoBehaviour
     private void Start()
     {
         ammo = maxAmmo;
-        mainPs = shootParticle.main;
     }
 
     private void Update()
     {
         currentColor = Colors[ActiveColor];
-        mainPs.startColor = new ParticleSystem.MinMaxGradient(currentColor);
 
         // Shooting
-        if (Input.GetMouseButton(0) && ammo > 0 && !reloading && !mustReload)
-            Shoot();
-        else if (shootParticle.isPlaying)
-            shootParticle.Stop();
+        if (timer < maxTimer)
+            timer += Time.deltaTime;
+        else if (Input.GetMouseButton(0) && ammo > 0 && !reloading && !mustReload)
+        {
+            // Check if we're too close to an object
+            if (!Physics.Raycast(mainCam.position, mainCam.forward, minimumDistance))
+            {
+                Shoot();
+                timer = .0f;
+            }
+        }
 
         // Reloading
         if (Input.GetKeyDown(KeyCode.R) && !reloading)
@@ -98,14 +107,25 @@ public class PlayerPainting : MonoBehaviour
     {
         ammo -= Time.deltaTime;
 
-        if (shootParticle.isStopped)
-            shootParticle.Play();
+        // Create splatter
+        GameObject splatterObject = Instantiate(paintPrefab, spawnPoint.position, spawnPoint.rotation);
+        PaintSplatter splatter = splatterObject.GetComponent<PaintSplatter>();
+
+        // Determine starting velocity and scale (I use System.Random because it's so much better than Unity's Random)
+        System.Random rand = new();
+        int randomForceX = rand.Next(-50, 50);
+        int randomForceY = rand.Next(-50, 50);
+        int randomForceZ = rand.Next(300, 600);
+        float randomScale = (float)rand.Next(15, 40) / 100;
+
+        // Set the starting velocity and scale and send the splatter flying
+        Vector3 force = new(randomForceX, randomForceY, randomForceZ);
+        Vector3 scale = new(randomScale, randomScale, randomScale);
+        splatter.Send(currentColor, force, scale);
     }
 
     private void NextColor()
     {
-        // ----------------------change to Coroutine or add timer to fix bug where already shot particles can still change color.----------------------------
-
         upcomingColor++;
 
         if (upcomingColor > Colors.Count - 1)
@@ -117,8 +137,6 @@ public class PlayerPainting : MonoBehaviour
 
     private void PrevColor()
     {
-        // ----------------------change to Coroutine or add timer to fix bug where already shot particles can still change color.----------------------------
-
         upcomingColor--;
 
         if (upcomingColor < 0)

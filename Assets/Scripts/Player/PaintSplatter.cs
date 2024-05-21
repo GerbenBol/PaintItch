@@ -42,7 +42,7 @@ public class PaintSplatter : MonoBehaviour
         Vector3 heading = collisionPoint - pos;
         float distance = heading.magnitude;
         Vector3 dir = heading / distance;
-        RaycastHit[] hits = Physics.RaycastAll(pos, dir, distance, paintableLayer);
+        RaycastHit[] hits = Physics.RaycastAll(pos, dir, distance + 1, paintableLayer, QueryTriggerInteraction.Ignore);
 
         foreach (RaycastHit hit in hits)
             if (hit.collider.gameObject.layer == 6)

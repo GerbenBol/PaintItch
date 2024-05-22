@@ -22,7 +22,7 @@ public class HoveredObjectPercentage : MonoBehaviour
             PaintableObject obj = hitInfo.transform.GetComponent<PaintableObject>();
             if (displayPercent < 100)
             {
-                displayPercent = 100 / (obj.completionPercentage * 100) * obj.completedPercentage;
+                displayPercent = 100 / (obj.completionPercentage * 100) * obj.completedPercentage * 100;
             }
             else if (displayPercent > 100)
             {

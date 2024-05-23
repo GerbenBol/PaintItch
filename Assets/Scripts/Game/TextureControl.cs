@@ -54,7 +54,6 @@ public class TextureControl : MonoBehaviour
         if (index + 1 < ToCalculate.Count)
             index++;
         else stopCalc = true;
-
     }
 
     private IEnumerator ApplyTextures()

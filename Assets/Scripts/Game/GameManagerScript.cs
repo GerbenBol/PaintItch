@@ -43,7 +43,6 @@ public class GameManagerScript : MonoBehaviour
     public static void CompleteObject(int index)
     {
         paintableObjects[index] = true;
-
         bool allCompleted = true;
 
         foreach (KeyValuePair<int, bool> kvp in paintableObjects)

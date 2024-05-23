@@ -11,6 +11,7 @@ public class PaintableObject : MonoBehaviour
     public float completionPercentage = 1f;
     public float completedPercentage = .0f;
     public Texture2D MainTexture;
+    [SerializeField] private Texture2D aoTexture;
 
     private bool completed = false;
     private int index;
@@ -31,30 +32,25 @@ public class PaintableObject : MonoBehaviour
         Renderer rend = GetComponent<Renderer>();
         MainTexture = Instantiate(rend.material.mainTexture) as Texture2D;
         rend.material.mainTexture = MainTexture;
-        
-        if (required)
-            TextureControl.ToCalculate.Add(this);
-    }
-
-    private void Start()
-    {
         pixelsUpdated = new bool[MainTexture.width, MainTexture.height];
 
         if (required)
+        {
+            TextureControl.ToCalculate.Add(this);
             index = GameManagerScript.AddObject();
+        }
     }
 
     public IEnumerator CalculatePercentage()
     {
-        Debug.Log("calculating " + name);
-        int notBlack = 0;
+        float notBlack = 0;
 
-        for (int x = 0; x < MainTexture.width; x++)
-            for (int y = 0; y < MainTexture.height; y++)
-                if (MainTexture.GetPixel(x, y) != Color.black)
+        for (int x = 0; x < aoTexture.width; x++)
+            for (int y = 0; y < aoTexture.height; y++)
+                if (aoTexture.GetPixel(x, y) != Color.black)
                     notBlack++;
 
-        float paintablePercentage = (MainTexture.width * MainTexture.height) / notBlack;
+        float paintablePercentage = notBlack / (aoTexture.width * aoTexture.height);
         completionPercentage = paintablePercentage * .85f;
 
         TextureControl.CalcNextObject();

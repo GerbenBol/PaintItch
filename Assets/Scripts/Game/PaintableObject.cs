@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PaintableObject : MonoBehaviour
 {
-    [SerializeField] private float completionPercentage = .85f;
-    [SerializeField] private float completedPercentage = .0f;
+    [SerializeField] public float completionPercentage = .85f;
+    [SerializeField] public float completedPercentage = .0f;
     [SerializeField] private bool required;
 
     public Texture2D MainTexture;

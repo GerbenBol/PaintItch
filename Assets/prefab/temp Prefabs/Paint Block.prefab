@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5297316457112784248}
   m_Layer: 0
   m_Name: Paint Block
-  m_TagString: Untagged
+  m_TagString: Splatter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,9 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   rb: {fileID: 1370269040228042600}
   renderer: {fileID: 4824266719422342250}
+  paintableLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!54 &1370269040228042600
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -143,9 +146,9 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.7, y: 0.7, z: 0.7}
   m_Center: {x: 0, y: 0, z: 0}

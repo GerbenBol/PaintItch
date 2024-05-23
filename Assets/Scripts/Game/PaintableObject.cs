@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
 public class PaintableObject : MonoBehaviour
 {
-    [SerializeField] public float completionPercentage = .85f;
-    [SerializeField] public float completedPercentage = .0f;
-    [SerializeField] private bool required;
+    public bool required;
 
+    public float completionPercentage = 1f;
+    public float completedPercentage = .0f;
     public Texture2D MainTexture;
 
     private bool completed = false;
@@ -25,15 +26,39 @@ public class PaintableObject : MonoBehaviour
     private readonly Dictionary<Vector2Int, Color> updateList = new();
     private bool[,] pixelsUpdated;
 
-    private void Start()
+    private void Awake()
     {
         Renderer rend = GetComponent<Renderer>();
         MainTexture = Instantiate(rend.material.mainTexture) as Texture2D;
         rend.material.mainTexture = MainTexture;
+        
+        if (required)
+            TextureControl.ToCalculate.Add(this);
+    }
+
+    private void Start()
+    {
         pixelsUpdated = new bool[MainTexture.width, MainTexture.height];
 
         if (required)
             index = GameManagerScript.AddObject();
+    }
+
+    public IEnumerator CalculatePercentage()
+    {
+        Debug.Log("calculating " + name);
+        int notBlack = 0;
+
+        for (int x = 0; x < MainTexture.width; x++)
+            for (int y = 0; y < MainTexture.height; y++)
+                if (MainTexture.GetPixel(x, y) != Color.black)
+                    notBlack++;
+
+        float paintablePercentage = (MainTexture.width * MainTexture.height) / notBlack;
+        completionPercentage = paintablePercentage * .85f;
+
+        TextureControl.CalcNextObject();
+        yield return null;
     }
 
     public void ChangeTexture(Vector2Int coords, Color color)

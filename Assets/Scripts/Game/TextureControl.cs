@@ -7,7 +7,12 @@ public class TextureControl : MonoBehaviour
     [SerializeField] private AudioClip dingClip;
 
     public static List<Texture2D> ToUpdate = new();
+    public static List<PaintableObject> ToCalculate = new();
     public static AudioClip CompletedDing;
+
+    private static int index = 0;
+    private static bool readyForCalc = true;
+    private bool stopCalc = false;
 
     private readonly float maxTimer = .1f;
     private float timer = .0f;
@@ -28,6 +33,28 @@ public class TextureControl : MonoBehaviour
             timer = .0f;
         }
         else timer += Time.deltaTime;
+        
+        if (readyForCalc && !stopCalc)
+            StartNextCalc();
+    }
+
+    public static void CalcNextObject()
+    {
+        readyForCalc = true;
+    }
+
+    private void StartNextCalc()
+    {
+        readyForCalc = false;
+        PaintableObject obj = ToCalculate[index];
+
+        if (obj.CompareTag("Level" + GameManagerScript.CurrentLevel))
+            StartCoroutine(obj.CalculatePercentage());
+
+        if (index + 1 < ToCalculate.Count)
+            index++;
+        else stopCalc = true;
+
     }
 
     private IEnumerator ApplyTextures()

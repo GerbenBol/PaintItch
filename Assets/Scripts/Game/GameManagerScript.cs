@@ -7,6 +7,8 @@ public class GameManagerScript : MonoBehaviour
 {
     [SerializeField] private GameObject canvas;
 
+    public static int CurrentLevel = 0;
+
     private static readonly Dictionary<int, bool> paintableObjects = new();
     private static int index = 0;
 

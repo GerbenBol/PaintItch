@@ -10,7 +10,6 @@ public class PlayerPainting : MonoBehaviour
     public int ActiveColor = 0;
     public int upcomingColor = 0;
     public Color currentColor;
-    private Color lastUsedColor;
 
     [SerializeField] private Transform startPoint;
     [SerializeField] private GameObject gun;
@@ -33,7 +32,6 @@ public class PlayerPainting : MonoBehaviour
     private bool barEmpty;
     private bool startedEmpty;
     private bool mustReload;
-    [SerializeField] private GameObject reloadPrompt;
 
     public float ammoBar;
 
@@ -69,10 +67,8 @@ public class PlayerPainting : MonoBehaviour
         else if (Input.mouseScrollDelta.y < 0 && !reloading)
             PrevColor();
 
-        // Update float for visuals for ammo bar and reload prompt
+        // Update float for visuals for ammo bar
         ammoBar = ammo / maxAmmo;
-        if (ammo <= 0)
-            mustReload = true;
 
         // Reloading visual
         if (reloading)
@@ -105,11 +101,6 @@ public class PlayerPainting : MonoBehaviour
 
             reloadFirstFrame = false;
         }
-
-        if (mustReload)
-            reloadPrompt.SetActive(true);
-        else
-            reloadPrompt.SetActive(false);
     }
 
     private void Shoot()
@@ -135,40 +126,24 @@ public class PlayerPainting : MonoBehaviour
 
     private void NextColor()
     {
-        if (!mustReload)
-            lastUsedColor = currentColor;
-
         upcomingColor++;
 
         if (upcomingColor > Colors.Count - 1)
             upcomingColor = 0;
 
-        
-
         mustReload = true;
         wheel.RotateWheel(1);
-
-        //if (mustReload && lastUsedColor == currentColor)
-            //mustReload = false;
     }
 
     private void PrevColor()
     {
-        if (!mustReload)
-            lastUsedColor = currentColor;
-
         upcomingColor--;
 
         if (upcomingColor < 0)
             upcomingColor = Colors.Count - 1;
 
-        
-
         mustReload = true;
         wheel.RotateWheel(-1);
-
-        //if (mustReload && lastUsedColor == currentColor)
-            //mustReload = false;
     }
 
     private IEnumerator Reload()

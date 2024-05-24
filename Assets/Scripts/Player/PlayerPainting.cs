@@ -12,7 +12,6 @@ public class PlayerPainting : MonoBehaviour
     public Color currentColor;
     private Color lastUsedColor;
 
-    [SerializeField] private Transform startPoint;
     [SerializeField] private GameObject gun;
     [SerializeField] private ColorWheelGun wheel;
     [SerializeField] Image fillBar;

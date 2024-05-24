@@ -42,18 +42,21 @@ public class TextureControl : MonoBehaviour
     {
         readyForCalc = true;
     }
-
+    // throttle = check a set amount of pixels per frame
     private void StartNextCalc()
     {
         readyForCalc = false;
         PaintableObject obj = ToCalculate[index];
 
-        if (obj.CompareTag("Level" + GameManagerScript.CurrentLevel))
-            StartCoroutine(obj.CalculatePercentage());
+        while (index + 1 < ToCalculate.Count)
+        {
+            if (obj.CompareTag("Level" + GameManagerScript.CurrentLevel))
+                obj.CalculatePercentage();
 
-        if (index + 1 < ToCalculate.Count)
-            index++;
-        else stopCalc = true;
+            if (index + 1 < ToCalculate.Count)
+                index++;
+            else stopCalc = true;
+        }
     }
 
     private IEnumerator ApplyTextures()

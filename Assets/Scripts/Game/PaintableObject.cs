@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 
@@ -15,7 +16,7 @@ public class PaintableObject : MonoBehaviour
 
     private bool completed = false;
     private int index;
-    private readonly int circleSize = 4;
+    private readonly int circleSize = 20;
 
     private readonly Dictionary<int, int> circle = new()
     {
@@ -41,9 +42,11 @@ public class PaintableObject : MonoBehaviour
         }
     }
 
-    public IEnumerator CalculatePercentage()
+    public async Task CalculatePercentage()
     {
         float notBlack = 0;
+
+        await Task.Delay(1);
 
         for (int x = 0; x < aoTexture.width; x++)
             for (int y = 0; y < aoTexture.height; y++)
@@ -53,8 +56,7 @@ public class PaintableObject : MonoBehaviour
         float paintablePercentage = notBlack / (aoTexture.width * aoTexture.height);
         completionPercentage = paintablePercentage * .85f;
 
-        TextureControl.CalcNextObject();
-        yield return null;
+        //TextureControl.CalcNextObject();
     }
 
     public void ChangeTexture(Vector2Int coords, Color color)

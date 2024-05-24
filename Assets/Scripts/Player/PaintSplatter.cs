@@ -45,8 +45,22 @@ public class PaintSplatter : MonoBehaviour
         RaycastHit[] hits = Physics.RaycastAll(pos, dir, distance + 1, paintableLayer, QueryTriggerInteraction.Ignore);
 
         foreach (RaycastHit hit in hits)
-            if (hit.collider.gameObject.layer == 6)
+            if (hit.collider.gameObject.layer == 6 && HoveredObjectPercentage.focusedObject == HoveredObjectPercentage.nonFocusObj)
             {
+                Debug.Log("Free Painting");
+                PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
+                Vector2 textureCoord = hit.textureCoord;
+
+                Texture tex = obj.MainTexture;
+                int pixelX = (int)(textureCoord.x * tex.width);
+                int pixelY = (int)(textureCoord.y * tex.height);
+                Vector2Int paintPosition = new(pixelX, pixelY);
+                obj.ChangeTexture(paintPosition, color);
+                break;
+            }
+            else if (hit.collider.gameObject == HoveredObjectPercentage.focusedObject)
+            {
+                Debug.Log("Focused Painting");
                 PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
                 Vector2 textureCoord = hit.textureCoord;
 

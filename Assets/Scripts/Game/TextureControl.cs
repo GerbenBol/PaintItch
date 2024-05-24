@@ -11,8 +11,6 @@ public class TextureControl : MonoBehaviour
     public static AudioClip CompletedDing;
 
     private static int index = 0;
-    private static bool readyForCalc = true;
-    private bool stopCalc = false;
 
     private readonly float maxTimer = .1f;
     private float timer = .0f;
@@ -33,30 +31,38 @@ public class TextureControl : MonoBehaviour
             timer = .0f;
         }
         else timer += Time.deltaTime;
-        
-        if (readyForCalc && !stopCalc)
+
+        if (index >= ToCalculate.Count)
             StartNextCalc();
     }
-
-    public static void CalcNextObject()
-    {
-        readyForCalc = true;
-    }
-    // throttle = check a set amount of pixels per frame
+    
     private void StartNextCalc()
     {
-        readyForCalc = false;
         PaintableObject obj = ToCalculate[index];
-
-        while (index + 1 < ToCalculate.Count)
+        
+        if (obj.CompareTag("Level" + GameManagerScript.CurrentLevel))
         {
-            if (obj.CompareTag("Level" + GameManagerScript.CurrentLevel))
-                obj.CalculatePercentage();
+            int retVal = obj.CalculatePercentage(1000);
 
-            if (index + 1 < ToCalculate.Count)
+            if (retVal == -1)
+                index--;
+            else
+            {
                 index++;
-            else stopCalc = true;
+                PaintableObject nextObj = ToCalculate[index];
+
+                if (obj.CompareTag("Level" + GameManagerScript.CurrentLevel))
+                {
+                    int retValNew = nextObj.CalculatePercentage(retVal);
+
+                    if (retValNew == -1)
+                        index--;
+                }
+            }
         }
+
+        if (index + 1 < ToCalculate.Count)
+            index++;
     }
 
     private IEnumerator ApplyTextures()

@@ -29,6 +29,6 @@ public class HoveredObjectPercentage : MonoBehaviour
                 displayPercent = 100;
             }
         }
-        Debug.Log(displayPercent + "%");
+        //Debug.Log(displayPercent + "%");
     }
 }

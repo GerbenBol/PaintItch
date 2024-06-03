@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4056863719268092725}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &2911914814676581996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2442295857655230798}
+  m_Layer: 0
+  m_Name: Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2442295857655230798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2911914814676581996}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -0.00327, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4056863719268092725}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &4807391992715850710
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,6 +302,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  paintPrefab: {fileID: 8228453155752560297, guid: 367383485c517514db16840d588b5ffd, type: 3}
 --- !u!1 &7772674866525584216
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +467,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2859738833734968151, guid: d46862a40bbde98409e51cd35bff3f77, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1139118085512199864}
+    - targetCorrespondingSourceObject: {fileID: 2859738833734968151, guid: d46862a40bbde98409e51cd35bff3f77, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2442295857655230798}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d46862a40bbde98409e51cd35bff3f77, type: 3}
 --- !u!4 &3203224808542025031 stripped

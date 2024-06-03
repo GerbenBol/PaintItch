@@ -1157,6 +1157,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 697987520066043679, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_MotionVectors
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3849490246282903632, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: m_Name
       value: blockout
@@ -1238,7 +1242,14 @@ PrefabInstance:
       value: 49.966
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8178985775017610667, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+    - {fileID: 6993213922153697023, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+    - {fileID: 4074634965370120553, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+    - {fileID: 8139323453932993122, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+    - {fileID: 2817106533118675344, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+    - {fileID: 2668451413900539253, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+    - {fileID: 4480577443996963340, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}

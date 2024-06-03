@@ -32,17 +32,17 @@ public class TextureControl : MonoBehaviour
         }
         else timer += Time.deltaTime;
 
-        if (index >= ToCalculate.Count)
+        if (index < ToCalculate.Count)
             StartNextCalc();
     }
     
     private void StartNextCalc()
     {
         PaintableObject obj = ToCalculate[index];
-        
-        if (obj.CompareTag("Level" + GameManagerScript.CurrentLevel))
+
+        /*if (obj.CompareTag("Level" + GameManagerScript.CurrentLevel))
         {
-            int retVal = obj.CalculatePercentage(1000);
+            int retVal = obj.CalculatePercentage(2048);
 
             if (retVal == -1)
                 index--;
@@ -59,6 +59,29 @@ public class TextureControl : MonoBehaviour
                         index--;
                 }
             }
+        }*/
+        Debug.Log("start calc");
+        int checkAmount = 2048;
+
+        while (index < ToCalculate.Count - 1)
+        {
+            Debug.Log($"{index} of {ToCalculate.Count}");
+            obj = ToCalculate[index];
+
+            if (obj.CompareTag("Level" + GameManagerScript.CurrentLevel))
+            {
+                int retVal = obj.CalculatePercentage(checkAmount);
+
+                if (retVal == -1)
+                {
+                    index--;
+                    break;
+                }
+                else
+                    checkAmount = retVal;
+            }
+
+            index++;
         }
 
         if (index + 1 < ToCalculate.Count)

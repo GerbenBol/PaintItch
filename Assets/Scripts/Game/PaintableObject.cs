@@ -13,10 +13,8 @@ public class PaintableObject : MonoBehaviour
 
     private bool completed = false;
     private float notBlack = 0;
-    private int index;
-    private int pixelIndexX = 0;
-    private int pixelIndexY;
-    private int indexTotal = 0;
+    private int index, indexTotal = 0;
+    private int pixelIndexX = 0, pixelIndexY = 0;
     private int textureSize;
     private readonly int circleSize = 20;
 
@@ -51,8 +49,6 @@ public class PaintableObject : MonoBehaviour
 
         while (pixelIndexX < aoTexture.width)
         {
-            pixelIndexY = 0;
-
             while (pixelIndexY < aoTexture.height)
             {
                 if (aoTexture.GetPixel(pixelIndexX, pixelIndexY) != Color.black)
@@ -71,6 +67,13 @@ public class PaintableObject : MonoBehaviour
         {
             float paintablePercentage = notBlack / (aoTexture.width * aoTexture.height);
             completionPercentage = paintablePercentage * .85f;
+            checkAmount -= currentChecked;
+            Debug.Log($"checked {name}, {completionPercentage}");
+        }
+        else
+        {
+            Debug.Log(indexTotal + ", " + textureSize);
+            Debug.Log("this should be continue with others? ");
             checkAmount = -1;
         }
 

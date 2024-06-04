@@ -152,7 +152,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2033701486}
+  m_Father: {fileID: 1983945394}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &74824829
 PrefabInstance:
@@ -371,6 +371,10 @@ PrefabInstance:
     - target: {fileID: 797325188597286342, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
       propertyPath: paintableMask.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1356458022216909162, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2899363356202604884, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -699,7 +703,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4056863719268092725, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 7750963524730505290, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
       insertIndex: -1
       addedObject: {fileID: 29584041}
     m_AddedComponents: []
@@ -1517,9 +1521,9 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932269055}
   m_CullTransparentMesh: 1
---- !u!4 &2033701486 stripped
+--- !u!4 &1983945394 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4056863719268092725, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7750963524730505290, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
   m_PrefabInstance: {fileID: 315599075}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &605143473938724598

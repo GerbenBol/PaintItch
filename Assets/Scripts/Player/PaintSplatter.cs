@@ -61,11 +61,9 @@ public class PaintSplatter : MonoBehaviour
             }
     }
 
-    public void ChangePaintingLayer()
+    public void ChangePaintingLayer(LayerMask layer)
     {
-        if (paintingLayer == 6)
-            paintingLayer = 7;
-        else if (paintingLayer == 7)
-            paintingLayer = 6;
+        paintingLayer = layer;
+        Debug.Log($"{paintingLayer}, {layer}");
     }
 }

@@ -13,6 +13,8 @@ public class HoveredObjectPercentage : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     private float displayPercent;
     [SerializeField] private GameObject paintPrefab;
+    [SerializeField] private LayerMask focussedLayerMask;
+    [SerializeField] private LayerMask unFocussedLayerMask;
 
     private PaintSplatter paintSplatter;
     void Start()
@@ -38,29 +40,36 @@ public class HoveredObjectPercentage : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.F))
             {
-                if (focusedObject != null && focusedObject.layer == 7)
+                if (focusedObject != null && focusedObject.layer == focussedLayerMask)
                 {
-                    focusedObject.layer = 6;
+                    focusedObject.layer = unFocussedLayerMask;
                     focusedObject = null;
                     Debug.Log("Unfocused Object");
                 }
-                if (focusedObject != hoveredObject)
+                if (hoveredObject != focusedObject)
                 {
                     focusedObject = hoveredObject;
-                    //paintSplatter.ChangePaintingLayer();
-                    focusedObject.layer = 7;
+                    focusedObject.layer = focussedLayerMask;
                     Debug.Log("Focused Object");
                 }
             }
         }
         else if (focusedObject != null && Input.GetKeyDown(KeyCode.F))
         {
-            focusedObject.layer = 6;
+            focusedObject.layer = unFocussedLayerMask;
             focusedObject = null;
             Debug.Log("Unfocused Object");
         }
         //Debug.Log(displayPercent + "%");
-        //if (focusedObject = null)
-            //paintSplatter.ChangePaintingLayer();
+        if (focusedObject == null)
+        {
+            paintSplatter.ChangePaintingLayer(unFocussedLayerMask);
+            Debug.Log("Painting layer = 6");
+        }
+        else
+        {
+            paintSplatter.ChangePaintingLayer(focussedLayerMask);
+            Debug.Log("Painting layer = 7");
+        }
     }
 }

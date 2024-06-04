@@ -79,7 +79,6 @@ public class PaintableObject : MonoBehaviour
             float paintablePercentage = notBlack / (aoTexture.width * aoTexture.height);
             completionPercentage = paintablePercentage * .85f;
             checkAmount -= currentChecked;
-            Debug.Log($"checked {name}, {completionPercentage}");
         }
         else
             checkAmount = -1;

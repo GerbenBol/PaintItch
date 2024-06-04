@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class HoveredObjectPercentage : MonoBehaviour
+public class HoveredObject : MonoBehaviour
 {
     [SerializeField] private GameObject cam;
     private string hoveredObjectName;

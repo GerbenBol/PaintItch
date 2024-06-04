@@ -23,9 +23,17 @@ public class PaintSplatter : MonoBehaviour
         {
             Vector3 collisionPoint = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
 
-            if (HoveredObjectPercentage.isFocused)
-            if (other.gameObject.layer == paintingLayer)
-                Paint(collisionPoint);
+            if (HoveredObject.isFocused)
+            {
+                if (other.gameObject.layer == paintingLayer && HoveredObject.focusedObject == other.gameObject)
+                    Paint(collisionPoint);
+            }
+            else
+            {
+                if (other.gameObject.layer == paintingLayer)
+                    Paint(collisionPoint);
+            }
+            
 
             Destroy(gameObject);
         }

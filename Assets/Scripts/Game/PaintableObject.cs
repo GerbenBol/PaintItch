@@ -16,7 +16,7 @@ public class PaintableObject : MonoBehaviour
     private int index, indexTotal = 0;
     private int pixelIndexX = 0, pixelIndexY = 0;
     private int textureSize;
-    private readonly int circleSize = 20;
+    private readonly int circleSize = 1;
 
     private readonly Dictionary<int, int> circle = new()
     {
@@ -46,6 +46,7 @@ public class PaintableObject : MonoBehaviour
     public int CalculatePercentage(int checkAmount)
     {
         int currentChecked = 0;
+        int xBreak = 0, yBreak = 0;
 
         while (pixelIndexX < aoTexture.width)
         {
@@ -54,16 +55,26 @@ public class PaintableObject : MonoBehaviour
                 if (aoTexture.GetPixel(pixelIndexX, pixelIndexY) != Color.black)
                     notBlack++;
 
-                pixelIndexY++; indexTotal++; currentChecked++;
+                pixelIndexY++;
+                indexTotal++;
+                currentChecked++;
 
                 if (currentChecked >= checkAmount)
+                {
+                    xBreak = pixelIndexX;
+                    yBreak = pixelIndexY;
                     break;
+                }
             }
 
+            pixelIndexY = 0;
             pixelIndexX++;
         }
 
-        if (indexTotal == textureSize)
+        pixelIndexX = xBreak;
+        pixelIndexY = yBreak;
+
+        if (indexTotal >= textureSize)
         {
             float paintablePercentage = notBlack / (aoTexture.width * aoTexture.height);
             completionPercentage = paintablePercentage * .85f;
@@ -71,11 +82,7 @@ public class PaintableObject : MonoBehaviour
             Debug.Log($"checked {name}, {completionPercentage}");
         }
         else
-        {
-            Debug.Log(indexTotal + ", " + textureSize);
-            Debug.Log("this should be continue with others? ");
             checkAmount = -1;
-        }
 
         return checkAmount;
     }

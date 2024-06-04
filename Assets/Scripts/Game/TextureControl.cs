@@ -60,26 +60,28 @@ public class TextureControl : MonoBehaviour
                 }
             }
         }*/
-        Debug.Log("start calc");
-        int checkAmount = 2048;
+        int checkAmount = 100000;
+        int returner = 0;
 
         while (index < ToCalculate.Count - 1)
         {
-            Debug.Log($"{index} of {ToCalculate.Count}");
             obj = ToCalculate[index];
 
             if (obj.CompareTag("Level" + GameManagerScript.CurrentLevel))
             {
-                int retVal = obj.CalculatePercentage(checkAmount);
+                returner = obj.CalculatePercentage(checkAmount);
 
-                if (retVal == -1)
+                if (returner == -1)
                 {
                     index--;
                     break;
                 }
                 else
-                    checkAmount = retVal;
+                    checkAmount = returner;
             }
+
+            if (returner == -1)
+                break;
 
             index++;
         }

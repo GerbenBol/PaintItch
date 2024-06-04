@@ -169,7 +169,7 @@ PrefabInstance:
     - target: {fileID: 1133270398661160844, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: aoTexture
       value: 
-      objectReference: {fileID: 2800000, guid: 16c8ee1b586633b4e83b5cd5ebe19f86, type: 3}
+      objectReference: {fileID: 2800000, guid: fcbee137faa5b2141b52101b2bf64bc8, type: 3}
     - target: {fileID: 1294199696030970574, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: required
       value: 1
@@ -329,6 +329,14 @@ PrefabInstance:
     - target: {fileID: 6610785023528898661, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: m_TagString
       value: Level0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113831991516970502, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.915
+      objectReference: {fileID: 0}
+    - target: {fileID: 7113831991516970502, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.449
       objectReference: {fileID: 0}
     - target: {fileID: 7651202278907349128, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: m_TagString

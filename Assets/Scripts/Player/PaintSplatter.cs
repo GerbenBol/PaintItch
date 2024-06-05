@@ -10,6 +10,8 @@ public class PaintSplatter : MonoBehaviour
     [SerializeField] private new Renderer renderer;
     [SerializeField] private LayerMask paintableLayer;
 
+    private int paintingLayer = 6;
+
     private void Start()
     {
         Destroy(gameObject, 8f);
@@ -21,8 +23,17 @@ public class PaintSplatter : MonoBehaviour
         {
             Vector3 collisionPoint = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
 
-            if (other.gameObject.layer == 6)
-                Paint(collisionPoint);
+            if (HoveredObject.isFocused)
+            {
+                if (other.gameObject.layer == paintingLayer && HoveredObject.focusedObject == other.gameObject)
+                    Paint(collisionPoint);
+            }
+            else
+            {
+                if (other.gameObject.layer == paintingLayer)
+                    Paint(collisionPoint);
+            }
+            
 
             Destroy(gameObject);
         }
@@ -45,7 +56,7 @@ public class PaintSplatter : MonoBehaviour
         RaycastHit[] hits = Physics.RaycastAll(pos, dir, distance + 1, paintableLayer, QueryTriggerInteraction.Ignore);
 
         foreach (RaycastHit hit in hits)
-            if (hit.collider.gameObject.layer == 6)
+            if (hit.collider.gameObject.layer == paintingLayer)
             {
                 PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
                 Vector2 textureCoord = hit.textureCoord;
@@ -58,4 +69,10 @@ public class PaintSplatter : MonoBehaviour
                 break;
             }
     }
+
+    /*public void ChangePaintingLayer(LayerMask layer)
+    {
+        paintingLayer = layer;
+        Debug.Log($"{paintingLayer}, {layer}");
+    }*/
 }

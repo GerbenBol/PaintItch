@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class FenceOpen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private int level;
+    [SerializeField] private Vector3 openPosition;
+    [SerializeField] private Vector3 openRotation;
+    private Vector3 closedPosition;
+
+    private void Start()
     {
-        
+        closedPosition = transform.localPosition;
+        GameManagerScript.LevelFences.Add(this);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Open()
     {
-        
+        transform.localPosition = openPosition;
+        transform.Rotate(openRotation);
+    }
+
+    public void Close()
+    {
+        transform.localPosition = closedPosition;
+        transform.Rotate(-openRotation);
     }
 }

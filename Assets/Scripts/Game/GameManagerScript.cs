@@ -7,7 +7,8 @@ public class GameManagerScript : MonoBehaviour
 {
     [SerializeField] private GameObject canvas;
 
-    public static int CurrentLevel = 0;
+    public static int CurrentLevel = -1;
+    public static List<FenceOpen> LevelFences = new();
 
     private static readonly Dictionary<int, bool> paintableObjects = new();
     private static int index = 0;
@@ -24,12 +25,6 @@ public class GameManagerScript : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
             canvas.SetActive(true);
-        }
-
-        //Temp win condition
-        if (Input.GetKeyDown(KeyCode.P) && Time.timeScale == 1)
-        {
-            SceneManager.LoadScene("End Level");
         }
     }
 
@@ -51,5 +46,14 @@ public class GameManagerScript : MonoBehaviour
 
         if (allCompleted)
             SceneManager.LoadScene("End Level");
+    }
+
+    public static void OpenLevel(int level)
+    {
+        if (CurrentLevel != -1)
+            LevelFences[CurrentLevel].Close();
+
+        LevelFences[level].Open();
+        CurrentLevel = level;
     }
 }

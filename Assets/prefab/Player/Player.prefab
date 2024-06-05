@@ -272,6 +272,13 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  paintPrefab: {fileID: 8228453155752560297, guid: 367383485c517514db16840d588b5ffd, type: 3}
+  focussedLayerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  unFocussedLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &7772674866525584216
 GameObject:
   m_ObjectHideFlags: 0

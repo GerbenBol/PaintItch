@@ -7,14 +7,14 @@ public class PlayerMovement : MonoBehaviour
     private Camera mainCam;
     private Rigidbody rigidBody;
 
-    [SerializeField] private float movementSpeed;  //15000
+    [SerializeField] private float movementSpeed;  //10000
     [SerializeField] private int sensitivity;      //5
     private int camAngleXLimit = 85;
     private float playerXRotation;
 
     public bool isGrounded = true;
-    [SerializeField] private float jumpHeight;     //500
-    [SerializeField] private int drag;             //30
+    [SerializeField] private float jumpHeight;     //400
+    [SerializeField] private int drag;             //20
 
     void Start()
     {
@@ -32,18 +32,35 @@ public class PlayerMovement : MonoBehaviour
         if (Cursor.lockState == CursorLockMode.Locked)
             LookAround();
 
+        
+
+
         //Makes the player move with [W,A,S,D]
         if (isGrounded)
         {
-            rigidBody.AddForce(transform.right * (Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime));
-            rigidBody.AddForce(transform.forward * (Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime));
+            if (Input.GetAxis("Horizontal") != 0 && Input.GetAxis("Vertical") != 0)
+            {
+                rigidBody.AddForce(transform.right * (Input.GetAxis("Horizontal") * (movementSpeed / 1.3f) * Time.deltaTime));
+                rigidBody.AddForce(transform.forward * (Input.GetAxis("Vertical") * (movementSpeed / 1.3f) * Time.deltaTime));
+            }
+            else
+            {
+                rigidBody.AddForce(transform.right * (Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime));
+                rigidBody.AddForce(transform.forward * (Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime));  
+            }
+        }
+        
+        if (!isGrounded)
+        {
+            rigidBody.AddForce(transform.right * (Input.GetAxis("Horizontal") * (movementSpeed / 20f) * Time.deltaTime));
+            rigidBody.AddForce(transform.forward * (Input.GetAxis("Vertical") * (movementSpeed / 20f) * Time.deltaTime));
         }
 
         //Allows the player to jump with [SPACE]
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rigidBody.AddForce(transform.up * jumpHeight);
-            rigidBody.drag = 0;
+            //rigidBody.drag = 0;
         }
     }
 

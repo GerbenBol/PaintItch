@@ -1,22 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PaintableObject : MonoBehaviour
 {
-    public bool required;
+    [SerializeField] public float completionPercentage = .85f;
+    [SerializeField] public float completedPercentage = .0f;
+    [SerializeField] private bool required;
 
-    public float completionPercentage = 1f;
-    public float completedPercentage = .0f;
     public Texture2D MainTexture;
-    [SerializeField] private Texture2D aoTexture;
 
     private bool completed = false;
-    private float notBlack = 0;
-    private int index, indexTotal = 0;
-    private int pixelIndexX = 0, pixelIndexY = 0;
-    private int textureSize;
-    private readonly int circleSize = 1;
+    private int index;
+    private readonly int circleSize = 4;
 
     private readonly Dictionary<int, int> circle = new()
     {
@@ -28,62 +25,15 @@ public class PaintableObject : MonoBehaviour
     private readonly Dictionary<Vector2Int, Color> updateList = new();
     private bool[,] pixelsUpdated;
 
-    private void Awake()
+    private void Start()
     {
         Renderer rend = GetComponent<Renderer>();
         MainTexture = Instantiate(rend.material.mainTexture) as Texture2D;
         rend.material.mainTexture = MainTexture;
         pixelsUpdated = new bool[MainTexture.width, MainTexture.height];
-        textureSize = MainTexture.width * MainTexture.height;
 
         if (required)
-        {
-            TextureControl.ToCalculate.Add(this);
             index = GameManagerScript.AddObject();
-        }
-    }
-
-    public int CalculatePercentage(int checkAmount)
-    {
-        int currentChecked = 0;
-        int xBreak = 0, yBreak = 0;
-
-        while (pixelIndexX < aoTexture.width)
-        {
-            while (pixelIndexY < aoTexture.height)
-            {
-                if (aoTexture.GetPixel(pixelIndexX, pixelIndexY) != Color.black)
-                    notBlack++;
-
-                pixelIndexY++;
-                indexTotal++;
-                currentChecked++;
-
-                if (currentChecked >= checkAmount)
-                {
-                    xBreak = pixelIndexX;
-                    yBreak = pixelIndexY;
-                    break;
-                }
-            }
-
-            pixelIndexY = 0;
-            pixelIndexX++;
-        }
-
-        pixelIndexX = xBreak;
-        pixelIndexY = yBreak;
-
-        if (indexTotal >= textureSize)
-        {
-            float paintablePercentage = notBlack / (aoTexture.width * aoTexture.height);
-            completionPercentage = paintablePercentage * .85f;
-            checkAmount -= currentChecked;
-        }
-        else
-            checkAmount = -1;
-
-        return checkAmount;
     }
 
     public void ChangeTexture(Vector2Int coords, Color color)

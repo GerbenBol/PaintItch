@@ -7,8 +7,6 @@ public class GameManagerScript : MonoBehaviour
 {
     [SerializeField] private GameObject canvas;
 
-    public static int CurrentLevel = 0;
-
     private static readonly Dictionary<int, bool> paintableObjects = new();
     private static int index = 0;
 
@@ -43,6 +41,7 @@ public class GameManagerScript : MonoBehaviour
     public static void CompleteObject(int index)
     {
         paintableObjects[index] = true;
+
         bool allCompleted = true;
 
         foreach (KeyValuePair<int, bool> kvp in paintableObjects)

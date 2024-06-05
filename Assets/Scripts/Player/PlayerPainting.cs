@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,7 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private Transform mainCam;
     [SerializeField] private float minimumDistance;
+    [SerializeField] private Animator animator;
 
     private readonly float maxTimer = .05f;
     private float timer = .0f;
@@ -82,7 +84,7 @@ public class PlayerPainting : MonoBehaviour
                 startedEmpty = true;
 
             if (barEmptyStart)
-                ammo -= preReloadAmmo * Time.deltaTime / 1.5f;
+                ammo -= preReloadAmmo * Time.deltaTime / 1.1f;
 
             if (ammo <= 0)
             {
@@ -97,9 +99,9 @@ public class PlayerPainting : MonoBehaviour
                 fillBar.color = currentColor;
 
                 if (!startedEmpty)
-                    ammo += maxAmmo * Time.deltaTime / 1.5f;
+                    ammo += maxAmmo * Time.deltaTime / 1.1f;
                 else
-                    ammo += maxAmmo * Time.deltaTime / 3f;
+                    ammo += maxAmmo * Time.deltaTime / 2.2f;
             }
 
             reloadFirstFrame = false;
@@ -176,12 +178,14 @@ public class PlayerPainting : MonoBehaviour
         reloadFirstFrame = true;
         reloading = true;
         barEmpty = ammo <= 0;
-        yield return new WaitForSeconds(3);
+        animator.SetBool("Reloading", true);
+        yield return new WaitForSeconds(2.2f);
         ActiveColor = upcomingColor;
         ammo = maxAmmo;
         reloading = false;
         mustReload = false;
         barEmptyStart = false;
         startedEmpty = false;
+        animator.SetBool("Reloading", false);
     }
 }

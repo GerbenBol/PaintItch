@@ -12,7 +12,7 @@ public class FenceOpen : MonoBehaviour
     private void Start()
     {
         closedPosition = transform.localPosition;
-        GameManagerScript.LevelFences.Add(this);
+        GameManagerScript.AddFence(level, this);
     }
 
     public void Open()

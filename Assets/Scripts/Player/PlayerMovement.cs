@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -14,7 +15,9 @@ public class PlayerMovement : MonoBehaviour
 
     public bool isGrounded = true;
     [SerializeField] private float jumpHeight;     //400
-    [SerializeField] private int drag;             //20
+
+    private Vector3 currentForce;
+    [SerializeField] private float customDrag;     //idk yet (in %)
 
     void Start()
     {
@@ -23,17 +26,14 @@ public class PlayerMovement : MonoBehaviour
 
         //locks the cursor to the middle of the screen
         Cursor.lockState = CursorLockMode.Locked;
-
-        rigidBody.drag = drag;
     }
 
     void Update()
     {
+        currentForce = rigidBody.GetAccumulatedForce();
+
         if (Cursor.lockState == CursorLockMode.Locked)
             LookAround();
-
-        
-
 
         //Makes the player move with [W,A,S,D]
         if (isGrounded)
@@ -60,8 +60,13 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rigidBody.AddForce(transform.up * jumpHeight);
-            //rigidBody.drag = 0;
         }
+
+        //Adds drag only on the X or Z axis
+        if (Input.GetAxis("Horizontal") == 0 && currentForce.x != 0)
+            rigidBody.AddForce(transform.right * (-currentForce.x / 100) * customDrag);
+        if (Input.GetAxis("Vertical") == 0 && currentForce.z != 0)
+            rigidBody.AddForce(transform.forward * (-currentForce.x / 100) * customDrag);
     }
 
     private void LookAround()
@@ -76,14 +81,12 @@ public class PlayerMovement : MonoBehaviour
     //checks if the player is standing on the ground or not
     private void OnTriggerStay(Collider other)
     {
-        rigidBody.drag = drag;
         isGrounded = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
         isGrounded = false;
-        rigidBody.drag = 0;
     }
 }
 // Don't forget to add drag!

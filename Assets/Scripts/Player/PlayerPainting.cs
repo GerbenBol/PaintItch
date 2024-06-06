@@ -174,11 +174,11 @@ public class PlayerPainting : MonoBehaviour
 
     private IEnumerator Reload()
     {
+        animator.SetBool("Reloading", true);
         preReloadAmmo = ammo;
         reloadFirstFrame = true;
         reloading = true;
         barEmpty = ammo <= 0;
-        animator.SetBool("Reloading", true);
         yield return new WaitForSeconds(2.2f);
         ActiveColor = upcomingColor;
         ammo = maxAmmo;

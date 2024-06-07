@@ -37,7 +37,6 @@ public class PaintableObject : MonoBehaviour
         rend.material.mainTexture = MainTexture;
         pixelsUpdated = new bool[MainTexture.width, MainTexture.height];
         textureSize = MainTexture.width * MainTexture.height;
-        Debug.Log(tag);
         level = Convert.ToInt32(tag.Substring(tag.Length - 1, 1));
 
         if (required)

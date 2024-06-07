@@ -28,12 +28,7 @@ public class GameManagerScript : MonoBehaviour
     public static int AddObject(int level)
     {
         // Check if the level already exists, if not make new
-        if (levels.ContainsKey(level))
-            return levels[level].AddObject();
-        else
-            levels.Add(level, new(level, 0));
-
-        return 0;
+        return levels[level].AddObject();
     }
 
     public static void AddFence(int level, FenceOpen fence)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Level : MonoBehaviour
 {
@@ -9,14 +10,15 @@ public class Level : MonoBehaviour
     public string Quest;
 
     private readonly Dictionary<int, bool> objects = new();
-    private readonly int levelID;
+    private int levelID;
     private int index = 0;
     private bool completed = false;
     private FenceOpen levelFence;
 
-    private void Start()
+    private void Awake()
     {
-        
+        levelID = Convert.ToInt32(name.Substring(name.Length - 1, 1));
+        GameManagerScript.AddLevel(levelID, this);
     }
 
     public int AddObject()
@@ -56,5 +58,15 @@ public class Level : MonoBehaviour
 
         if (allCompleted)
             completed = true;
+    }
+
+    public void Enlarge()
+    {
+        Debug.Log("enlarge " + name);
+    }
+
+    public void OriginalSize()
+    {
+        Debug.Log("return to original size " + name);
     }
 }

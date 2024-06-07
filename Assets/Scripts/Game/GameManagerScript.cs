@@ -25,9 +25,13 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
+    public static void AddLevel(int id, Level level)
+    {
+        levels.Add(id, level);
+    }
+
     public static int AddObject(int level)
     {
-        // Check if the level already exists, if not make new
         return levels[level].AddObject();
     }
 

@@ -4,16 +4,33 @@ public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] private Transform mainCamera;
 
+    private Level currentFocused;
+
     void Update()
     {
-        if (Physics.Raycast(mainCamera.position, mainCamera.forward, out RaycastHit hitInfo, 5) && Input.GetKeyDown(KeyCode.E))
+        if (Physics.Raycast(mainCamera.position, mainCamera.forward, out RaycastHit hitInfo, 2))
         {
             GameObject hitObj = hitInfo.transform.gameObject;
+            Level lvl;
 
-            if (hitObj.name == "level0")
-                GameManagerScript.OpenLevel(0);
-            else if (hitObj.name == "level1")
-                GameManagerScript.OpenLevel(1);
+            if (currentFocused != null)
+                lvl = currentFocused;
+            else
+                lvl = GameObject.Find("level0").GetComponent<Level>();
+
+            if (currentFocused == null || hitObj != currentFocused.gameObject)
+            {
+                lvl = hitObj.GetComponent<Level>();
+
+                if (currentFocused != null)
+                    currentFocused.OriginalSize();
+            }
+
+            currentFocused = lvl;
+            lvl.Enlarge();
+
+            if (Input.GetKeyDown(KeyCode.E))
+                GameManagerScript.OpenLevel(lvl.LevelID);
         }
     }
 }

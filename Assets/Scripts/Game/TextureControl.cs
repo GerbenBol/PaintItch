@@ -15,6 +15,7 @@ public class TextureControl : MonoBehaviour
     private readonly float maxTimer = .1f;
     private float timer = .0f;
     private bool running = false;
+    private int modifier = 1;
 
     private void Start()
     {
@@ -46,7 +47,7 @@ public class TextureControl : MonoBehaviour
         {
             obj = ToCalculate[index];
 
-            if (obj.CompareTag("Level" + GameManagerScript.CurrentLevel))
+            if (obj.CompareTag("Level" + (GameManagerScript.CurrentLevel + modifier)))
             {
                 returner = obj.CalculatePercentage(checkAmount);
 
@@ -58,6 +59,8 @@ public class TextureControl : MonoBehaviour
                 else
                     checkAmount = returner;
             }
+            else
+                modifier++;
 
             if (returner == -1)
                 break;

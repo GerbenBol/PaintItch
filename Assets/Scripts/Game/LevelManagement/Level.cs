@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-public class Level
+public class Level : MonoBehaviour
 {
     public int LevelID { get => levelID; }
     public bool Completed { get => completed; }
+    public string Quest;
 
     private readonly Dictionary<int, bool> objects = new();
     private readonly int levelID;
@@ -12,11 +14,9 @@ public class Level
     private bool completed = false;
     private FenceOpen levelFence;
 
-    public Level(int id, int firstItem)
+    private void Start()
     {
-        levelID = id;
-        objects.Add(firstItem, false);
-        index++;
+        
     }
 
     public int AddObject()

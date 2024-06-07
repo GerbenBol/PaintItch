@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7d88ecf7d9722884190de5b89a9f598f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 30.93
+      value: 26.291853
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d88ecf7d9722884190de5b89a9f598f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1202538
+      value: -0.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d88ecf7d9722884190de5b89a9f598f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 150.84
+      value: -31.967218
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d88ecf7d9722884190de5b89a9f598f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d88ecf7d9722884190de5b89a9f598f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d88ecf7d9722884190de5b89a9f598f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d88ecf7d9722884190de5b89a9f598f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d88ecf7d9722884190de5b89a9f598f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 934d585a30d73a446885283bf14525e7, type: 2}
+    - target: {fileID: 482040270900878784, guid: 7d88ecf7d9722884190de5b89a9f598f, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7d88ecf7d9722884190de5b89a9f598f, type: 3}
       propertyPath: m_Name
       value: P_Tree

@@ -6,6 +6,6 @@ public class ColorWheelGun : MonoBehaviour
 {
     public void RotateWheel(int newColor)
     {
-        transform.Rotate(0, (365 / 20) * newColor, 0f);
+        transform.Rotate(0, 0f, (365 / 20) * newColor);
     }
 }

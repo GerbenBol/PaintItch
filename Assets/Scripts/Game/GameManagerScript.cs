@@ -1,16 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
     [SerializeField] private GameObject canvas;
 
-    public static int CurrentLevel = 0;
+    public static int CurrentLevel = -1;
 
-    private static readonly Dictionary<int, bool> paintableObjects = new();
-    private static int index = 0;
+    private readonly static Dictionary<int, Level> levels = new();
 
     private void Start()
     {
@@ -25,31 +23,37 @@ public class GameManagerScript : MonoBehaviour
             Time.timeScale = 0;
             canvas.SetActive(true);
         }
-
-        //Temp win condition
-        if (Input.GetKeyDown(KeyCode.P) && Time.timeScale == 1)
-        {
-            SceneManager.LoadScene("End Level");
-        }
     }
 
-    public static int AddObject()
+    public static int AddObject(int level)
     {
-        paintableObjects.Add(index, false);
-        index++;
-        return index - 1;
+        // Check if the level already exists, if not make new
+        if (levels.ContainsKey(level))
+            return levels[level].AddObject();
+        else
+            levels.Add(level, new(level, 0));
+
+        return 0;
     }
 
-    public static void CompleteObject(int index)
+    public static void AddFence(int level, FenceOpen fence)
     {
-        paintableObjects[index] = true;
-        bool allCompleted = true;
+        levels[level].AddFence(fence);
+    }
 
-        foreach (KeyValuePair<int, bool> kvp in paintableObjects)
-            if (!kvp.Value)
-                allCompleted = false;
+    public static void CompleteObject(int level, int index)
+    {
+        levels[level].CompleteObject(index);
+    }
 
-        if (allCompleted)
-            SceneManager.LoadScene("End Level");
+    public static void OpenLevel(int level)
+    {
+        // Check if any fences are open
+        if (CurrentLevel != -1)
+            levels[CurrentLevel].StopLevel();
+
+        // Open new level
+        levels[level].StartLevel();
+        CurrentLevel = level;
     }
 }

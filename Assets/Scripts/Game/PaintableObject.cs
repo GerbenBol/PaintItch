@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,7 @@ public class PaintableObject : MonoBehaviour
     private int index, indexTotal = 0;
     private int pixelIndexX = 0, pixelIndexY = 0;
     private int textureSize;
+    private int level;
     private readonly int circleSize = 1;
 
     private readonly Dictionary<int, int> circle = new()
@@ -35,11 +37,12 @@ public class PaintableObject : MonoBehaviour
         rend.material.mainTexture = MainTexture;
         pixelsUpdated = new bool[MainTexture.width, MainTexture.height];
         textureSize = MainTexture.width * MainTexture.height;
+        level = Convert.ToInt32(tag.Substring(tag.Length - 1, 1));
 
         if (required)
         {
             TextureControl.ToCalculate.Add(this);
-            index = GameManagerScript.AddObject();
+            index = GameManagerScript.AddObject(level);
         }
     }
 
@@ -127,7 +130,7 @@ public class PaintableObject : MonoBehaviour
             if (completedPercentage >= completionPercentage && !completed)
             {
                 completed = true;
-                GameManagerScript.CompleteObject(index);
+                GameManagerScript.CompleteObject(level, index);
                 AudioSource.PlayClipAtPoint(TextureControl.CompletedDing, transform.position);
             }
 

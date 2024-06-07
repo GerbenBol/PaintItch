@@ -207,7 +207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8882328229932317118, guid: 6a55202d8c9f75f478c41948ce6b5861, type: 3}
       propertyPath: m_Name
-      value: P_dak hoek (3)
+      value: Roof 34
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -270,6 +270,14 @@ PrefabInstance:
     - target: {fileID: 3705960429646883538, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 23
       objectReference: {fileID: 0}
     - target: {fileID: 9037512068698367154, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -347,7 +355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852663273046920973, guid: 718806fdd90d03843b00ade4e581a037, type: 3}
       propertyPath: m_Name
-      value: P_dak plat midden lang (2)
+      value: Roof 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -367,6 +375,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5743093342200142816}
     m_Modifications:
+    - target: {fileID: 621760744299842395, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090649793421228297, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2168833844459637537, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.067898
@@ -471,7 +487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8882328229932317118, guid: 6a55202d8c9f75f478c41948ce6b5861, type: 3}
       propertyPath: m_Name
-      value: P_dak hoek (1)
+      value: Roof 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -495,6 +511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 24
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -502,6 +522,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 6
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
@@ -563,7 +587,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7155019052766824344, guid: 120c7632d68adae4189a5e34b9056c3c, type: 3}
       propertyPath: m_Name
-      value: P_paal lang (1)
+      value: Outside Wall 27
       objectReference: {fileID: 0}
     - target: {fileID: 7494107736723021090, guid: 120c7632d68adae4189a5e34b9056c3c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -673,7 +697,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852663273046920973, guid: 718806fdd90d03843b00ade4e581a037, type: 3}
       propertyPath: m_Name
-      value: P_dak plat midden lang (5)
+      value: Roof 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -695,7 +719,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin lang (5)
+      value: Roof 25
       objectReference: {fileID: 0}
     - target: {fileID: 7969194116564895969, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_LocalScale.x
@@ -803,6 +827,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 21
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -823,7 +855,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5077582818687072127, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin kort (3)
+      value: Roof 27
       objectReference: {fileID: 0}
     - target: {fileID: 5565571761292471749, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_LocalScale.x
@@ -929,7 +961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8882328229932317118, guid: 6a55202d8c9f75f478c41948ce6b5861, type: 3}
       propertyPath: m_Name
-      value: P_dak hoek (7)
+      value: Roof 31
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -964,6 +996,14 @@ PrefabInstance:
     - target: {fileID: 317807900322554803, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.0000057145953
+      objectReference: {fileID: 0}
+    - target: {fileID: 621760744299842395, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090649793421228297, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 4
       objectReference: {fileID: 0}
     - target: {fileID: 2168833844459637537, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_LocalScale.x
@@ -1033,7 +1073,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin lang (3)
+      value: Roof 24
       objectReference: {fileID: 0}
     - target: {fileID: 7969194116564895969, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1147,7 +1187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852663273046920973, guid: 718806fdd90d03843b00ade4e581a037, type: 3}
       propertyPath: m_Name
-      value: P_dak plat midden lang (1)
+      value: Roof 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1167,9 +1207,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6691165124941765948}
     m_Modifications:
+    - target: {fileID: 5509947508894002717, guid: ccca20347dae9614e82594f12b0baa26, type: 3}
+      propertyPath: m_Name
+      value: Roof 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6270691611668782382, guid: ccca20347dae9614e82594f12b0baa26, type: 3}
       propertyPath: m_Name
-      value: P_dak los (1)
+      value: Roof 11
       objectReference: {fileID: 0}
     - target: {fileID: 6651298094656407444, guid: ccca20347dae9614e82594f12b0baa26, type: 3}
       propertyPath: m_LocalScale.x
@@ -1245,6 +1289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 6
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -1252,6 +1300,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 7
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1313,7 +1365,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5077582818687072127, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin kort
+      value: Roof 12
       objectReference: {fileID: 0}
     - target: {fileID: 5565571761292471749, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_LocalScale.x
@@ -1381,6 +1433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 15
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -1388,6 +1444,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 16
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1451,6 +1511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 7
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -1458,6 +1522,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 8
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalScale.x
@@ -1525,6 +1593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 12
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -1532,6 +1604,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 13
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalScale.x
@@ -1639,6 +1715,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1661,6 +1745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 17
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -1668,6 +1756,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 18
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1771,6 +1863,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1839,7 +1939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852663273046920973, guid: 718806fdd90d03843b00ade4e581a037, type: 3}
       propertyPath: m_Name
-      value: P_dak plat midden lang
+      value: Roof 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1909,7 +2009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852663273046920973, guid: 718806fdd90d03843b00ade4e581a037, type: 3}
       propertyPath: m_Name
-      value: P_dak plat midden lang (3)
+      value: Roof 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1931,7 +2031,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1187407446892962725, guid: 5bcb911277881c440870c266a1a897c6, type: 3}
       propertyPath: m_Name
-      value: P_dak punt half (1)
+      value: Roof 2
       objectReference: {fileID: 0}
     - target: {fileID: 1959440104460466463, guid: 5bcb911277881c440870c266a1a897c6, type: 3}
       propertyPath: m_LocalScale.z
@@ -1997,7 +2097,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5077582818687072127, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin kort (2)
+      value: Roof 22
       objectReference: {fileID: 0}
     - target: {fileID: 5565571761292471749, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_LocalScale.x
@@ -2063,7 +2163,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1187407446892962725, guid: 5bcb911277881c440870c266a1a897c6, type: 3}
       propertyPath: m_Name
-      value: P_dak punt half
+      value: Roof 1
       objectReference: {fileID: 0}
     - target: {fileID: 1959440104460466463, guid: 5bcb911277881c440870c266a1a897c6, type: 3}
       propertyPath: m_LocalScale.z
@@ -2131,6 +2231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 8
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -2138,6 +2242,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 9
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalScale.x
@@ -2203,7 +2311,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin lang (7)
+      value: Roof 19
       objectReference: {fileID: 0}
     - target: {fileID: 7969194116564895969, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2269,7 +2377,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7155019052766824344, guid: 120c7632d68adae4189a5e34b9056c3c, type: 3}
       propertyPath: m_Name
-      value: P_paal lang
+      value: Outside Wall 25
       objectReference: {fileID: 0}
     - target: {fileID: 7494107736723021090, guid: 120c7632d68adae4189a5e34b9056c3c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2331,7 +2439,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin lang (6)
+      value: Roof 18
       objectReference: {fileID: 0}
     - target: {fileID: 7969194116564895969, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_LocalScale.x
@@ -2397,7 +2505,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5021950131265143558, guid: 25bce33445ab27145a0a76392e80136a, type: 3}
       propertyPath: m_Name
-      value: P_dak punt lang
+      value: Roof 3
       objectReference: {fileID: 0}
     - target: {fileID: 5690964046404737468, guid: 25bce33445ab27145a0a76392e80136a, type: 3}
       propertyPath: m_LocalScale.x
@@ -2467,7 +2575,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5077582818687072127, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin kort (7)
+      value: Roof 14
       objectReference: {fileID: 0}
     - target: {fileID: 5565571761292471749, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_LocalScale.x
@@ -2579,6 +2687,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 19
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2597,6 +2713,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5743093342200142816}
     m_Modifications:
+    - target: {fileID: 621760744299842395, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090649793421228297, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2168833844459637537, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.7438192
@@ -2701,7 +2825,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8882328229932317118, guid: 6a55202d8c9f75f478c41948ce6b5861, type: 3}
       propertyPath: m_Name
-      value: P_dak hoek (5)
+      value: Roof 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2725,6 +2849,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 16
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -2732,6 +2860,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 17
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2795,6 +2927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 14
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -2802,6 +2938,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 15
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2865,6 +3005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 9
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -2872,6 +3016,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 10
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalScale.x
@@ -2937,7 +3085,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7155019052766824344, guid: 120c7632d68adae4189a5e34b9056c3c, type: 3}
       propertyPath: m_Name
-      value: P_paal lang (2)
+      value: Outside Wall 26
       objectReference: {fileID: 0}
     - target: {fileID: 7494107736723021090, guid: 120c7632d68adae4189a5e34b9056c3c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2999,7 +3147,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5077582818687072127, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin kort (4)
+      value: Roof 28
       objectReference: {fileID: 0}
     - target: {fileID: 5565571761292471749, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_LocalScale.x
@@ -3065,7 +3213,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5077582818687072127, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin kort (1)
+      value: Roof 15
       objectReference: {fileID: 0}
     - target: {fileID: 5565571761292471749, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_LocalScale.x
@@ -3133,6 +3281,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 13
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -3140,6 +3292,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 14
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalScale.x
@@ -3245,7 +3401,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8882328229932317118, guid: 6a55202d8c9f75f478c41948ce6b5861, type: 3}
       propertyPath: m_Name
-      value: P_dak hoek (4)
+      value: Roof 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3267,7 +3423,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin lang (1)
+      value: Roof 21
       objectReference: {fileID: 0}
     - target: {fileID: 7969194116564895969, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_LocalScale.x
@@ -3373,7 +3529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8882328229932317118, guid: 6a55202d8c9f75f478c41948ce6b5861, type: 3}
       propertyPath: m_Name
-      value: P_dak hoek (2)
+      value: Roof 33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3395,7 +3551,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin lang (2)
+      value: Roof 23
       objectReference: {fileID: 0}
     - target: {fileID: 7969194116564895969, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_LocalScale.x
@@ -3507,6 +3663,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3529,6 +3693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 11
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -3536,6 +3704,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 12
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalScale.x
@@ -3641,7 +3813,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8882328229932317118, guid: 6a55202d8c9f75f478c41948ce6b5861, type: 3}
       propertyPath: m_Name
-      value: P_dak hoek
+      value: Roof 29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3663,7 +3835,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5077582818687072127, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin kort (6)
+      value: Roof 13
       objectReference: {fileID: 0}
     - target: {fileID: 5565571761292471749, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_LocalScale.x
@@ -3775,6 +3947,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 18
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3843,7 +4023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7852663273046920973, guid: 718806fdd90d03843b00ade4e581a037, type: 3}
       propertyPath: m_Name
-      value: P_dak plat midden lang (4)
+      value: Roof 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3865,7 +4045,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin lang (4)
+      value: Roof 26
       objectReference: {fileID: 0}
     - target: {fileID: 7969194116564895969, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_LocalScale.x
@@ -3931,7 +4111,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin lang
+      value: Roof 17
       objectReference: {fileID: 0}
     - target: {fileID: 7969194116564895969, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_LocalScale.x
@@ -3997,7 +4177,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5077582818687072127, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_Name
-      value: P_dak schuin kort (5)
+      value: Roof 20
       objectReference: {fileID: 0}
     - target: {fileID: 5565571761292471749, guid: 4195bb79ac2269c45b86e32e7d4cf03c, type: 3}
       propertyPath: m_LocalScale.x
@@ -4103,7 +4283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8882328229932317118, guid: 6a55202d8c9f75f478c41948ce6b5861, type: 3}
       propertyPath: m_Name
-      value: P_dak hoek (6)
+      value: Roof 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4127,6 +4307,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 10
+      objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000000037252903
@@ -4134,6 +4318,10 @@ PrefabInstance:
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.04526234
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 11
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalScale.x
@@ -4241,6 +4429,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Outside Wall 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 22
+      objectReference: {fileID: 0}
     - target: {fileID: 9037512068698367154, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0000019073486
@@ -4271,9 +4467,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6691165124941765948}
     m_Modifications:
+    - target: {fileID: 5509947508894002717, guid: ccca20347dae9614e82594f12b0baa26, type: 3}
+      propertyPath: m_Name
+      value: Roof 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6270691611668782382, guid: ccca20347dae9614e82594f12b0baa26, type: 3}
       propertyPath: m_Name
-      value: P_dak los
+      value: Roof 10
       objectReference: {fileID: 0}
     - target: {fileID: 6651298094656407444, guid: ccca20347dae9614e82594f12b0baa26, type: 3}
       propertyPath: m_LocalScale.x

@@ -5,32 +5,48 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private Transform mainCamera;
 
     private Level currentFocused;
+    private bool returnedToSize = false;
 
     void Update()
     {
-        if (Physics.Raycast(mainCamera.position, mainCamera.forward, out RaycastHit hitInfo, 2))
+        Level lvl;
+
+        if (currentFocused != null)
+            lvl = currentFocused;
+        else
+            lvl = GameObject.Find("level0").GetComponent<Level>();
+
+        // Raycast recht voor ons uit
+        if (Physics.Raycast(mainCamera.position, mainCamera.forward, out RaycastHit hitInfo, 5))
         {
             GameObject hitObj = hitInfo.transform.gameObject;
-            Level lvl;
 
-            if (currentFocused != null)
-                lvl = currentFocused;
-            else
-                lvl = GameObject.Find("level0").GetComponent<Level>();
-
-            if (currentFocused == null || hitObj != currentFocused.gameObject)
+            // Check of we naar een quest kijken (voorkomt error messages)
+            if (hitObj.name[..5] == "level")
             {
-                lvl = hitObj.GetComponent<Level>();
+                if (returnedToSize)
+                {
+                    if (currentFocused == null || hitObj != currentFocused.gameObject)
+                        lvl = hitObj.GetComponent<Level>();
 
-                if (currentFocused != null)
-                    currentFocused.OriginalSize();
+                    currentFocused = lvl;
+                    lvl.Enlarge();
+                    returnedToSize = false;
+                }
+
+                if (Input.GetKeyDown(KeyCode.E))
+                    GameManagerScript.OpenLevel(lvl.LevelID);
             }
-
-            currentFocused = lvl;
-            lvl.Enlarge();
-
-            if (Input.GetKeyDown(KeyCode.E))
-                GameManagerScript.OpenLevel(lvl.LevelID);
+            else if (!returnedToSize)
+            {
+                returnedToSize = true;
+                lvl.OriginalSize();
+            }
+        }
+        else if (!returnedToSize)
+        {
+            returnedToSize = true;
+            lvl.OriginalSize();
         }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerPainting : MonoBehaviour
 {
+    public List<string> ColorNames;
     public List<Color> Colors;
     public int ActiveColor = 0;
     public int upcomingColor = 0;

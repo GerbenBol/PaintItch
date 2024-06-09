@@ -6,6 +6,7 @@ using UnityEngine;
 public class PaintableObject : MonoBehaviour
 {
     public bool required;
+    public bool extraObject = false;
 
     public float completionPercentage = 1f;
     public float completedPercentage = .0f;
@@ -30,7 +31,7 @@ public class PaintableObject : MonoBehaviour
     private readonly Dictionary<Vector2Int, Color> updateList = new();
     private bool[,] pixelsUpdated;
 
-    private void Awake()
+    private void Start()
     {
         Renderer rend = GetComponent<Renderer>();
         MainTexture = Instantiate(rend.material.mainTexture) as Texture2D;
@@ -42,7 +43,7 @@ public class PaintableObject : MonoBehaviour
         if (required)
         {
             TextureControl.ToCalculate.Add(this);
-            index = GameManagerScript.AddObject(level);
+            index = GameManagerScript.AddObject(level, this);
         }
     }
 

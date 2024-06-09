@@ -30,9 +30,9 @@ public class GameManagerScript : MonoBehaviour
         levels.Add(id, level);
     }
 
-    public static int AddObject(int level)
+    public static int AddObject(int level, PaintableObject obj)
     {
-        return levels[level].AddObject();
+        return levels[level].AddObject(obj);
     }
 
     public static void AddFence(int level, FenceOpen fence)

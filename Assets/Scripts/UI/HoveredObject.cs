@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -18,10 +19,12 @@ public class HoveredObject : MonoBehaviour
     [SerializeField] private LayerMask focussedLayerMask;
     [SerializeField] private LayerMask unFocussedLayerMask;
 
-    //private PaintSplatter paintSplatter;
+    [SerializeField] TextMeshProUGUI focusTMP;
+    [SerializeField] TextMeshProUGUI hoverTMP;
+    //private bool changeFocusTxt;
+
     void Start()
     {
-        //paintSplatter = paintPrefab.GetComponent<PaintSplatter>();
     }
 
     void Update()
@@ -45,6 +48,7 @@ public class HoveredObject : MonoBehaviour
                 if (focusedObject == null)
                 {
                     focusedObject = hoveredObject;
+                    //changeFocusTxt = false;
                     isFocused = true;
                     Debug.Log("Focus from null");
                 }
@@ -57,45 +61,35 @@ public class HoveredObject : MonoBehaviour
                 else
                 {
                     focusedObject = hoveredObject;
+                    //changeFocusTxt = false;
                     isFocused = true;
                     Debug.Log("Focus change");
                 }
-                /*if (focusedObject != null && focusedObject.layer == 7)
-                {
-                    focusedObject.layer = 6;
-                    focusedObject = null;
-                    Debug.Log("Unfocused Object");
-                }
-                if (hoveredObject != focusedObject)
-                {
-                    focusedObject = hoveredObject;
-                    focusedObject.layer = 7;
-                    Debug.Log("Focused Object");
-                }*/
             }
         }
         else if (Input.GetKeyDown(KeyCode.F) && focusedObject != null)
         {
             focusedObject = null;
             isFocused = false;
+            hoveredObjectName = null;
             Debug.Log("Focus to null (Aim at nothing)");
-        }
-        /*else if (focusedObject != null && Input.GetKeyDown(KeyCode.F))
-        {
-            focusedObject.layer = 6;
-            focusedObject = null;
-            Debug.Log("Unfocused Object");
-        }
-        //Debug.Log(displayPercent + "%");
-        if (focusedObject == null)
-        {
-            paintSplatter.ChangePaintingLayer(6);
-            Debug.Log("Painting layer = 6");
         }
         else
         {
-            paintSplatter.ChangePaintingLayer(7);
-            Debug.Log("Painting layer = 7");
-        }*/
+            hoveredObjectName = null;
+        }
+
+        if (isFocused/* && !changeFocusTxt*/)
+        {
+            focusTMP.text = "Focused on : " + hoveredObjectName;
+            //changeFocusTxt = true;
+        }  
+        else
+            focusTMP.text = "";
+
+        if (hoveredObjectName != null)
+            hoverTMP.text = hoveredObjectName;
+        else
+            hoverTMP.text = "";
     }
 }

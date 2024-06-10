@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
@@ -45,7 +44,8 @@ public class Level : MonoBehaviour
             int id = rand.Next(0, completedObjects.Count);
             int color = rand.Next(0, 19);
             vio = objects[id];
-            vio.extraObject = true;
+            vio.ExtraObject = true;
+            vio.ExtraColor = player.Colors[color];
             string name = vio.name;
             Extra += name[..1].ToUpper() + name[1..] +
                 $" to be painted {player.ColorNames[color]}.";

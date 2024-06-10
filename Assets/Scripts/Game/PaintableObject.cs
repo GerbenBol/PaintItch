@@ -6,7 +6,8 @@ using UnityEngine;
 public class PaintableObject : MonoBehaviour
 {
     public bool required;
-    public bool extraObject = false;
+    public bool ExtraObject = false;
+    public Color ExtraColor;
 
     public float completionPercentage = 1f;
     public float completedPercentage = .0f;
@@ -19,7 +20,7 @@ public class PaintableObject : MonoBehaviour
     private int pixelIndexX = 0, pixelIndexY = 0;
     private int textureSize;
     private int level;
-    private readonly int circleSize = 1;
+    private readonly int circleSize = 4;
 
     private readonly Dictionary<int, int> circle = new()
     {
@@ -82,6 +83,7 @@ public class PaintableObject : MonoBehaviour
         {
             float paintablePercentage = notBlack / (aoTexture.width * aoTexture.height);
             completionPercentage = paintablePercentage * .85f;
+            Debug.Log(name);
             checkAmount -= currentChecked;
         }
         else
@@ -94,6 +96,21 @@ public class PaintableObject : MonoBehaviour
     {
         updateList.Add(coords, color);
         StartCoroutine(nameof(UpdateColor));
+    }
+
+    private void CheckExtra()
+    {
+        int correctColor = 0;
+
+        for (int x = 0; x < MainTexture.width; x++)
+            for (int y = 0; y < MainTexture.height; y++)
+                if (MainTexture.GetPixel(x, y) == ExtraColor)
+                    correctColor++;
+
+        if (correctColor >= textureSize * completionPercentage * .85f)
+            Debug.Log("correct color");
+        else
+            Debug.Log("incorrect color");
     }
 
     private IEnumerator UpdateColor()
@@ -133,6 +150,9 @@ public class PaintableObject : MonoBehaviour
                 completed = true;
                 GameManagerScript.CompleteObject(level, index);
                 AudioSource.PlayClipAtPoint(TextureControl.CompletedDing, transform.position);
+
+                if (ExtraObject)
+                    CheckExtra();
             }
 
             if (!TextureControl.ToUpdate.Contains(MainTexture))

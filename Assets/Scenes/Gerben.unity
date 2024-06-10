@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 20639030}
   m_Layer: 6
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: Arrows
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -955,6 +955,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 319905196198583030, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+      propertyPath: focusTMP
+      value: 
+      objectReference: {fileID: 789698370}
+    - target: {fileID: 319905196198583030, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+      propertyPath: hoverTMP
+      value: 
+      objectReference: {fileID: 1057865756}
+    - target: {fileID: 319905196198583030, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4807391992715850710, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1112,6 +1124,10 @@ PrefabInstance:
       propertyPath: openRotation.y
       value: -65.299
       objectReference: {fileID: 0}
+    - target: {fileID: 874011383378234418, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
     - target: {fileID: 892867366125575058, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: level
       value: 0
@@ -1156,6 +1172,10 @@ PrefabInstance:
       propertyPath: aoTexture
       value: 
       objectReference: {fileID: 2800000, guid: 65803cd40a3742c45a91faac28da56bb, type: 3}
+    - target: {fileID: 2257374422755636245, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
     - target: {fileID: 2396166820523478835, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: openRotation.y
       value: 65.299
@@ -1179,6 +1199,14 @@ PrefabInstance:
     - target: {fileID: 3849490246282903632, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: m_Name
       value: blockout
+      objectReference: {fileID: 0}
+    - target: {fileID: 3987510011271876167, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021896711885191543, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
       objectReference: {fileID: 0}
     - target: {fileID: 4243526764545193422, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: m_TagString
@@ -1324,7 +1352,23 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Level0
       objectReference: {fileID: 0}
+    - target: {fileID: 6592802790677484470, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
     - target: {fileID: 6817149450771890200, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862126772164278062, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7044586717188085087, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256042524622943610, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: m_TagString
       value: Level0
       objectReference: {fileID: 0}
@@ -1340,11 +1384,23 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8475272877343553014, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
     - target: {fileID: 8502278601120563303, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: required
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8524450662636253020, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756971192019350675, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8768301135509792945, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: m_TagString
       value: Level0
       objectReference: {fileID: 0}
@@ -1441,7 +1497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
-  extraObject: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -1905,7 +1962,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
-  extraObject: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -2089,7 +2147,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
-  extraObject: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -2592,6 +2651,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 403909937}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &789698370 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7208688782410940663, guid: a09ba40f2371ad54b83acdb3f2f45e00, type: 3}
+  m_PrefabInstance: {fileID: 6832981241932684229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &823136646 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2150584873668492703, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
@@ -2610,7 +2680,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
-  extraObject: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -3082,7 +3153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
-  extraObject: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -3109,6 +3181,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1165073596168651963, guid: 63fb9ad2031d4f4459a53b457bbaa3f0, type: 3}
+--- !u!114 &1057865756 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9150346801480112044, guid: a09ba40f2371ad54b83acdb3f2f45e00, type: 3}
+  m_PrefabInstance: {fileID: 6832981241932684229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1098402581
 GameObject:
   m_ObjectHideFlags: 0
@@ -3381,7 +3464,7 @@ GameObject:
   - component: {fileID: 1254006602}
   m_Layer: 6
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: Arrows
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3877,7 +3960,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
-  extraObject: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -3922,7 +4006,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
-  extraObject: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -4178,7 +4263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 1
-  extraObject: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -4549,7 +4635,7 @@ GameObject:
   - component: {fileID: 1695440971}
   m_Layer: 6
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: Arrows
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4624,7 +4710,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
-  extraObject: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -5521,7 +5608,7 @@ GameObject:
   - component: {fileID: 2087995493}
   m_Layer: 6
   m_Name: Arrow
-  m_TagString: Untagged
+  m_TagString: Arrows
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -22,11 +22,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec7975c9d37d77c48b50d07ca6eef54a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec7975c9d37d77c48b50d07ca6eef54a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec7975c9d37d77c48b50d07ca6eef54a, type: 3}
       propertyPath: m_LocalRotation.y
@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec7975c9d37d77c48b50d07ca6eef54a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ec7975c9d37d77c48b50d07ca6eef54a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0895fe708ea33634e937f6513336cfab, type: 2}
     - target: {fileID: 919132149155446097, guid: ec7975c9d37d77c48b50d07ca6eef54a, type: 3}
       propertyPath: m_Name
-      value: quest bord
+      value: P_quest bord
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ec7975c9d37d77c48b50d07ca6eef54a, type: 3}
       propertyPath: m_Layer
@@ -110,7 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  required: 0
   completionPercentage: 0.85
   completedPercentage: 0
-  required: 0
   MainTexture: {fileID: 0}
+  aoTexture: {fileID: 0}

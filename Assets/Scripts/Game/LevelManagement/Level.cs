@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class Level : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Level : MonoBehaviour
     [SerializeField] private string Name;
     [SerializeField] private string QuestDesc;
     [SerializeField] private double Price;
+    [SerializeField] private Color LevelColor;
     [SerializeField] private string Extra = "I would like ";
 
     private readonly Dictionary<int, bool> completedObjects = new();
@@ -24,6 +26,7 @@ public class Level : MonoBehaviour
     private FenceOpen secondFence;
     private PaintableObject vio;
     private PlayerPainting player;
+    private GameObject levelArrow;
 
     private void Awake()
     {
@@ -46,6 +49,7 @@ public class Level : MonoBehaviour
             string name = vio.name;
             Extra += name[..1].ToUpper() + name[1..] +
                 $" to be painted {player.ColorNames[color]}.";
+            LevelColor = player.Colors[color];
         }
     }
 
@@ -67,13 +71,14 @@ public class Level : MonoBehaviour
 
     public void AddArrow(GameObject arrow)
     {
-
+        levelArrow = arrow;
     }
 
     public void StartLevel()
     {
         // Open fence
         levelFence.Open();
+        levelArrow.SetActive(true);
 
         if (secondFence != null)
             secondFence.Open();
@@ -83,6 +88,7 @@ public class Level : MonoBehaviour
     {
         // Close fence
         levelFence.Close();
+        levelArrow.SetActive(false);
 
         if (secondFence != null)
             secondFence.Close();
@@ -108,7 +114,7 @@ public class Level : MonoBehaviour
         if (name != "level0")
         {
             transform.localScale = new(.09f, .09f, .09f);
-            Quest.OpenQuest(Name, Price, QuestDesc, Extra, levelID);
+            Quest.OpenQuest(Name, Price, QuestDesc, Extra, levelID, LevelColor);
         }
     }
 

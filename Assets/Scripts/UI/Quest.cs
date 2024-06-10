@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Quest : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI levelName;
     [SerializeField] private TextMeshProUGUI levelBase;
     [SerializeField] private TextMeshProUGUI levelExtra;
+    [SerializeField] private Image levelImage;
     [SerializeField] private List<GameObject> cameras;
 
     private static bool openNextFrame = false;
@@ -17,6 +19,7 @@ public class Quest : MonoBehaviour
     private static double activePrice;
     private static string activeDesc;
     private static string activeExtra;
+    private static Color activeColor;
     private static GameObject thisObj;
 
     private void Start()
@@ -40,7 +43,7 @@ public class Quest : MonoBehaviour
         }
     }
 
-    public static void OpenQuest(string name, double price, string desc, string extra, int levelIndex)
+    public static void OpenQuest(string name, double price, string desc, string extra, int levelIndex, Color color)
     {
         thisObj.SetActive(true);
         openNextFrame = true;
@@ -49,6 +52,7 @@ public class Quest : MonoBehaviour
         activePrice = price;
         activeDesc = desc;
         activeExtra = extra;
+        activeColor = color;
     }
 
     public static void CloseQuest()
@@ -62,5 +66,6 @@ public class Quest : MonoBehaviour
         levelName.text = activeName;
         levelBase.text = activeDesc;
         levelExtra.text = activeExtra;
+        levelImage.color = activeColor;
     }
 }

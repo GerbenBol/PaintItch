@@ -40,6 +40,11 @@ public class GameManagerScript : MonoBehaviour
         levels[level].AddFence(fence);
     }
 
+    public static void AddArrow(int level, GameObject arrow)
+    {
+        levels[level].AddArrow(arrow);
+    }
+
     public static void CompleteObject(int level, int index)
     {
         levels[level].CompleteObject(index);

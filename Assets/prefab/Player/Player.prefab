@@ -289,8 +289,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.45
-  m_Center: {x: 0, y: -0.63, z: -0.0009229183}
+  m_Radius: 0.38017967
+  m_Center: {x: 0.0073301494, y: -0.63, z: -0.0009229184}
 --- !u!114 &8106587578411077338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +306,8 @@ MonoBehaviour:
   movementSpeed: 10000
   sensitivity: 5
   isGrounded: 0
-  jumpHeight: 500
+  jumpHeight: 600
+  trampJumpMod: 700
   drag: 20
 --- !u!114 &4861099138357988166
 MonoBehaviour:
@@ -362,7 +363,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4807391992715850710}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d3aa6a7f52a44249badca0f7683a27e, type: 3}
   m_Name: 
@@ -378,6 +379,8 @@ MonoBehaviour:
   unFocussedLayerMask:
     serializedVersion: 2
     m_Bits: 64
+  focusTMP: {fileID: 0}
+  hoverTMP: {fileID: 0}
 --- !u!114 &4864240424966266737
 MonoBehaviour:
   m_ObjectHideFlags: 0

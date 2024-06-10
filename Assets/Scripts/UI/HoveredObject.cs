@@ -21,7 +21,6 @@ public class HoveredObject : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI focusTMP;
     [SerializeField] TextMeshProUGUI hoverTMP;
-    //private bool changeFocusTxt;
 
     void Start()
     {
@@ -48,7 +47,6 @@ public class HoveredObject : MonoBehaviour
                 if (focusedObject == null)
                 {
                     focusedObject = hoveredObject;
-                    //changeFocusTxt = false;
                     isFocused = true;
                     Debug.Log("Focus from null");
                 }
@@ -61,7 +59,6 @@ public class HoveredObject : MonoBehaviour
                 else
                 {
                     focusedObject = hoveredObject;
-                    //changeFocusTxt = false;
                     isFocused = true;
                     Debug.Log("Focus change");
                 }
@@ -79,10 +76,9 @@ public class HoveredObject : MonoBehaviour
             hoveredObjectName = null;
         }
 
-        if (isFocused/* && !changeFocusTxt*/)
+        if (isFocused)
         {
-            focusTMP.text = "Focused on : " + hoveredObjectName;
-            //changeFocusTxt = true;
+            focusTMP.text = "Focused on : " + focusedObject.name;
         }  
         else
             focusTMP.text = "";

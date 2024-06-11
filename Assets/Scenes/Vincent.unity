@@ -512,6 +512,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8432165704593599431, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 639df4fa7f7501d49b526c755e2cfdc4, type: 2}
     - target: {fileID: 8863504525454696567, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -561,6 +565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
+  extraObject: 0
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -605,6 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
+  extraObject: 0
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -1123,6 +1129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
+  extraObject: 0
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -1228,6 +1235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
+  extraObject: 0
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -1272,6 +1280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
+  extraObject: 0
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -1327,6 +1336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
+  extraObject: 0
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -1382,6 +1392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
+  extraObject: 0
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}
@@ -1693,7 +1704,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998487792}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f76392a8b3e1aef4d9e95c979d47bc2c, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

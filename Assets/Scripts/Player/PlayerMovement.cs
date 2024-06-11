@@ -68,6 +68,11 @@ public class PlayerMovement : MonoBehaviour
                 jumpHeight -= trampJumpMod;
             //rigidBody.drag = 0;
         }
+
+        if (Input.GetKey(KeyCode.C))
+            gameObject.transform.localScale = new Vector3(1, 0.5f, 1);
+        else
+            gameObject.transform.localScale = Vector3.one;
     }
 
     private void LookAround()

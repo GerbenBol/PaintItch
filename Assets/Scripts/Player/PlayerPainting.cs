@@ -175,8 +175,8 @@ public class PlayerPainting : MonoBehaviour
 
     private void ThrowNade()
     {
-        GameObject thrownNade = Instantiate(nadePrefab, nadeSpawn.position, mainCam.rotation);
-        //thrownNade.GetComponent<Nade>().Direction = mainCam.transform.;
+        GameObject thrownNade = Instantiate(nadePrefab, nadeSpawn.position, Quaternion.identity);
+        thrownNade.GetComponent<Nade>().SetNade(currentColor, mainCam.rotation);
         nadeCD = .0f;
     }
 

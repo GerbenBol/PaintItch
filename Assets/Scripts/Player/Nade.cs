@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Nade : MonoBehaviour
 {
-    [SerializeField] private GameObject paintPrefab;
+    [SerializeField] private List<GameObject> paintPrefabs;
 
     private Color color;
     private Quaternion newRotation;
@@ -43,12 +43,14 @@ public class Nade : MonoBehaviour
 
     private void CreateSplatter()
     {
+        System.Random rand = new();
+        int prefabIndex = rand.Next(paintPrefabs.Count);
+
         // Create splatter
-        GameObject splatterObj = Instantiate(paintPrefab, transform.position, transform.rotation);
+        GameObject splatterObj = Instantiate(paintPrefabs[prefabIndex], transform.position, transform.rotation);
         PaintSplatter splatter = splatterObj.GetComponent<PaintSplatter>();
 
         // Determine starting velocity and scale
-        System.Random rand = new();
         int randomForceX = rand.Next(-200, 200);
         int randomForceY = rand.Next(-200, 200);
         int randomForceZ = rand.Next(100, 450);

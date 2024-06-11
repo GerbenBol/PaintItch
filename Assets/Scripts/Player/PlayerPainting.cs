@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
@@ -16,7 +17,7 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private ColorWheelGun wheel;
     [SerializeField] Image fillBar;
     [SerializeField] private float ammo;
-    [SerializeField] private GameObject paintPrefab;
+    [SerializeField] private List<GameObject> paintPrefabs;
     [SerializeField] private GameObject nadePrefab;
     [SerializeField] private Transform mainCam;
     [SerializeField] private float minimumDistance;
@@ -151,13 +152,14 @@ public class PlayerPainting : MonoBehaviour
     private void Shoot()
     {
         ammo -= Time.deltaTime;
+        System.Random rand = new();
+        int prefabIndex = rand.Next(0, paintPrefabs.Count);
 
         // Create splatter
-        GameObject splatterObject = Instantiate(paintPrefab, spawnpoint.position, spawnpoint.rotation);
+        GameObject splatterObject = Instantiate(paintPrefabs[prefabIndex], spawnpoint.position, spawnpoint.rotation);
         PaintSplatter splatter = splatterObject.GetComponent<PaintSplatter>();
 
         // Determine starting velocity and scale (I use System.Random because it's so much better than Unity's Random)
-        System.Random rand = new();
         int randomForceX = rand.Next(-50, 50);
         int randomForceY = rand.Next(-50, 50);
         int randomForceZ = rand.Next(300, 600);

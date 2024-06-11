@@ -135,5 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14366b3098f3f70449695f89057745ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0, g: 0, b: 0, a: 0}
-  paintPrefab: {fileID: 8228453155752560297, guid: 367383485c517514db16840d588b5ffd, type: 3}
+  paintPrefabs:
+  - {fileID: 6564777485078711757, guid: 8187bee2a2009c7439d0dac29d986e2e, type: 3}
+  - {fileID: 2850633420434349674, guid: 00361c634e0cf8d468a123f5a93892fe, type: 3}
+  - {fileID: 8323738899705963496, guid: 9b91d4fff0ebe9e4cbe8babcaebdff5a, type: 3}

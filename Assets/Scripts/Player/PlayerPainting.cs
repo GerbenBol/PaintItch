@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class PlayerPainting : MonoBehaviour
@@ -12,34 +13,55 @@ public class PlayerPainting : MonoBehaviour
     public Color currentColor;
     private Color lastUsedColor;
 
-    [SerializeField] private GameObject gun;
     [SerializeField] private ColorWheelGun wheel;
     [SerializeField] Image fillBar;
     [SerializeField] private float ammo;
     [SerializeField] private GameObject paintPrefab;
-    [SerializeField] private Transform spawnPoint;
+    [SerializeField] private GameObject nadePrefab;
     [SerializeField] private Transform mainCam;
     [SerializeField] private float minimumDistance;
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject reloadPrompt;
+
+    public float ammoBar;
+
+    [Header("Weapons")]
+    [SerializeField] private GameObject standard;
+    [SerializeField] private GameObject mini;
+    [SerializeField] private GameObject nade;
+
+    [Header("Spawnpoints")]
+    [SerializeField] private Transform standardSpawn;
+    [SerializeField] private Transform miniSpawn;
+    [SerializeField] private Transform nadeSpawn;
+
+    [Header("Attributes")]
+    [SerializeField] private float standardMaxAmmo = 9;
+    [SerializeField] private float miniMaxAmmo = 100;
 
     private readonly float maxTimer = .05f;
+    private readonly float maxNadeCD = .2f;
     private float timer = .0f;
+    private float nadeCD = .0f;
+    private bool standardActive = true;
+    private bool nadeActive = false;
+
+    private Transform spawnpoint;
 
     private float maxAmmo = 9;
     private float preReloadAmmo;
     private bool reloading;
     private bool reloadFirstFrame;
+
     private bool barEmptyStart;
     private bool barEmpty;
     private bool startedEmpty;
     private bool mustReload;
-    [SerializeField] private GameObject reloadPrompt;
-
-    public float ammoBar;
 
     private void Start()
     {
         ammo = maxAmmo;
+        spawnpoint = standardSpawn;
     }
 
     private void Update()
@@ -47,9 +69,9 @@ public class PlayerPainting : MonoBehaviour
         currentColor = Colors[ActiveColor];
 
         // Shooting
-        if (timer < maxTimer)
+        if (timer < maxTimer && standardActive)
             timer += Time.deltaTime;
-        else if (Input.GetMouseButton(0) && ammo > 0 && !reloading && !mustReload)
+        else if (Input.GetMouseButton(0) && ammo > 0 && !reloading && !mustReload && !nadeActive)
         {
             // Check if we're too close to an object
             if (!Physics.Raycast(mainCam.position, mainCam.forward, minimumDistance))
@@ -58,6 +80,12 @@ public class PlayerPainting : MonoBehaviour
                 timer = .0f;
             }
         }
+        else if (Input.GetMouseButton(0) && nadeActive && nadeCD >= maxNadeCD)
+            ThrowNade();
+
+        // Nade cd
+        if (nadeCD < maxNadeCD)
+            nadeCD += Time.deltaTime;
 
         // Reloading
         if (Input.GetKeyDown(KeyCode.R) && !reloading)
@@ -71,8 +99,16 @@ public class PlayerPainting : MonoBehaviour
 
         // Update float for visuals for ammo bar and reload prompt
         ammoBar = ammo / maxAmmo;
+
         if (ammo <= 0)
             mustReload = true;
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            ChangeGun(0);
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+            ChangeGun(1);
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+            ChangeGun(2);
 
         // Reloading visual
         if (reloading)
@@ -117,7 +153,7 @@ public class PlayerPainting : MonoBehaviour
         ammo -= Time.deltaTime;
 
         // Create splatter
-        GameObject splatterObject = Instantiate(paintPrefab, spawnPoint.position, spawnPoint.rotation);
+        GameObject splatterObject = Instantiate(paintPrefab, spawnpoint.position, spawnpoint.rotation);
         PaintSplatter splatter = splatterObject.GetComponent<PaintSplatter>();
 
         // Determine starting velocity and scale (I use System.Random because it's so much better than Unity's Random)
@@ -130,7 +166,18 @@ public class PlayerPainting : MonoBehaviour
         // Set the starting velocity and scale and send the splatter flying
         Vector3 force = new(randomForceX, randomForceY, randomForceZ);
         Vector3 scale = new(randomScale, randomScale, randomScale);
-        splatter.Send(currentColor, force, scale);
+
+        if (standardActive)
+            splatter.Send(currentColor, force, scale);
+        else if (!standardActive)
+            splatter.Send(currentColor, force * 1.15f, scale);
+    }
+
+    private void ThrowNade()
+    {
+        GameObject thrownNade = Instantiate(nadePrefab, nadeSpawn.position, mainCam.rotation);
+        //thrownNade.GetComponent<Nade>().Direction = mainCam.transform.;
+        nadeCD = .0f;
     }
 
     private void NextColor()
@@ -169,6 +216,54 @@ public class PlayerPainting : MonoBehaviour
 
         if (mustReload && lastUsedColor == Colors[upcomingColor])
             mustReload = false;
+    }
+
+    private void ChangeGun(int gun)
+    {
+        if (gun == 0 && !standardActive)
+            ChangeStandard(true);
+        else if (gun == 1 && standardActive)
+            ChangeMini(true);
+        else if (gun == 2 && !nadeActive)
+            ChangeNade(true);
+    }
+
+    private void ChangeStandard(bool newStatus)
+    {
+        standardActive = newStatus;
+        standard.SetActive(standardActive);
+
+        if (standardActive)
+        {
+            ChangeMini(false);
+            ChangeNade(false);
+            spawnpoint = standardSpawn;
+        }
+    }
+
+    private void ChangeMini(bool newStatus)
+    {
+        mini.SetActive(newStatus);
+
+        if (newStatus)
+        {
+            ChangeStandard(false);
+            ChangeNade(false);
+            spawnpoint = miniSpawn;
+        }
+    }
+
+    private void ChangeNade(bool newStatus)
+    {
+        nadeActive = newStatus;
+        nade.SetActive(nadeActive);
+
+        if (nadeActive)
+        {
+            ChangeStandard(false);
+            ChangeMini(false);
+            spawnpoint = nadeSpawn;
+        }
     }
 
     private IEnumerator Reload()

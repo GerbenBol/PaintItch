@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 7750963524730505290}
   - component: {fileID: 2166704223625794069}
   - component: {fileID: 1356458022216909162}
+  - component: {fileID: 4455302005741592285}
   - component: {fileID: 8432165704593599431}
   - component: {fileID: 8037346572384470037}
   - component: {fileID: 7703079208780979570}
@@ -146,6 +147,7 @@ GameObject:
   - component: {fileID: 4861099138357988166}
   - component: {fileID: 319905196198583030}
   - component: {fileID: 4864240424966266737}
+  - component: {fileID: 1619553149575528907}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -220,6 +222,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &4455302005741592285
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807391992715850710}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.39
+  m_Center: {x: 0, y: 0.29, z: 0}
 --- !u!136 &8432165704593599431
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -227,7 +250,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4807391992715850710}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 639df4fa7f7501d49b526c755e2cfdc4, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -309,6 +332,8 @@ MonoBehaviour:
   jumpHeight: 600
   trampJumpMod: 700
   drag: 20
+  playerCollider: {fileID: 8432165704593599431}
+  playerTrigger: {fileID: 7703079208780979570}
 --- !u!114 &4861099138357988166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef16b66a988234240a9522fa1a09cfb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ColorNames: []
   Colors:
   - {r: 0.9924528, g: 0.15542178, b: 0.15542178, a: 1}
   - {r: 0.4641509, g: 0, b: 0, a: 1}
@@ -394,6 +420,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 7367132984253578729}
+--- !u!135 &1619553149575528907
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807391992715850710}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.38017967
+  m_Center: {x: 0.0073301494, y: 0.24, z: -0.0009229184}
 --- !u!1 &7772674866525584216
 GameObject:
   m_ObjectHideFlags: 0

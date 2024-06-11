@@ -18,6 +18,11 @@ public class PlayerMovement : MonoBehaviour
     private bool onTramp;
     [SerializeField] private int drag;             //20
 
+    [SerializeField] private Collider playerCollider;
+    [SerializeField] private Collider playerTrigger;
+
+    private bool crouched;
+
     void Start()
     {
         mainCam = Camera.main;
@@ -46,18 +51,18 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 rigidBody.AddForce(transform.right * (Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime));
-                rigidBody.AddForce(transform.forward * (Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime));  
+                rigidBody.AddForce(transform.forward * (Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime));
             }
         }
-        
-        if (!isGrounded)
+
+        if (!isGrounded && !crouched)
         {
-            rigidBody.AddForce(transform.right * (Input.GetAxis("Horizontal") * (movementSpeed / 20f) * Time.deltaTime));
-            rigidBody.AddForce(transform.forward * (Input.GetAxis("Vertical") * (movementSpeed / 20f) * Time.deltaTime));
+            rigidBody.AddForce(transform.right * (Input.GetAxis("Horizontal") * (movementSpeed / 25f) * Time.deltaTime));
+            rigidBody.AddForce(transform.forward * (Input.GetAxis("Vertical") * (movementSpeed / 25f) * Time.deltaTime));
         }
 
         //Allows the player to jump with [SPACE]
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space) && !crouched)
         {
             if (onTramp)
                 jumpHeight += trampJumpMod;
@@ -69,10 +74,22 @@ public class PlayerMovement : MonoBehaviour
             //rigidBody.drag = 0;
         }
 
-        if (Input.GetKey(KeyCode.C))
-            gameObject.transform.localScale = new Vector3(1, 0.5f, 1);
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            crouched = true;
+            playerCollider.enabled = false;
+            playerTrigger.enabled = false;
+            isGrounded = false;
+        }
         else
-            gameObject.transform.localScale = Vector3.one;
+        {
+            crouched = false;
+            playerCollider.enabled = true;
+            playerTrigger.enabled = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+            rigidBody.drag = 0;
     }
 
     private void LookAround()

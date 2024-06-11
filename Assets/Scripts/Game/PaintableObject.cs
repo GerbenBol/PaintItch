@@ -21,6 +21,8 @@ public class PaintableObject : MonoBehaviour
     private int textureSize;
     private int level;
     private readonly int circleSize = 4;
+    private PlayerPainting player;
+    //private Color lastColor;
 
     private readonly Dictionary<int, int> circle = new()
     {
@@ -40,6 +42,7 @@ public class PaintableObject : MonoBehaviour
         pixelsUpdated = new bool[MainTexture.width, MainTexture.height];
         textureSize = MainTexture.width * MainTexture.height;
         level = Convert.ToInt32(tag.Substring(tag.Length - 1, 1));
+        player = GameObject.Find("Player").GetComponent<PlayerPainting>();
 
         if (required)
         {
@@ -70,6 +73,9 @@ public class PaintableObject : MonoBehaviour
                     yBreak = pixelIndexY;
                     break;
                 }
+
+                if (indexTotal >= textureSize)
+                    break;
             }
 
             pixelIndexY = 0;
@@ -83,7 +89,6 @@ public class PaintableObject : MonoBehaviour
         {
             float paintablePercentage = notBlack / (aoTexture.width * aoTexture.height);
             completionPercentage = paintablePercentage * .85f;
-            Debug.Log(name);
             checkAmount -= currentChecked;
         }
         else
@@ -100,17 +105,23 @@ public class PaintableObject : MonoBehaviour
 
     private void CheckExtra()
     {
-        int correctColor = 0;
+        /*int correctColor = 0;
 
         for (int x = 0; x < MainTexture.width; x++)
             for (int y = 0; y < MainTexture.height; y++)
+            {
                 if (MainTexture.GetPixel(x, y) == ExtraColor)
                     correctColor++;
+                else
+                    Debug.Log(MainTexture.GetPixel(x, y));
+            }
 
-        if (correctColor >= textureSize * completionPercentage * .85f)
-            Debug.Log("correct color");
+        if (correctColor >= textureSize * completionPercentage * .65f)
+            Debug.Log($"correct color, {correctColor}, {textureSize * completionPercentage * .65f}");
         else
-            Debug.Log("incorrect color");
+            Debug.Log($"incorrect color, {correctColor}, {textureSize * completionPercentage * .65f}");*/
+        if (player.Colors[player.ActiveColor] == ExtraColor)
+            Debug.Log("correct color");
     }
 
     private IEnumerator UpdateColor()

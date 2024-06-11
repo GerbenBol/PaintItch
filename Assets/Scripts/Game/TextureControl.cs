@@ -10,12 +10,12 @@ public class TextureControl : MonoBehaviour
     public static List<PaintableObject> ToCalculate = new();
     public static AudioClip CompletedDing;
 
-    private static int index = 0;
+    private int index = 0;
 
     private readonly float maxTimer = .1f;
     private float timer = .0f;
     private bool running = false;
-    private int modifier = 1;
+//    private int modifier = 1;
 
     private void Start()
     {
@@ -41,29 +41,20 @@ public class TextureControl : MonoBehaviour
     {
         PaintableObject obj;
         int checkAmount = 500000;
-        int returner = 0;
+        int returner;
 
-        while (index < ToCalculate.Count - 1)
+        while (index < ToCalculate.Count)
         {
             obj = ToCalculate[index];
-
-            if (obj.CompareTag("Level" + (GameManagerScript.CurrentLevel + modifier)))
-            {
-                returner = obj.CalculatePercentage(checkAmount);
-
-                if (returner == -1)
-                {
-                    index--;
-                    break;
-                }
-                else
-                    checkAmount = returner;
-            }
-            else
-                modifier++;
+            returner = obj.CalculatePercentage(checkAmount);
 
             if (returner == -1)
+            {
+                index--;
                 break;
+            }
+            else
+                checkAmount = returner;
 
             index++;
         }

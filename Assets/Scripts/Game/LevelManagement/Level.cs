@@ -1,60 +1,129 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using System;
 
-public class Level
+public class Level : MonoBehaviour
 {
     public int LevelID { get => levelID; }
     public bool Completed { get => completed; }
 
-    private readonly Dictionary<int, bool> objects = new();
-    private readonly int levelID;
+    [SerializeField] private string Name;
+    [SerializeField] private string QuestDesc;
+    [SerializeField] private double Price;
+    [SerializeField] private Color LevelColor;
+    [SerializeField] private string Extra = "I would like ";
+
+    private readonly Dictionary<int, bool> completedObjects = new();
+    private readonly Dictionary<int, PaintableObject> objects = new();
+    private int levelID;
     private int index = 0;
+    private readonly float maxTimer = .2f;
+    private float timer = .0f;
     private bool completed = false;
     private FenceOpen levelFence;
+    private FenceOpen secondFence;
+    private PaintableObject vio;
+    private PlayerPainting player;
+    private GameObject levelArrow;
 
-    public Level(int id, int firstItem)
+    private void Awake()
     {
-        levelID = id;
-        objects.Add(firstItem, false);
-        index++;
+        levelID = Convert.ToInt32(name.Substring(name.Length - 1, 1));
+        GameManagerScript.AddLevel(levelID, this);
+        player = GameObject.Find("Player").GetComponent<PlayerPainting>();
     }
 
-    public int AddObject()
+    private void Update()
     {
-        objects.Add(index, false);
+        if (timer < maxTimer)
+            timer += Time.deltaTime;
+        else if (name != "level0" && vio == null)
+        {
+            System.Random rand = new();
+            int id = rand.Next(0, completedObjects.Count);
+            int color = rand.Next(0, 19);
+            vio = objects[id];
+            vio.ExtraObject = true;
+            vio.ExtraColor = player.Colors[color];
+            string name = vio.name;
+            Extra += name[..1].ToUpper() + name[1..] +
+                $" to be painted {player.ColorNames[color]}.";
+            LevelColor = player.Colors[color];
+        }
+    }
+
+    public int AddObject(PaintableObject obj)
+    {
+        objects.Add(index, obj);
+        completedObjects.Add(index, false);
         index++;
         return index - 1;
     }
 
     public void AddFence(FenceOpen fence)
     {
-        levelFence = fence;
+        if (levelFence == null)
+            levelFence = fence;
+        else
+            secondFence = fence;
+    }
+
+    public void AddArrow(GameObject arrow)
+    {
+        levelArrow = arrow;
     }
 
     public void StartLevel()
     {
         // Open fence
         levelFence.Open();
+        levelArrow.SetActive(true);
+
+        if (secondFence != null)
+            secondFence.Open();
     }
 
     public void StopLevel()
     {
         // Close fence
         levelFence.Close();
+        levelArrow.SetActive(false);
+
+        if (secondFence != null)
+            secondFence.Close();
     }
 
     public void CompleteObject(int index)
     {
         // Set object to completed
-        objects[index] = true;
+        completedObjects[index] = true;
         bool allCompleted = true;
 
         // Check if all objects in this level are completed
-        foreach (KeyValuePair<int, bool> kvp in objects)
+        foreach (KeyValuePair<int, bool> kvp in completedObjects)
             if (!kvp.Value)
                 allCompleted = false;
 
         if (allCompleted)
             completed = true;
+    }
+
+    public void Enlarge()
+    {
+        if (name != "level0")
+        {
+            transform.localScale = new(.09f, .09f, .09f);
+            Quest.OpenQuest(Name, Price, QuestDesc, Extra, levelID, LevelColor);
+        }
+    }
+
+    public void OriginalSize()
+    {
+        if (name != "level0")
+        {
+            transform.localScale = new(.07f, .07f, .07f);
+            Quest.CloseQuest();
+        }
     }
 }

@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerPainting : MonoBehaviour
 {
+    public List<string> ColorNames;
     public List<Color> Colors;
     public int ActiveColor = 0;
     public int upcomingColor = 0;

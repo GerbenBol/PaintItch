@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 7921669741148340123}
   m_Layer: 6
   m_Name: paal kort
-  m_TagString: Untagged
+  m_TagString: Level0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 6038944518330334838}
   m_Layer: 6
   m_Name: quest bord
-  m_TagString: Untagged
+  m_TagString: Level0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,13 +186,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3017921415385513846}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.11800003, y: 0.46665, z: -0.008000135}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 581278748950839103}
-  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &6071006318305491621
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 5683703393071136204}
   m_Layer: 6
   m_Name: paal kort (1)
-  m_TagString: Untagged
+  m_TagString: Level0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

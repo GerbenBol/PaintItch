@@ -4,16 +4,49 @@ public class PlayerInteract : MonoBehaviour
 {
     [SerializeField] private Transform mainCamera;
 
+    private Level currentFocused;
+    private bool returnedToSize = false;
+
     void Update()
     {
-        if (Physics.Raycast(mainCamera.position, mainCamera.forward, out RaycastHit hitInfo, 5) && Input.GetKeyDown(KeyCode.E))
+        Level lvl;
+
+        if (currentFocused != null)
+            lvl = currentFocused;
+        else
+            lvl = GameObject.Find("level0").GetComponent<Level>();
+
+        // Raycast recht voor ons uit
+        if (Physics.Raycast(mainCamera.position, mainCamera.forward, out RaycastHit hitInfo, 5))
         {
             GameObject hitObj = hitInfo.transform.gameObject;
 
-            if (hitObj.name == "level0")
-                GameManagerScript.OpenLevel(0);
-            else if (hitObj.name == "level1")
-                GameManagerScript.OpenLevel(1);
+            // Check of we naar een quest kijken (voorkomt error messages)
+            if (hitObj.name[..5] == "level")
+            {
+                if (returnedToSize)
+                {
+                    if (currentFocused == null || hitObj != currentFocused.gameObject)
+                        lvl = hitObj.GetComponent<Level>();
+
+                    currentFocused = lvl;
+                    lvl.Enlarge();
+                    returnedToSize = false;
+                }
+
+                if (Input.GetKeyDown(KeyCode.E))
+                    GameManagerScript.OpenLevel(lvl.LevelID);
+            }
+            else if (!returnedToSize)
+            {
+                returnedToSize = true;
+                lvl.OriginalSize();
+            }
+        }
+        else if (!returnedToSize)
+        {
+            returnedToSize = true;
+            lvl.OriginalSize();
         }
     }
 }

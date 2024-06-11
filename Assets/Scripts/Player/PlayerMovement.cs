@@ -13,7 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private float playerXRotation;
 
     public bool isGrounded = true;
-    [SerializeField] private float jumpHeight;     //400
+    [SerializeField] private int jumpHeight;       //600
+    [SerializeField] private int trampJumpMod;     //700
+    private bool onTramp;
     [SerializeField] private int drag;             //20
 
     void Start()
@@ -31,8 +33,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Cursor.lockState == CursorLockMode.Locked)
             LookAround();
-
-        
 
 
         //Makes the player move with [W,A,S,D]
@@ -59,9 +59,20 @@ public class PlayerMovement : MonoBehaviour
         //Allows the player to jump with [SPACE]
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
+            if (onTramp)
+                jumpHeight += trampJumpMod;
+
             rigidBody.AddForce(transform.up * jumpHeight);
+
+            if (jumpHeight > trampJumpMod)
+                jumpHeight -= trampJumpMod;
             //rigidBody.drag = 0;
         }
+
+        if (Input.GetKey(KeyCode.C))
+            gameObject.transform.localScale = new Vector3(1, 0.5f, 1);
+        else
+            gameObject.transform.localScale = Vector3.one;
     }
 
     private void LookAround()
@@ -77,6 +88,12 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         rigidBody.drag = drag;
+
+        if (other.CompareTag("Trampoline"))
+            onTramp = true;
+        else
+            onTramp = false;
+
         isGrounded = true;
     }
 
@@ -86,4 +103,3 @@ public class PlayerMovement : MonoBehaviour
         rigidBody.drag = 0;
     }
 }
-// Don't forget to add drag!

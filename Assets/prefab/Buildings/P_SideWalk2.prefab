@@ -48,12 +48,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 804f7858465467d40b55b238388705bb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 71f545a1243f2fa40999e839d94526f7, type: 2}
     - target: {fileID: 919132149155446097, guid: 804f7858465467d40b55b238388705bb, type: 3}
       propertyPath: m_Name
-      value: sidewalk2
+      value: P_SideWalk2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 804f7858465467d40b55b238388705bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8242554781566886371}
   m_SourcePrefab: {fileID: 100100000, guid: 804f7858465467d40b55b238388705bb, type: 3}
+--- !u!1 &2784746142534681583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 804f7858465467d40b55b238388705bb, type: 3}
+  m_PrefabInstance: {fileID: 3054581896855322302}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &8242554781566886371
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2784746142534681583}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5695495534631207743, guid: 804f7858465467d40b55b238388705bb, type: 3}

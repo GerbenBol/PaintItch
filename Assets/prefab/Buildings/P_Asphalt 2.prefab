@@ -48,12 +48,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fa491ce0be9dab84495e45985a175892, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a66ffeec9aed0a141be9dc45a45c8172, type: 2}
     - target: {fileID: 919132149155446097, guid: fa491ce0be9dab84495e45985a175892, type: 3}
       propertyPath: m_Name
-      value: asphalt 2
+      value: P_Asphalt 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa491ce0be9dab84495e45985a175892, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6042040741295120356}
   m_SourcePrefab: {fileID: 100100000, guid: fa491ce0be9dab84495e45985a175892, type: 3}
+--- !u!1 &1464831152607219623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fa491ce0be9dab84495e45985a175892, type: 3}
+  m_PrefabInstance: {fileID: 1771403383695569654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6042040741295120356
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464831152607219623}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 9148106930174485795, guid: fa491ce0be9dab84495e45985a175892, type: 3}

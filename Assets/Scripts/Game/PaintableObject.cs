@@ -22,7 +22,6 @@ public class PaintableObject : MonoBehaviour
     private int level;
     private readonly int circleSize = 4;
     private PlayerPainting player;
-    //private Color lastColor;
 
     private readonly Dictionary<int, int> circle = new()
     {

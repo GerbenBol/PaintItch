@@ -224,7 +224,7 @@ public class PlayerPainting : MonoBehaviour
     {
         if (gun == 0 && !standardActive)
             ChangeStandard(true);
-        else if (gun == 1 && standardActive)
+        else if (gun == 1)
             ChangeMini(true);
         else if (gun == 2 && !nadeActive)
             ChangeNade(true);

@@ -26,7 +26,7 @@ public class Nade : MonoBehaviour
         originalRotation = transform.rotation;
         transform.rotation = newRotation;
         GetComponent<Rigidbody>().AddRelativeForce(transform.forward * 600);
-        Destroy(gameObject, 5);
+        Destroy(gameObject, 2);
     }
 
     private void Explode()

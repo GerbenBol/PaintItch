@@ -7,6 +7,7 @@ public class Level : MonoBehaviour
 {
     public int LevelID { get => levelID; }
     public bool Completed { get => completed; }
+    public double ObjectPrice { get => objPrice; }
 
     [SerializeField] private string Name;
     [SerializeField] private string QuestDesc;
@@ -21,6 +22,7 @@ public class Level : MonoBehaviour
     private int index = 0;
     private readonly float maxTimer = .2f;
     private float timer = .0f;
+    private double objPrice;
     private bool completed = false;
     private FenceOpen levelFence;
     private FenceOpen secondFence;

@@ -14,7 +14,7 @@ public class PlayerPainting : MonoBehaviour
     public Color currentColor;
     private Color lastUsedColor;
 
-    [SerializeField] private ColorWheelGun wheel;
+    [SerializeField] private List<ColorWheelGun> wheels;
     [SerializeField] Image fillBar;
     [SerializeField] private float ammo;
     [SerializeField] private List<GameObject> paintPrefabs;
@@ -192,10 +192,10 @@ public class PlayerPainting : MonoBehaviour
         if (upcomingColor > Colors.Count - 1)
             upcomingColor = 0;
 
-        
-
         mustReload = true;
-        wheel.RotateWheel(1);
+
+        foreach (ColorWheelGun wheel in wheels)
+            wheel.RotateWheel(1);
 
         if (mustReload && lastUsedColor == Colors[upcomingColor])
             mustReload = false;
@@ -211,10 +211,10 @@ public class PlayerPainting : MonoBehaviour
         if (upcomingColor < 0)
             upcomingColor = Colors.Count - 1;
 
-        
-
         mustReload = true;
-        wheel.RotateWheel(-1);
+
+        foreach (ColorWheelGun wheel in wheels)
+            wheel.RotateWheel(-1);
 
         if (mustReload && lastUsedColor == Colors[upcomingColor])
             mustReload = false;

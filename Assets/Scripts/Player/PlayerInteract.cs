@@ -7,8 +7,12 @@ public class PlayerInteract : MonoBehaviour
     private Level currentFocused;
     private bool returnedToSize = false;
 
-    void Update()
+    private void Update()
     {
+        // Open the shop
+        if (Input.GetKeyDown(KeyCode.Tab))
+            Shop.OpenShop();
+
         Level lvl;
 
         if (currentFocused != null)

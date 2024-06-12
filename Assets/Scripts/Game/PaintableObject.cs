@@ -160,6 +160,7 @@ public class PaintableObject : MonoBehaviour
                 completed = true;
                 GameManagerScript.CompleteObject(level, index);
                 AudioSource.PlayClipAtPoint(TextureControl.CompletedDing, transform.position);
+                Shop.Money += GameManagerScript.GetPrice(level);
 
                 if (ExtraObject)
                     CheckExtra();

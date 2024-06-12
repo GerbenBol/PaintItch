@@ -85,6 +85,9 @@ public class Level : MonoBehaviour
 
         if (secondFence != null)
             secondFence.Open();
+
+        // Set objects price
+        objPrice = Price / objects.Count;
     }
 
     public void StopLevel()

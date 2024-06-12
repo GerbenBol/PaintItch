@@ -45,6 +45,11 @@ public class GameManagerScript : MonoBehaviour
         levels[level].AddArrow(arrow);
     }
 
+    public static double GetPrice(int level)
+    {
+        return levels[level].ObjectPrice;
+    }
+
     public static void CompleteObject(int level, int index)
     {
         levels[level].CompleteObject(index);

@@ -1,28 +1,40 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    public static int Money = 50;
+    public static double Money = 50;
 
     [SerializeField] private TextMeshProUGUI moneyText;
+    [SerializeField] private GameObject mainShop;
+    [SerializeField] private GameObject brushesShop;
+    [SerializeField] private GameObject weaponsShop;
+    [SerializeField] private GameObject upgradesShop;
+    private static TextMeshProUGUI mText;
+    private static GameObject gO;
 
     private void Start()
     {
-        OpenShop();
+        mText = moneyText;
+        gO = gameObject;
+        CloseShop();
     }
 
-    public void OpenShop()
+    public static void OpenShop()
     {
+        gO.SetActive(true);
         UpdateMoney();
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void CloseShop()
     {
-
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        gO.SetActive(false);
     }
 
     public void BuyItem(BuyableItem sender)
@@ -37,8 +49,40 @@ public class Shop : MonoBehaviour
         }
     }
 
-    private void UpdateMoney()
+    public void OpenMainShop(bool active)
     {
-        moneyText.text = "$ " + Money;
+        mainShop.SetActive(active);
+        brushesShop.SetActive(!active);
+        weaponsShop.SetActive(!active);
+        upgradesShop.SetActive(!active);
+    }
+
+    public void OpenBrushes(bool active)
+    {
+        brushesShop.SetActive(active);
+        weaponsShop.SetActive(!active);
+        upgradesShop.SetActive(!active);
+        mainShop.SetActive(!active);
+    }
+
+    public void OpenWeapons(bool active)
+    {
+        weaponsShop.SetActive(active);
+        brushesShop.SetActive(!active);
+        upgradesShop.SetActive(!active);
+        mainShop.SetActive(!active);
+    }
+
+    public void OpenUpgrades(bool active)
+    {
+        upgradesShop.SetActive(active);
+        weaponsShop.SetActive(!active);
+        brushesShop.SetActive(!active);
+        mainShop.SetActive(!active);
+    }
+
+    private static void UpdateMoney()
+    {
+        mText.text = Money.ToString();
     }
 }

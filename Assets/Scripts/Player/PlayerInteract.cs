@@ -14,7 +14,7 @@ public class PlayerInteract : MonoBehaviour
         if (currentFocused != null)
             lvl = currentFocused;
         else
-            lvl = GameObject.Find("level0").GetComponent<Level>();
+            lvl = GameObject.Find("Level0").GetComponent<Level>();
 
         // Raycast recht voor ons uit
         if (Physics.Raycast(mainCamera.position, mainCamera.forward, out RaycastHit hitInfo, 5))
@@ -22,7 +22,7 @@ public class PlayerInteract : MonoBehaviour
             GameObject hitObj = hitInfo.transform.gameObject;
 
             // Check of we naar een quest kijken (voorkomt error messages)
-            if (hitObj.name[..5] == "level")
+            if (hitObj.name[..5] == "Level")
             {
                 if (returnedToSize)
                 {

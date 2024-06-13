@@ -54,7 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c90848f44efde7540b85bd53637005b4, type: 2}
     - target: {fileID: 919132149155446097, guid: 12be2f628bf7cf54cb4775d171b5bfbf, type: 3}
       propertyPath: m_Name
-      value: plane voor gras
+      value: P_plane voor gras
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12be2f628bf7cf54cb4775d171b5bfbf, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

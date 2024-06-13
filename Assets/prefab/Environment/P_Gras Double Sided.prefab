@@ -45,6 +45,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_plane voor gras (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2496334259129370643, guid: aa5860504932bbb4dbb54e33a8e85fb4, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3021654099163288233, guid: aa5860504932bbb4dbb54e33a8e85fb4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -106,6 +110,10 @@ PrefabInstance:
     - target: {fileID: 2496334259129370643, guid: aa5860504932bbb4dbb54e33a8e85fb4, type: 3}
       propertyPath: m_Name
       value: P_plane voor gras
+      objectReference: {fileID: 0}
+    - target: {fileID: 2496334259129370643, guid: aa5860504932bbb4dbb54e33a8e85fb4, type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3021654099163288233, guid: aa5860504932bbb4dbb54e33a8e85fb4, type: 3}
       propertyPath: m_LocalScale.x

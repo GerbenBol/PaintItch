@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Level0
       objectReference: {fileID: 0}
+    - target: {fileID: -4415164238728724737, guid: 38bc43848bea76a4b8b312896ced2ece, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -1439730007547781893, guid: 38bc43848bea76a4b8b312896ced2ece, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -123,6 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   required: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 1
   completedPercentage: 0
   MainTexture: {fileID: 0}

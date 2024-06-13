@@ -22,19 +22,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b99b7b8c249d9be46b3730778129d037, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0061704423
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b99b7b8c249d9be46b3730778129d037, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.006170442
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b99b7b8c249d9be46b3730778129d037, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7070799
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b99b7b8c249d9be46b3730778129d037, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7070798
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b99b7b8c249d9be46b3730778129d037, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ed55dec5837428247a88ca6f435adee3, type: 2}
     - target: {fileID: 919132149155446097, guid: b99b7b8c249d9be46b3730778129d037, type: 3}
       propertyPath: m_Name
-      value: P.muur 1 achterkant
+      value: P.schuur muur 1 achterkant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b99b7b8c249d9be46b3730778129d037, type: 3}
       propertyPath: m_Layer
@@ -110,7 +110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  required: 1
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 0.85
   completedPercentage: 0
-  required: 1
   MainTexture: {fileID: 0}
+  aoTexture: {fileID: 0}

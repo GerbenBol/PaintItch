@@ -160,10 +160,21 @@ public class PlayerPainting : MonoBehaviour
         PaintSplatter splatter = splatterObject.GetComponent<PaintSplatter>();
 
         // Determine starting velocity and scale (I use System.Random because it's so much better than Unity's Random)
-        int randomForceX = rand.Next(-50, 50);
-        int randomForceY = rand.Next(-50, 50);
-        int randomForceZ = rand.Next(300, 600);
+        int randomForceX, randomForceY, randomForceZ;
         float randomScale = (float)rand.Next(15, 40) / 100;
+
+        if (standardActive)
+        {
+            randomForceX = rand.Next(-10, 10);
+            randomForceY = rand.Next(-10, 10);
+            randomForceZ = rand.Next(300, 600);
+        }
+        else
+        {
+            randomForceX = rand.Next(-50, 50);
+            randomForceY = rand.Next(-50, 50);
+            randomForceZ = rand.Next(300, 600);
+        }
 
         // Set the starting velocity and scale and send the splatter flying
         Vector3 force = new(randomForceX, randomForceY, randomForceZ);

@@ -120,7 +120,7 @@ public class PaintableObject : MonoBehaviour
         else
             Debug.Log($"incorrect color, {correctColor}, {textureSize * completionPercentage * .65f}");*/
         if (player.Colors[player.ActiveColor] == ExtraColor)
-            Debug.Log("correct color");
+            Shop.Money += GameManagerScript.GetPrice(level) * level;
     }
 
     private IEnumerator UpdateColor()

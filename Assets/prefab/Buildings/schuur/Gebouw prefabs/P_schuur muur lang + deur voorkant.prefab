@@ -66,17 +66,36 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b94c20cf76546854dbf2ae935c12620a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5497228593268110048}
+      addedObject: {fileID: 5744289670203847277}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b94c20cf76546854dbf2ae935c12620a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5744289670203847277}
+      addedObject: {fileID: -4053369691035166334}
   m_SourcePrefab: {fileID: 100100000, guid: b94c20cf76546854dbf2ae935c12620a, type: 3}
 --- !u!1 &3406859015932752027 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b94c20cf76546854dbf2ae935c12620a, type: 3}
   m_PrefabInstance: {fileID: 2559999418561400266}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &5497228593268110048
+--- !u!114 &5744289670203847277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3406859015932752027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  required: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
+  completionPercentage: 0.85
+  completedPercentage: 0
+  MainTexture: {fileID: 0}
+  aoTexture: {fileID: 0}
+--- !u!64 &-4053369691035166334
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,23 +116,4 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4880322574678394744, guid: b94c20cf76546854dbf2ae935c12620a, type: 3}
---- !u!114 &5744289670203847277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3406859015932752027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  required: 0
-  ExtraObject: 0
-  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
-  completionPercentage: 0.85
-  completedPercentage: 0
-  MainTexture: {fileID: 0}
-  aoTexture: {fileID: 0}
+  m_Mesh: {fileID: -2247401904798298885, guid: b94c20cf76546854dbf2ae935c12620a, type: 3}

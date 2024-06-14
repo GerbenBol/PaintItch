@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_picnick tafel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3aff27e0feea3864b954602198ccb5b5, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -63,6 +67,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3aff27e0feea3864b954602198ccb5b5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3605610317497263917}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3aff27e0feea3864b954602198ccb5b5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3906703137367314849}
   m_SourcePrefab: {fileID: 100100000, guid: 3aff27e0feea3864b954602198ccb5b5, type: 3}
 --- !u!1 &1410423037760657196 stripped
 GameObject:
@@ -91,3 +98,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4556067298352116208, guid: 3aff27e0feea3864b954602198ccb5b5, type: 3}
+--- !u!114 &3906703137367314849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410423037760657196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  required: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
+  completionPercentage: 1
+  completedPercentage: 0
+  MainTexture: {fileID: 0}
+  aoTexture: {fileID: 0}

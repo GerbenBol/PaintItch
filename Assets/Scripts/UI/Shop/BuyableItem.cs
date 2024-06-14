@@ -1,10 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BuyableItem : MonoBehaviour
 {
     public string Name;
-    public int Cost;
+    public double Cost;
+    public bool MultipleBuyable;
     public bool Bought;
+
+    [SerializeField] private TextMeshProUGUI nameText;
+    [SerializeField] private TextMeshProUGUI costText;
+
+    private void Start()
+    {
+        nameText.text = Name;
+        costText.text = Cost.ToString();
+    }
+
+    public void Buy()
+    {
+        if (!MultipleBuyable)
+        {
+            costText.text = "Bought!";
+            Bought = true;
+        }
+
+        if (Name == "Minigun")
+            PlayerUpgrades.Minigun = true;
+        else if (Name == "Grenade")
+            PlayerUpgrades.Grenades++;
+    }
 }

@@ -1,10 +1,9 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    public static double Money = 50;
+    public static double Money = 500;
 
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private GameObject mainShop;
@@ -38,14 +37,12 @@ public class Shop : MonoBehaviour
         gO.SetActive(false);
     }
 
-    public void BuyItem(BuyableItem sender)
+    public void BuyItem(BuyableItem item)
     {
-        if (sender.Cost <= Money && !sender.Bought)
+        if (item.Cost <= Money && !item.Bought)
         {
-            Debug.Log("buy " + sender.Name);
-            Money -= sender.Cost;
-            sender.Bought = true;
-            moneyText.text = "Bought!";
+            Money -= item.Cost;
+            item.Buy();
             UpdateMoney();
         }
     }

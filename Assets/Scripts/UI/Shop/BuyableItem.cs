@@ -27,12 +27,18 @@ public class BuyableItem : MonoBehaviour
 
         if (Name == "Minigun")
             PlayerUpgrades.Minigun = true;
+        else if (Name == "Lazer Spray")
+            PlayerUpgrades.Lazer = true;
         else if (Name == "Wide Spray")
             PlayerUpgrades.WiderSpray = true;
         else if (Name == "Tight Spray")
             PlayerUpgrades.SmallerSpray = true;
-        else if (Name == "Lazer Spray")
-            PlayerUpgrades.Lazer = true;
+        else if (Name == "EclipseBrush")
+            PlayerUpgrades.EclipseBrush = true;
+        else if (Name == "SquareBrush")
+            PlayerUpgrades.SquareBrush = true;
+        else if (Name == "TriangleBrush")
+            PlayerUpgrades.TriangleBrush = true;
         else if (Name == "Grenade")
             PlayerUpgrades.Grenades++;
     }

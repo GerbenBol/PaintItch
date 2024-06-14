@@ -1,8 +1,14 @@
 ﻿public static class PlayerUpgrades
 {
-    public static bool Minigun;
-    public static bool WiderSpray;
-    public static bool SmallerSpray;
-    public static bool Lazer;
+    // Guns
+    public static bool Minigun, Lazer;
+
+    // Sprays
+    public static bool WiderSpray, SmallerSpray;
+
+    // Brushes
+    public static bool EclipseBrush, SquareBrush, TriangleBrush;
+
+    // Nades
     public static int Grenades = 0;
 }

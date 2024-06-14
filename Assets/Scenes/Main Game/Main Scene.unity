@@ -2852,12 +2852,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6887290964030523126, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1140072206}
-    - targetCorrespondingSourceObject: {fileID: 5773773142920735168, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 541284671}
-    - targetCorrespondingSourceObject: {fileID: 5773773142920735168, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 541284670}
     - targetCorrespondingSourceObject: {fileID: 1421476629638929319, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1031367253}
@@ -3265,52 +3259,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533981007}
   m_CullTransparentMesh: 1
---- !u!1 &541284668 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5773773142920735168, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
-  m_PrefabInstance: {fileID: 374491386}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &541284670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541284668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  required: 0
-  ExtraObject: 0
-  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
-  completionPercentage: 1
-  completedPercentage: 0
-  MainTexture: {fileID: 0}
-  aoTexture: {fileID: 0}
---- !u!64 &541284671
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541284668}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -809999556750180857, guid: 51011195301bd8d4da76f926ec2d695f, type: 3}
 --- !u!1 &577985648 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5697197816113878952, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}

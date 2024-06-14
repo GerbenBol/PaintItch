@@ -22,10 +22,6 @@ public class HoveredObject : MonoBehaviour
     [SerializeField] TextMeshProUGUI focusTMP;
     [SerializeField] TextMeshProUGUI hoverTMP;
 
-    void Start()
-    {
-    }
-
     void Update()
     {
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out RaycastHit hitInfo, 10, layerMask))
@@ -48,19 +44,16 @@ public class HoveredObject : MonoBehaviour
                 {
                     focusedObject = hoveredObject;
                     isFocused = true;
-                    Debug.Log("Focus from null");
                 }
                 else if (hoveredObject == focusedObject)
                 {
                     focusedObject = null;
                     isFocused = false;
-                    Debug.Log("Focus to null (Aim at focus)");
                 } 
                 else
                 {
                     focusedObject = hoveredObject;
                     isFocused = true;
-                    Debug.Log("Focus change");
                 }
             }
         }
@@ -69,7 +62,6 @@ public class HoveredObject : MonoBehaviour
             focusedObject = null;
             isFocused = false;
             hoveredObjectName = null;
-            Debug.Log("Focus to null (Aim at nothing)");
         }
         else
         {

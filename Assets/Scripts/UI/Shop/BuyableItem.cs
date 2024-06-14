@@ -24,5 +24,10 @@ public class BuyableItem : MonoBehaviour
             costText.text = "Bought!";
             Bought = true;
         }
+
+        if (Name == "Minigun")
+            PlayerUpgrades.Minigun = true;
+        else if (Name == "Grenade")
+            PlayerUpgrades.Grenades++;
     }
 }

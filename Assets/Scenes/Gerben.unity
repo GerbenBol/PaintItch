@@ -292,7 +292,7 @@ MonoBehaviour:
   moneyText: {fileID: 2124233016}
   mainShop: {fileID: 1321613724}
   brushesShop: {fileID: 1601962589}
-  weaponsShop: {fileID: 0}
+  weaponsShop: {fileID: 1524473229}
   upgradesShop: {fileID: 2034859110}
 --- !u!1 &61781835
 GameObject:
@@ -1968,12 +1968,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6158288921481062853, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1590182544}
-    - targetCorrespondingSourceObject: {fileID: 5773773142920735168, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 509878422}
-    - targetCorrespondingSourceObject: {fileID: 5773773142920735168, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 509878421}
   m_SourcePrefab: {fileID: 100100000, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
 --- !u!1 &379170734
 GameObject:
@@ -2478,52 +2472,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 403909937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &509878417 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5773773142920735168, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
-  m_PrefabInstance: {fileID: 341508374}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &509878421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509878417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  required: 0
-  ExtraObject: 0
-  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
-  completionPercentage: 1
-  completedPercentage: 0
-  MainTexture: {fileID: 0}
-  aoTexture: {fileID: 0}
---- !u!64 &509878422
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509878417}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -809999556750180857, guid: 51011195301bd8d4da76f926ec2d695f, type: 3}
 --- !u!4 &543022090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7341287685166371152, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
@@ -5514,7 +5462,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1321613725
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6144,7 +6092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1524473230
 RectTransform:
   m_ObjectHideFlags: 0

@@ -41,7 +41,7 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private float miniMaxAmmo = 100;
 
     private readonly float maxTimer = .05f;
-    private readonly float maxNadeCD = .2f;
+    private readonly float maxNadeCD = 4f;
     private float timer = .0f;
     private float nadeCD = .0f;
     private bool standardActive = true;
@@ -49,6 +49,11 @@ public class PlayerPainting : MonoBehaviour
 
     private Transform spawnpoint;
 
+    private readonly float[] accuracy = new float[3]
+    {
+        1f, .25f, 2.5f
+    };
+    private int accuracyIndex = 0;
     private float maxAmmo = 9;
     private float preReloadAmmo;
     private bool reloading;
@@ -70,6 +75,8 @@ public class PlayerPainting : MonoBehaviour
         currentColor = Colors[ActiveColor];
 
         // Shooting
+        if (Input.GetMouseButton(1) && PlayerUpgrades.Lazer)
+            Lazer();
         if (timer < maxTimer && standardActive)
             timer += Time.deltaTime;
         else if (Input.GetMouseButton(0) && ammo > 0 && !reloading && !mustReload && !nadeActive)
@@ -104,12 +111,17 @@ public class PlayerPainting : MonoBehaviour
         if (ammo <= 0)
             mustReload = true;
 
+        // Gun changing
         if (Input.GetKeyDown(KeyCode.Alpha1))
             ChangeGun(0);
         else if (Input.GetKeyDown(KeyCode.Alpha2))
             ChangeGun(1);
         else if (Input.GetKeyDown(KeyCode.Alpha3))
             ChangeGun(2);
+
+        // Spray modifier
+        if (Input.GetKeyDown(KeyCode.Q))
+            NextSpray();
 
         // Reloading visual
         if (reloading)
@@ -160,7 +172,7 @@ public class PlayerPainting : MonoBehaviour
         PaintSplatter splatter = splatterObject.GetComponent<PaintSplatter>();
 
         // Determine starting velocity and scale (I use System.Random because it's so much better than Unity's Random)
-        int randomForceX, randomForceY, randomForceZ;
+        float randomForceX, randomForceY, randomForceZ;
         float randomScale = (float)rand.Next(15, 40) / 100;
 
         if (standardActive)
@@ -175,6 +187,9 @@ public class PlayerPainting : MonoBehaviour
             randomForceY = rand.Next(-50, 50);
             randomForceZ = rand.Next(300, 600);
         }
+
+        randomForceX *= accuracy[accuracyIndex];
+        randomForceY *= accuracy[accuracyIndex];
 
         // Set the starting velocity and scale and send the splatter flying
         Vector3 force = new(randomForceX, randomForceY, randomForceZ);
@@ -195,6 +210,11 @@ public class PlayerPainting : MonoBehaviour
 
         if (PlayerUpgrades.Grenades == 0)
             ChangeGun(0);
+    }
+
+    private void Lazer()
+    {
+
     }
 
     private void NextColor()
@@ -281,6 +301,23 @@ public class PlayerPainting : MonoBehaviour
             ChangeMini(false);
             spawnpoint = nadeSpawn;
         }
+    }
+
+    private void NextSpray()
+    {
+        if (accuracyIndex + 1 > 2)
+            accuracyIndex = 0;
+        else
+            accuracyIndex++;
+
+        Debug.Log(accuracyIndex);
+
+        if (accuracyIndex == 1 && !PlayerUpgrades.SmallerSpray)
+            accuracyIndex++;
+        else if (accuracyIndex == 2 && !PlayerUpgrades.WiderSpray)
+            accuracyIndex = 0;
+
+        Debug.Log($"current mode: {accuracyIndex} ({accuracy[accuracyIndex]})");
     }
 
     private IEnumerator Reload()

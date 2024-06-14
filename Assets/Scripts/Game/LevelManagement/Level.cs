@@ -7,12 +7,14 @@ public class Level : MonoBehaviour
 {
     public int LevelID { get => levelID; }
     public bool Completed { get => completed; }
+    public double ObjectPrice { get => objPrice; }
 
     [SerializeField] private string Name;
     [SerializeField] private string QuestDesc;
     [SerializeField] private double Price;
     [SerializeField] private Color LevelColor;
     [SerializeField] private string Extra = "I would like ";
+    [SerializeField] private GameObject vink;
 
     private readonly Dictionary<int, bool> completedObjects = new();
     private readonly Dictionary<int, PaintableObject> objects = new();
@@ -20,6 +22,7 @@ public class Level : MonoBehaviour
     private int index = 0;
     private readonly float maxTimer = .2f;
     private float timer = .0f;
+    private double objPrice;
     private bool completed = false;
     private FenceOpen levelFence;
     private FenceOpen secondFence;
@@ -38,7 +41,7 @@ public class Level : MonoBehaviour
     {
         if (timer < maxTimer)
             timer += Time.deltaTime;
-        else if (name != "level0" && vio == null)
+        else if (name != "Level0" && vio == null)
         {
             System.Random rand = new();
             int id = rand.Next(0, completedObjects.Count);
@@ -82,6 +85,9 @@ public class Level : MonoBehaviour
 
         if (secondFence != null)
             secondFence.Open();
+
+        // Set objects price
+        objPrice = Price / objects.Count;
     }
 
     public void StopLevel()
@@ -106,12 +112,15 @@ public class Level : MonoBehaviour
                 allCompleted = false;
 
         if (allCompleted)
+        {
+            vink.SetActive(true);
             completed = true;
+        }
     }
 
     public void Enlarge()
     {
-        if (name != "level0")
+        if (name != "Level0")
         {
             transform.localScale = new(.09f, .09f, .09f);
             Quest.OpenQuest(Name, Price, QuestDesc, Extra, levelID, LevelColor);
@@ -120,7 +129,7 @@ public class Level : MonoBehaviour
 
     public void OriginalSize()
     {
-        if (name != "level0")
+        if (name != "Level0")
         {
             transform.localScale = new(.07f, .07f, .07f);
             Quest.CloseQuest();

@@ -104,14 +104,17 @@ public class PlayerMovement : MonoBehaviour
     //checks if the player is standing on the ground or not
     private void OnTriggerStay(Collider other)
     {
-        rigidBody.drag = drag;
+        if (!other.CompareTag("Arrows"))
+        {
+            rigidBody.drag = drag;
 
-        if (other.CompareTag("Trampoline"))
-            onTramp = true;
-        else
-            onTramp = false;
+            if (other.CompareTag("Trampoline"))
+                onTramp = true;
+            else
+                onTramp = false;
 
-        isGrounded = true;
+            isGrounded = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)

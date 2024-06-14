@@ -22,7 +22,6 @@ public class PaintableObject : MonoBehaviour
     private int level;
     private readonly int circleSize = 4;
     private PlayerPainting player;
-    //private Color lastColor;
 
     private readonly Dictionary<int, int> circle = new()
     {
@@ -121,7 +120,7 @@ public class PaintableObject : MonoBehaviour
         else
             Debug.Log($"incorrect color, {correctColor}, {textureSize * completionPercentage * .65f}");*/
         if (player.Colors[player.ActiveColor] == ExtraColor)
-            Debug.Log("correct color");
+            Shop.Money += GameManagerScript.GetPrice(level) * level;
     }
 
     private IEnumerator UpdateColor()
@@ -161,6 +160,7 @@ public class PaintableObject : MonoBehaviour
                 completed = true;
                 GameManagerScript.CompleteObject(level, index);
                 AudioSource.PlayClipAtPoint(TextureControl.CompletedDing, transform.position);
+                Shop.Money += GameManagerScript.GetPrice(level);
 
                 if (ExtraObject)
                     CheckExtra();

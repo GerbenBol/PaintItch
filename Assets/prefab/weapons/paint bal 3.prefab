@@ -66,13 +66,13 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 31e1c3bfa30be7547a956ad45caa79b9, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3358508402418932900}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 31e1c3bfa30be7547a956ad45caa79b9, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 4445728093129843646}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 31e1c3bfa30be7547a956ad45caa79b9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2170067485056791290}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 31e1c3bfa30be7547a956ad45caa79b9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6632962042031259670}
   m_SourcePrefab: {fileID: 100100000, guid: 31e1c3bfa30be7547a956ad45caa79b9, type: 3}
 --- !u!23 &7530898313348678205 stripped
 MeshRenderer:
@@ -84,27 +84,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 31e1c3bfa30be7547a956ad45caa79b9, type: 3}
   m_PrefabInstance: {fileID: 9170091611481054905}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &3358508402418932900
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8323738899705963496}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.051537514
-  m_Center: {x: 0.030924797, y: -0.041944593, z: -0.024215043}
 --- !u!54 &4445728093129843646
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -131,7 +110,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 3
+  m_CollisionDetection: 1
 --- !u!114 &2170067485056791290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,3 +129,24 @@ MonoBehaviour:
   paintableLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!65 &6632962042031259670
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8323738899705963496}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.155159, y: 0.177809, z: 1.0142231}
+  m_Center: {x: 0.033679962, y: -0.043213964, z: -0.34286022}

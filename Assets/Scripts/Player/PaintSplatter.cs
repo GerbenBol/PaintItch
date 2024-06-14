@@ -17,7 +17,14 @@ public class PaintSplatter : MonoBehaviour
         Destroy(gameObject, 8f);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
+    {
+        Vector3 velo = rb.velocity;
+        Vector3 lookAtLocation = transform.position + velo.normalized;
+        transform.LookAt(lookAtLocation);
+    }
+
+    private void OnTriggerStay(Collider other)
     {
         if (!other.CompareTag("Splatter") && !other.CompareTag("Arrows"))
         {

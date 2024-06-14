@@ -54,11 +54,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ce851591402cc7e4086ab1eae49bdd3a, type: 2}
     - target: {fileID: 919132149155446097, guid: e1af736b8feb2a347a4e12ee2c80a389, type: 3}
       propertyPath: m_Name
-      value: bed
+      value: P_Bed
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e1af736b8feb2a347a4e12ee2c80a389, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1af736b8feb2a347a4e12ee2c80a389, type: 3}
+      propertyPath: m_TagString
+      value: Level0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

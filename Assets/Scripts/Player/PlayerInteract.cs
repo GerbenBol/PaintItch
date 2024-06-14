@@ -7,14 +7,19 @@ public class PlayerInteract : MonoBehaviour
     private Level currentFocused;
     private bool returnedToSize = false;
 
-
-
-    private bool holdingBox;
+    private bool holdingTramp;
     private bool firstPickup;
     private bool firstDrop;
     private string interactableName;
+    [SerializeField] private GameObject tramp;
+    [SerializeField] private GameObject trampHolder;
     [SerializeField] private GameObject trampTxt;
+    private Trampoline trampoline;
 
+    private void Start()
+    {
+        trampoline = tramp.GetComponent<Trampoline>();
+    }
     private void Update()
     {
         // Open the shop
@@ -53,6 +58,10 @@ public class PlayerInteract : MonoBehaviour
             {
                 returnedToSize = true;
                 lvl.OriginalSize();
+            } 
+            else if (hitObj.name == "P_Trampo" || hitObj.name == "Underside")
+            {
+                OnPickUp();
             }
         }
         else if (!returnedToSize)
@@ -63,12 +72,12 @@ public class PlayerInteract : MonoBehaviour
     }
 
     // Temp tramp pickup system
-    /*private void OnPickUp()
+    private void OnPickUp()
     {
         if (interactableName == "P_Trampo" || interactableName == "Underside")
         {
-            interactable.Interact(boxHolder);
-            holdingBox = !holdingBox;
+            trampoline.Interact(trampHolder);
+            holdingTramp = !holdingTramp;
 
             if (firstPickup)
             {
@@ -81,5 +90,5 @@ public class PlayerInteract : MonoBehaviour
                 firstDrop = false;
             }
         }
-    }*/
+    }
 }

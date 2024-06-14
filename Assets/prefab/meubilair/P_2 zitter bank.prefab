@@ -54,11 +54,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0255f0d414976ae40a2863b953b8a6d0, type: 2}
     - target: {fileID: 919132149155446097, guid: da738d888efc5b843ba57d50b942d8d1, type: 3}
       propertyPath: m_Name
-      value: 2 zitter bank
+      value: P_2 zitter bank
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: da738d888efc5b843ba57d50b942d8d1, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da738d888efc5b843ba57d50b942d8d1, type: 3}
+      propertyPath: m_TagString
+      value: Level0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -54,7 +54,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: af9c48c607072a0459c0df80808723de, type: 2}
     - target: {fileID: 919132149155446097, guid: b8468b165ad5b46439e412828000b83f, type: 3}
       propertyPath: m_Name
-      value: keuken tafel
+      value: P_keuken tafel
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b8468b165ad5b46439e412828000b83f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b8468b165ad5b46439e412828000b83f, type: 3}
+      propertyPath: m_TagString
+      value: Level0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

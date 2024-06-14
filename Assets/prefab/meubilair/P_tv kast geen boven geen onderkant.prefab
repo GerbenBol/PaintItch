@@ -54,11 +54,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 612b51c88e667b24085f377adc93ada2, type: 2}
     - target: {fileID: 919132149155446097, guid: ea4c3d78ca5188841af25929c0e08172, type: 3}
       propertyPath: m_Name
-      value: tv kast geen boven geen onderkant
+      value: P_tv kast geen boven geen onderkant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ea4c3d78ca5188841af25929c0e08172, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ea4c3d78ca5188841af25929c0e08172, type: 3}
+      propertyPath: m_TagString
+      value: Level0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

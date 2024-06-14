@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Trampoline : MonoBehaviour
 {
-    public static bool Locked;
+    /*public static bool Locked;
     private bool beingHold;
 
     void Start()
@@ -51,5 +51,5 @@ public class Trampoline : MonoBehaviour
 
         // Turn off lights
         LevelManager.Levels[level].SearchLights(false, myMatName);
-    }
+    }*/
 }

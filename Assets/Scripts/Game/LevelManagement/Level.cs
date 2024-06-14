@@ -122,7 +122,7 @@ public class Level : MonoBehaviour
     {
         if (name != "Level0")
         {
-            transform.localScale = new(.09f, .09f, .09f);
+            transform.localScale = new(.09f, .06f, .09f);
             Quest.OpenQuest(Name, Price, QuestDesc, Extra, levelID, LevelColor);
         }
     }
@@ -131,7 +131,7 @@ public class Level : MonoBehaviour
     {
         if (name != "Level0")
         {
-            transform.localScale = new(.07f, .07f, .07f);
+            transform.localScale = new(.07f, .04f, .07f);
             Quest.CloseQuest();
         }
     }

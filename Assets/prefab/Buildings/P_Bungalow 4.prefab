@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7452054554404749924}
   m_Layer: 0
   m_Name: Roof
-  m_TagString: Untagged
+  m_TagString: Level5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 1189868483973968293}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Level5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 4600728308033643615}
   m_Layer: 0
   m_Name: P_Bungalow 4
-  m_TagString: Untagged
+  m_TagString: Level5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,9 +153,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 23
       objectReference: {fileID: 0}
+    - target: {fileID: 3678940855999534630, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_Name
       value: Roof 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 8962664076912899541, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -218,6 +226,10 @@ PrefabInstance:
     - target: {fileID: 3962436636294732288, guid: 5117366acc0d8ba42a63937efef21e26, type: 3}
       propertyPath: m_Name
       value: Roof 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962436636294732288, guid: 5117366acc0d8ba42a63937efef21e26, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 4446943497989587130, guid: 5117366acc0d8ba42a63937efef21e26, type: 3}
       propertyPath: m_LocalScale.x
@@ -285,9 +297,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 193864794733858248, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_Name
       value: Inside Wall 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
@@ -304,6 +324,10 @@ PrefabInstance:
     - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_Name
       value: Outside Wall 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
@@ -367,6 +391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur lang (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 3705960429646883538, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.538777
@@ -411,9 +439,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside Wall 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: Inside Wall 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 9037512068698367154, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -444,6 +480,10 @@ PrefabInstance:
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: P_Muur lang (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 3705960429646883538, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -489,9 +529,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside Wall 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: Inside Wall 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 9037512068698367154, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -522,6 +570,10 @@ PrefabInstance:
     - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_Name
       value: Roof 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 7969194116564895969, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -584,6 +636,10 @@ PrefabInstance:
     - target: {fileID: 3962436636294732288, guid: 5117366acc0d8ba42a63937efef21e26, type: 3}
       propertyPath: m_Name
       value: Roof 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962436636294732288, guid: 5117366acc0d8ba42a63937efef21e26, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 4446943497989587130, guid: 5117366acc0d8ba42a63937efef21e26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -691,6 +747,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 17
       objectReference: {fileID: 0}
+    - target: {fileID: 4583748628677911031, guid: 7c32010e74c266d49bc8e658037c36ba, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -757,6 +817,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 12
       objectReference: {fileID: 0}
+    - target: {fileID: 7852663273046920973, guid: 718806fdd90d03843b00ade4e581a037, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -779,9 +843,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 21
       objectReference: {fileID: 0}
+    - target: {fileID: 3678940855999534630, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_Name
       value: Roof 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 8962664076912899541, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_LocalScale.z
@@ -849,9 +921,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 193864794733858248, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_Name
       value: Inside Wall 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 989884621481959511, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
@@ -868,6 +948,10 @@ PrefabInstance:
     - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_Name
       value: Outside Wall 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
@@ -975,6 +1059,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 16
       objectReference: {fileID: 0}
+    - target: {fileID: 4583748628677911031, guid: 7c32010e74c266d49bc8e658037c36ba, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -996,6 +1084,10 @@ PrefabInstance:
     - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_Name
       value: Roof 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 7969194116564895969, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1059,6 +1151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 7969194116564895969, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.492725
@@ -1120,6 +1216,10 @@ PrefabInstance:
     - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_Name
       value: Roof 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337370391944073819, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 7969194116564895969, guid: 5d5beae3f2b954d429dcf63f34c47b6b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1207,9 +1307,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inside Wall 15
       objectReference: {fileID: 0}
+    - target: {fileID: 621760744299842395, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 1090649793421228297, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_Name
       value: Outside Wall 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1090649793421228297, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 2168833844459637537, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1254,6 +1362,10 @@ PrefabInstance:
     - target: {fileID: 4145479949738938015, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_Name
       value: P_Deurgang
+      objectReference: {fileID: 0}
+    - target: {fileID: 4145479949738938015, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1333,9 +1445,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 28
       objectReference: {fileID: 0}
+    - target: {fileID: 1069146921313091739, guid: d71fbecf6a64b4242a2889e9edc05188, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8438202936089205517, guid: d71fbecf6a64b4242a2889e9edc05188, type: 3}
       propertyPath: m_Name
       value: Roof 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438202936089205517, guid: d71fbecf6a64b4242a2889e9edc05188, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1403,6 +1523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 14
       objectReference: {fileID: 0}
+    - target: {fileID: 7852663273046920973, guid: 718806fdd90d03843b00ade4e581a037, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1469,6 +1593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 13
       objectReference: {fileID: 0}
+    - target: {fileID: 4583748628677911031, guid: 7c32010e74c266d49bc8e658037c36ba, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1490,6 +1618,10 @@ PrefabInstance:
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: P_Muur lang (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 3705960429646883538, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1535,9 +1667,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside Wall 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: Inside Wall 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 9037512068698367154, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1569,13 +1709,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur kort
       objectReference: {fileID: 0}
+    - target: {fileID: 193864794733858248, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_Name
       value: Inside Wall 12
       objectReference: {fileID: 0}
+    - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_Name
       value: Outside Wall 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 8669129456793033212, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1639,6 +1791,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur lang (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 3705960429646883538, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 22.43322
@@ -1683,9 +1839,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside Wall 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: Inside Wall 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 9037512068698367154, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1717,9 +1881,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 18
       objectReference: {fileID: 0}
+    - target: {fileID: 3678940855999534630, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_Name
       value: Roof 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 8962664076912899541, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_LocalScale.z
@@ -1843,9 +2015,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 27
       objectReference: {fileID: 0}
+    - target: {fileID: 1069146921313091739, guid: d71fbecf6a64b4242a2889e9edc05188, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8438202936089205517, guid: d71fbecf6a64b4242a2889e9edc05188, type: 3}
       propertyPath: m_Name
       value: Roof 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438202936089205517, guid: d71fbecf6a64b4242a2889e9edc05188, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1868,6 +2048,10 @@ PrefabInstance:
     - target: {fileID: 243716608618404840, guid: cf94e0418b7b98f409b8ce2aaf2b8640, type: 3}
       propertyPath: m_Name
       value: Roof 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 243716608618404840, guid: cf94e0418b7b98f409b8ce2aaf2b8640, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 588294084064461138, guid: cf94e0418b7b98f409b8ce2aaf2b8640, type: 3}
       propertyPath: m_LocalScale.z
@@ -1935,6 +2119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3962436636294732288, guid: 5117366acc0d8ba42a63937efef21e26, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 4446943497989587130, guid: 5117366acc0d8ba42a63937efef21e26, type: 3}
       propertyPath: m_LocalScale.x
       value: -1
@@ -2001,6 +2189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur lang (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 3705960429646883538, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.65022
@@ -2045,9 +2237,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside Wall 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: Inside Wall 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 9037512068698367154, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2135,9 +2335,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 26
       objectReference: {fileID: 0}
+    - target: {fileID: 1069146921313091739, guid: d71fbecf6a64b4242a2889e9edc05188, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8438202936089205517, guid: d71fbecf6a64b4242a2889e9edc05188, type: 3}
       propertyPath: m_Name
       value: Roof 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438202936089205517, guid: d71fbecf6a64b4242a2889e9edc05188, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2160,6 +2368,10 @@ PrefabInstance:
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: P_Muur lang (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 3705960429646883538, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2205,9 +2417,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside Wall 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: Inside Wall 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 9037512068698367154, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2238,6 +2458,10 @@ PrefabInstance:
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: P_Muur lang
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 3705960429646883538, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2283,9 +2507,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside Wall 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: Inside Wall 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2309,9 +2541,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 25
       objectReference: {fileID: 0}
+    - target: {fileID: 3678940855999534630, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_Name
       value: Roof 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 8962664076912899541, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_LocalScale.x
@@ -2379,6 +2619,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur lang (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 3705960429646883538, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.32322
@@ -2423,9 +2667,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside Wall 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: Inside Wall 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 9037512068698367154, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2456,6 +2708,10 @@ PrefabInstance:
     - target: {fileID: 243716608618404840, guid: cf94e0418b7b98f409b8ce2aaf2b8640, type: 3}
       propertyPath: m_Name
       value: Roof 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 243716608618404840, guid: cf94e0418b7b98f409b8ce2aaf2b8640, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 588294084064461138, guid: cf94e0418b7b98f409b8ce2aaf2b8640, type: 3}
       propertyPath: m_LocalScale.z
@@ -2523,6 +2779,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 10
       objectReference: {fileID: 0}
+    - target: {fileID: 243716608618404840, guid: cf94e0418b7b98f409b8ce2aaf2b8640, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 588294084064461138, guid: cf94e0418b7b98f409b8ce2aaf2b8640, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.9190187
@@ -2588,6 +2848,10 @@ PrefabInstance:
     - target: {fileID: 243716608618404840, guid: cf94e0418b7b98f409b8ce2aaf2b8640, type: 3}
       propertyPath: m_Name
       value: Roof 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 243716608618404840, guid: cf94e0418b7b98f409b8ce2aaf2b8640, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 588294084064461138, guid: cf94e0418b7b98f409b8ce2aaf2b8640, type: 3}
       propertyPath: m_LocalScale.z
@@ -2655,9 +2919,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 19
       objectReference: {fileID: 0}
+    - target: {fileID: 3678940855999534630, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_Name
       value: Roof 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 8962664076912899541, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_LocalScale.z
@@ -2725,25 +2997,61 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside Wall 16
       objectReference: {fileID: 0}
+    - target: {fileID: 4777832154495032410, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261776302795245280, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.861
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261776302795245280, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3326878
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261776302795245280, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.014
+      objectReference: {fileID: 0}
     - target: {fileID: 5600711474563345323, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
       propertyPath: m_Name
       value: P_Muur binnen beide kanten kort
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600711474563345323, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 7159165141583414743, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
       propertyPath: m_Name
       value: Inside Wall 16
       objectReference: {fileID: 0}
+    - target: {fileID: 7159165141583414743, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498957852011143021, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.93812394
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498957852011143021, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.33268785
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498957852011143021, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.11111929
+      objectReference: {fileID: 0}
     - target: {fileID: 7790105925444462072, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.532787
+      value: 19.491404
       objectReference: {fileID: 0}
     - target: {fileID: 7790105925444462072, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.177312
+      value: -11.51
       objectReference: {fileID: 0}
     - target: {fileID: 7790105925444462072, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.332109
+      value: 2.195832
       objectReference: {fileID: 0}
     - target: {fileID: 7790105925444462072, guid: 7f7170c64f0618d48bc6c8f95cd733b1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2795,9 +3103,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3678940855999534630, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_Name
       value: Roof 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 8962664076912899541, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_LocalScale.z
@@ -2865,6 +3181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur lang (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 3705960429646883538, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.446674
@@ -2909,9 +3229,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside Wall 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: Inside Wall 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 9037512068698367154, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2943,9 +3271,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 22
       objectReference: {fileID: 0}
+    - target: {fileID: 3678940855999534630, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_Name
       value: Roof 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 8962664076912899541, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3009,9 +3345,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 24
       objectReference: {fileID: 0}
+    - target: {fileID: 3678940855999534630, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_Name
       value: Roof 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586701828018433903, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 8962664076912899541, guid: 6f14343707eeb9e438a91f41791ef5e2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3075,6 +3419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Muur lang (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 3705960429646883538, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.32322
@@ -3119,9 +3467,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside Wall 9
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: Inside Wall 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 9037512068698367154, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3205,9 +3561,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 29
       objectReference: {fileID: 0}
+    - target: {fileID: 1069146921313091739, guid: d71fbecf6a64b4242a2889e9edc05188, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 8438202936089205517, guid: d71fbecf6a64b4242a2889e9edc05188, type: 3}
       propertyPath: m_Name
       value: Roof 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8438202936089205517, guid: d71fbecf6a64b4242a2889e9edc05188, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3230,6 +3594,10 @@ PrefabInstance:
     - target: {fileID: 3962436636294732288, guid: 5117366acc0d8ba42a63937efef21e26, type: 3}
       propertyPath: m_Name
       value: Roof 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962436636294732288, guid: 5117366acc0d8ba42a63937efef21e26, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 4446943497989587130, guid: 5117366acc0d8ba42a63937efef21e26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3337,6 +3705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Roof 15
       objectReference: {fileID: 0}
+    - target: {fileID: 4583748628677911031, guid: 7c32010e74c266d49bc8e658037c36ba, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3358,6 +3730,10 @@ PrefabInstance:
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: P_Muur lang (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     - target: {fileID: 3705960429646883538, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3403,21 +3779,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Outside Wall 11
       objectReference: {fileID: 0}
+    - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
+      objectReference: {fileID: 0}
     - target: {fileID: 6507803697148255421, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.9808351
+      value: -0.9808332
       objectReference: {fileID: 0}
     - target: {fileID: 6507803697148255421, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1341912
+      value: -1.1341909
       objectReference: {fileID: 0}
     - target: {fileID: 6507803697148255421, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.07957253
+      value: 0.07957363
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
       value: Inside Wall 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
+      propertyPath: m_TagString
+      value: Level5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

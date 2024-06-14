@@ -74,22 +74,24 @@ public class PlayerMovement : MonoBehaviour
             //rigidBody.drag = 0;
         }
 
-        if (Input.GetKey(KeyCode.LeftControl))
+        // Crouch
+        if (Input.GetKeyDown(KeyCode.C))
         {
-            crouched = true;
-            playerCollider.enabled = false;
-            playerTrigger.enabled = false;
-            isGrounded = false;
+            if (!crouched)
+            {
+                crouched = true;
+                playerCollider.enabled = false;
+                playerTrigger.enabled = false;
+                isGrounded = false;
+                rigidBody.drag = 0;
+            }
+            else
+            {
+                crouched = false;
+                playerCollider.enabled = true;
+                playerTrigger.enabled = true;
+            }
         }
-        else
-        {
-            crouched = false;
-            playerCollider.enabled = true;
-            playerTrigger.enabled = true;
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-            rigidBody.drag = 0;
     }
 
     private void LookAround()

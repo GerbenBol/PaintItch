@@ -54,10 +54,66 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8b0c814c6f9cce045a0488dc00e58586, type: 2}
     - target: {fileID: 919132149155446097, guid: 9319064797fdce94f8ab4cedc6dded5f, type: 3}
       propertyPath: m_Name
-      value: deurpost anders om
+      value: P_deurpost anders om
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9319064797fdce94f8ab4cedc6dded5f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9319064797fdce94f8ab4cedc6dded5f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6752344317719524338}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9319064797fdce94f8ab4cedc6dded5f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9071606790951430785}
   m_SourcePrefab: {fileID: 100100000, guid: 9319064797fdce94f8ab4cedc6dded5f, type: 3}
+--- !u!1 &7107766402076168838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9319064797fdce94f8ab4cedc6dded5f, type: 3}
+  m_PrefabInstance: {fileID: 7954115826992934871}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6752344317719524338
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107766402076168838}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8385836491182413749, guid: 9319064797fdce94f8ab4cedc6dded5f, type: 3}
+--- !u!114 &9071606790951430785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107766402076168838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  required: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
+  completionPercentage: 1
+  completedPercentage: 0
+  MainTexture: {fileID: 0}
+  aoTexture: {fileID: 0}

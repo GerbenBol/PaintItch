@@ -191,6 +191,10 @@ public class PlayerPainting : MonoBehaviour
         GameObject thrownNade = Instantiate(nadePrefab, nadeSpawn.position, Quaternion.identity);
         thrownNade.GetComponent<Nade>().SetNade(currentColor, mainCam.rotation);
         nadeCD = .0f;
+        PlayerUpgrades.Grenades--;
+
+        if (PlayerUpgrades.Grenades == 0)
+            ChangeGun(0);
     }
 
     private void NextColor()
@@ -235,9 +239,9 @@ public class PlayerPainting : MonoBehaviour
     {
         if (gun == 0 && !standardActive)
             ChangeStandard(true);
-        else if (gun == 1)
+        else if (gun == 1 && PlayerUpgrades.Minigun)
             ChangeMini(true);
-        else if (gun == 2 && !nadeActive)
+        else if (gun == 2 && !nadeActive && PlayerUpgrades.Grenades > 0)
             ChangeNade(true);
     }
 

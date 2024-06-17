@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    public static double Money = 50;
+    public static double Money = 500;
 
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private GameObject mainShop;

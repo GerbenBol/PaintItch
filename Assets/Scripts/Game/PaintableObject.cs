@@ -142,20 +142,29 @@ public class PaintableObject : MonoBehaviour
     private IEnumerator UpdateColor()
     {
         Dictionary<int, int> activeBrush;
+        string brushName = PlayerPainting.brushes[PlayerPainting.brushIndex];
 
-        if (PlayerUpgrades.EclipseBrush)
+        if (brushName == "eclipse")
             activeBrush = eclipse;
-        else if (PlayerUpgrades.SquareBrush)
+        else if (brushName == "square")
             activeBrush = square;
-        else if (PlayerUpgrades.TriangleBrush)
+        else if (brushName == "triangle")
             activeBrush = triangle;
         else
         {
             activeBrush = new();
             System.Random rand = new();
+            int j = 0;
 
             for (int i = -11; i < 12; i++)
-                activeBrush.Add(i, rand.Next(7, 15));
+            {
+                if (i <= 2)
+                    j += rand.Next(0, 3);
+                else
+                    j -= rand.Next(0, 3);
+
+                activeBrush.Add(i, j);
+            }
         }
 
         foreach (KeyValuePair<Vector2Int, Color> kvp in updateList)

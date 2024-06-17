@@ -13,6 +13,11 @@ public class PlayerPainting : MonoBehaviour
     public int upcomingColor = 0;
     public Color currentColor;
     private Color lastUsedColor;
+    public static string[] brushes = new string[4]
+    {
+        "default", "eclipse", "square", "triangle"
+    };
+    public static int brushIndex = 0;
 
     [SerializeField] private List<ColorWheelGun> wheels;
     [SerializeField] Image fillBar;
@@ -75,8 +80,8 @@ public class PlayerPainting : MonoBehaviour
         currentColor = Colors[ActiveColor];
 
         // Shooting
-        if (Input.GetMouseButton(1) && PlayerUpgrades.Lazer)
-            Lazer();
+        /*if (Input.GetMouseButton(1) && PlayerUpgrades.Lazer)
+            Lazer();*/
         if (timer < maxTimer && standardActive)
             timer += Time.deltaTime;
         else if (Input.GetMouseButton(0) && ammo > 0 && !reloading && !mustReload && !nadeActive)
@@ -122,6 +127,10 @@ public class PlayerPainting : MonoBehaviour
         // Spray modifier
         if (Input.GetKeyDown(KeyCode.Q))
             NextSpray();
+
+        // Brush modifier
+        if (Input.GetKeyDown(KeyCode.B))
+            NextBrush();
 
         // Reloading visual
         if (reloading)
@@ -310,14 +319,26 @@ public class PlayerPainting : MonoBehaviour
         else
             accuracyIndex++;
 
-        Debug.Log(accuracyIndex);
-
         if (accuracyIndex == 1 && !PlayerUpgrades.SmallerSpray)
             accuracyIndex++;
         else if (accuracyIndex == 2 && !PlayerUpgrades.WiderSpray)
             accuracyIndex = 0;
+    }
 
-        Debug.Log($"current mode: {accuracyIndex} ({accuracy[accuracyIndex]})");
+    private void NextBrush()
+    {
+        if (brushIndex + 1 > brushes.Length)
+            brushIndex = 0;
+        else
+            brushIndex++;
+
+        if (brushIndex == 1 && !PlayerUpgrades.EclipseBrush)
+            brushIndex++;
+        if (brushIndex == 2 && !PlayerUpgrades.SquareBrush)
+            brushIndex++;
+        if (brushIndex == 3 && !PlayerUpgrades.TriangleBrush)
+            brushIndex = 0;
+
     }
 
     private IEnumerator Reload()

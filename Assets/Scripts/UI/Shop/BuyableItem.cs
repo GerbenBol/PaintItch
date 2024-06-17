@@ -33,11 +33,11 @@ public class BuyableItem : MonoBehaviour
             PlayerUpgrades.WiderSpray = true;
         else if (Name == "Tight Spray")
             PlayerUpgrades.SmallerSpray = true;
-        else if (Name == "EclipseBrush")
+        else if (Name == "Eclipse Brush")
             PlayerUpgrades.EclipseBrush = true;
-        else if (Name == "SquareBrush")
+        else if (Name == "Square Brush")
             PlayerUpgrades.SquareBrush = true;
-        else if (Name == "TriangleBrush")
+        else if (Name == "Triangle Brush")
             PlayerUpgrades.TriangleBrush = true;
         else if (Name == "Grenade")
             PlayerUpgrades.Grenades++;

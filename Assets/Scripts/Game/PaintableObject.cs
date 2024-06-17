@@ -20,15 +20,31 @@ public class PaintableObject : MonoBehaviour
     private int pixelIndexX = 0, pixelIndexY = 0;
     private int textureSize;
     private int level;
-    private readonly int circleSize = 4;
+    private readonly int sizeModifier = 4;
     private PlayerPainting player;
 
-    private readonly Dictionary<int, int> circle = new()
+    private readonly Dictionary<int, int> eclipse = new()
     {
         { -11, 7 }, { -10, 9 }, { -9, 10 }, { -8, 12 }, { -7, 12 }, { -6, 13 },
         { -5, 14 }, { -4, 14 }, { -3, 15 }, { -2, 15 }, { -1, 15 }, { 0, 15 },
         { 1, 15 }, { 2, 15 }, { 3, 15 }, { 4, 14 }, { 5, 14 }, { 6, 13 },
         { 7, 12 }, { 8, 12 }, { 9, 10 }, { 10, 9 }, { 11, 7 }
+    };
+    private readonly Dictionary<int, int> square = new()
+    {
+        { -11, 15 }, { -10, 15 }, { -9, 15 }, { -8, 15 }, { -7, 15 },
+        { -6, 15 }, { -5, 15 }, { -4, 15 }, { -3, 15 }, { -2, 15 },
+        { -1, 15 }, { 0, 15 }, { 1, 15 }, { 2, 15 }, { 3, 15 },
+        { 4, 15 }, { 5, 15 }, { 6, 15 }, { 7, 15 }, { 8, 15 },
+        { 9, 15 }, { 10, 15 }, { 11, 15 }, { 12, 15 }, { 13, 15 },
+        { 14, 15 }, { 15, 15 }
+    };
+    private readonly Dictionary<int, int> triangle = new()
+    {
+        { -11, 1 }, { -10, 1 }, { -9, 2 }, { -8, 2 }, { -7, 3 }, { -6, 4 },
+        { -5, 5 }, { -4, 5 }, { -3, 6 }, { -2, 6 }, { -1, 7 }, { 0, 8 },
+        { 1, 9 }, { 2, 9 }, { 3, 10 }, { 4, 10 }, { 5, 11 }, { 6, 12 },
+        { 7, 13 }, { 8, 13 }, { 9, 14 }, { 10, 14 }, { 11, 15 }
     };
     private readonly Dictionary<Vector2Int, Color> updateList = new();
     private bool[,] pixelsUpdated;
@@ -125,12 +141,29 @@ public class PaintableObject : MonoBehaviour
 
     private IEnumerator UpdateColor()
     {
+        Dictionary<int, int> activeBrush;
+
+        if (PlayerUpgrades.EclipseBrush)
+            activeBrush = eclipse;
+        else if (PlayerUpgrades.SquareBrush)
+            activeBrush = square;
+        else if (PlayerUpgrades.TriangleBrush)
+            activeBrush = triangle;
+        else
+        {
+            activeBrush = new();
+            System.Random rand = new();
+
+            for (int i = -11; i < 12; i++)
+                activeBrush.Add(i, rand.Next(7, 15));
+        }
+
         foreach (KeyValuePair<Vector2Int, Color> kvp in updateList)
         {
             float changedPixels = 0;
             int firstIndex = 0, lastIndex = 0;
 
-            foreach (KeyValuePair<int, int> coords in circle)
+            foreach (KeyValuePair<int, int> coords in activeBrush)
             {
                 if (firstIndex == 0)
                     firstIndex = coords.Key;
@@ -138,8 +171,8 @@ public class PaintableObject : MonoBehaviour
                 lastIndex = coords.Key;
             }
 
-            for (int x = firstIndex * circleSize; x < lastIndex * circleSize; x++)
-                for (int y = -circle[x / circleSize] * circleSize; y <= circle[x / circleSize] * circleSize; y++)
+            for (int x = firstIndex * sizeModifier; x < lastIndex * sizeModifier; x++)
+                for (int y = -activeBrush[x / sizeModifier] * sizeModifier; y <= activeBrush[x / sizeModifier] * sizeModifier; y++)
                 {
                     Vector2Int vec2 = new(kvp.Key.x + x, kvp.Key.y + y);
                     MainTexture.SetPixel(vec2.x, vec2.y, kvp.Value);

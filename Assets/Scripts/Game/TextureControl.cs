@@ -15,7 +15,6 @@ public class TextureControl : MonoBehaviour
     private readonly float maxTimer = .1f;
     private float timer = .0f;
     private bool running = false;
-//    private int modifier = 1;
 
     private void Start()
     {

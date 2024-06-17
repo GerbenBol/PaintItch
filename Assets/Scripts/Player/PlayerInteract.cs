@@ -74,6 +74,9 @@ public class PlayerInteract : MonoBehaviour
     // Temp tramp pickup system
     private void OnPickUp()
     {
+        ///
+        /// hey, check ff of deze if klopt, je set nergens interactableName (hij zegt ook dat ie readonly gemaakt kan worden)
+        ///
         if (interactableName == "P_Trampo" || interactableName == "Underside")
         {
             trampoline.Interact(trampHolder);

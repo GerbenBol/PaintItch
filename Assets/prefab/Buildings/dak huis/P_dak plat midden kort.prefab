@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 8e1e88b7d1f4bee4ab363ebfeda86c7f, type: 2}
     - target: {fileID: 919132149155446097, guid: 74227f8fd9686ab4b950a16337712426, type: 3}
       propertyPath: m_Name
-      value: dak plat midden kort
+      value: P_dak plat midden kort
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 74227f8fd9686ab4b950a16337712426, type: 3}
       propertyPath: m_Layer
@@ -88,10 +88,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  required: 1
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 0.85
   completedPercentage: 0
-  required: 0
   MainTexture: {fileID: 0}
+  aoTexture: {fileID: 2800000, guid: 4bb6a92295b3d824c84655a5be622bc3, type: 3}
 --- !u!64 &2592493124870430881
 MeshCollider:
   m_ObjectHideFlags: 0

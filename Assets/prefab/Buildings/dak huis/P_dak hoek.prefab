@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 7872b38ebd22106459a1557e193d7769, type: 2}
     - target: {fileID: 919132149155446097, guid: 8d52c934f8872914684ec6b298f45e39, type: 3}
       propertyPath: m_Name
-      value: dak hoek
+      value: P_dak hoek
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8d52c934f8872914684ec6b298f45e39, type: 3}
       propertyPath: m_Layer
@@ -88,10 +88,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  required: 1
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
   completionPercentage: 0.85
   completedPercentage: 0
-  required: 0
   MainTexture: {fileID: 0}
+  aoTexture: {fileID: 2800000, guid: a7bd1cfe3cb57b0468565de06e2c4e25, type: 3}
 --- !u!64 &4342600368474537359
 MeshCollider:
   m_ObjectHideFlags: 0

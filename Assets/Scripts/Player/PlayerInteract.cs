@@ -10,15 +10,14 @@ public class PlayerInteract : MonoBehaviour
     private bool holdingTramp;
     private bool firstPickup;
     private bool firstDrop;
-    private string interactableName;
     [SerializeField] private GameObject tramp;
     [SerializeField] private GameObject trampHolder;
     [SerializeField] private GameObject trampTxt;
-    private Trampoline trampoline;
+    [SerializeField] private Trampoline trampoline;
 
     private void Start()
     {
-        trampoline = tramp.GetComponent<Trampoline>();
+
     }
     private void Update()
     {
@@ -59,9 +58,10 @@ public class PlayerInteract : MonoBehaviour
                 returnedToSize = true;
                 lvl.OriginalSize();
             } 
-            else if (hitObj.name == "P_Trampo" || hitObj.name == "Underside")
+           else if (hitObj.name == "Unpaintable Trampo" || hitObj.name == "Underside")
             {
-                OnPickUp();
+                if (Input.GetKeyDown(KeyCode.E))
+                    OnPickUp();
             }
         }
         else if (!returnedToSize)
@@ -71,27 +71,21 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-    // Temp tramp pickup system
+    // Tramp pickup system
     private void OnPickUp()
     {
-        ///
-        /// hey, check ff of deze if klopt, je set nergens interactableName (hij zegt ook dat ie readonly gemaakt kan worden)
-        ///
-        if (interactableName == "P_Trampo" || interactableName == "Underside")
-        {
-            trampoline.Interact(trampHolder);
-            holdingTramp = !holdingTramp;
+        trampoline.Interact(trampHolder);
+        holdingTramp = !holdingTramp;
 
-            if (firstPickup)
-            {
-                trampTxt.SetActive(true);
-                firstPickup = false;
-            }
-            else if (firstDrop)
-            {
-                trampTxt.SetActive(false);
-                firstDrop = false;
-            }
+        if (firstPickup)
+        {
+            trampTxt.SetActive(true);
+            firstPickup = false;
+        }
+        else if (firstDrop)
+        {
+            trampTxt.SetActive(false);
+            firstDrop = false;
         }
     }
 }

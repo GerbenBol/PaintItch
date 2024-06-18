@@ -115,6 +115,7 @@ public class Level : MonoBehaviour
         {
             vink.SetActive(true);
             completed = true;
+            GameManagerScript.CompleteLevel();
         }
     }
 

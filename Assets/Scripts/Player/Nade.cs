@@ -7,15 +7,23 @@ public class Nade : MonoBehaviour
 {
     [SerializeField] private List<GameObject> paintPrefabs;
 
+    private Rigidbody rb;
     private Color color;
     private Quaternion newRotation;
     private Quaternion originalRotation;
+
+    private void Start()
+    {
+        transform.Rotate(new(-180, 0));
+        rb = GetComponent<Rigidbody>();
+        rb.AddRelativeTorque(new(180, 0));
+    }
 
     private void OnDestroy()
     {
         transform.rotation = originalRotation;
         transform.Rotate(new(-90, 0));
-        transform.position += new Vector3(0, .1f);
+        transform.position += new Vector3(0, .5f);
         Explode();
     }
 

@@ -811,10 +811,6 @@ PrefabInstance:
       propertyPath: hoverTMP
       value: 
       objectReference: {fileID: 1742292766}
-    - target: {fileID: 319905196198583030, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4807391992715850710, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
       propertyPath: m_Name
       value: Player
@@ -827,14 +823,6 @@ PrefabInstance:
       propertyPath: reloadPrompt
       value: 
       objectReference: {fileID: 400731095}
-    - target: {fileID: 5293570678068465527, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7461483930444778115, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7750963524730505290, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.97
@@ -4947,14 +4935,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 403909937}
     m_Modifications:
-    - target: {fileID: 123219491799040448, guid: a09ba40f2371ad54b83acdb3f2f45e00, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1106744866222683099, guid: a09ba40f2371ad54b83acdb3f2f45e00, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 160
-      objectReference: {fileID: 0}
     - target: {fileID: 1182389903399977121, guid: a09ba40f2371ad54b83acdb3f2f45e00, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5035,13 +5015,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2835424751235358532, guid: a09ba40f2371ad54b83acdb3f2f45e00, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -160
-      objectReference: {fileID: 0}
     - target: {fileID: 9099816244444997961, guid: a09ba40f2371ad54b83acdb3f2f45e00, type: 3}
       propertyPath: m_Name
       value: UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099816244444997961, guid: a09ba40f2371ad54b83acdb3f2f45e00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

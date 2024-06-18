@@ -154,9 +154,9 @@ public class PaintableObject : MonoBehaviour
         {
             activeBrush = new();
             System.Random rand = new();
-            int j = 0;
+            int j = 0, max = 12;
 
-            for (int i = -11; i < 12; i++)
+            for (int i = -11; i < max; i++)
             {
                 if (i <= 2)
                     j += rand.Next(0, 3);
@@ -164,6 +164,9 @@ public class PaintableObject : MonoBehaviour
                     j -= rand.Next(0, 3);
 
                 activeBrush.Add(i, j);
+
+                if (j > 0 && i > 10)
+                    max++;
             }
         }
 

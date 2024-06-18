@@ -26,7 +26,6 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private GameObject nadePrefab;
     [SerializeField] private Transform mainCam;
     [SerializeField] private float minimumDistance;
-    [SerializeField] private Animator animator;
     [SerializeField] private GameObject reloadPrompt;
 
     public float ammoBar;
@@ -35,6 +34,10 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private GameObject standard;
     [SerializeField] private GameObject mini;
     [SerializeField] private GameObject nade;
+
+    [Header("Animators")]
+    [SerializeField] private Animator standardAnimator;
+    [SerializeField] private Animator nadeAnimator;
 
     [Header("Spawnpoints")]
     [SerializeField] private Transform standardSpawn;
@@ -46,9 +49,9 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private float miniMaxAmmo = 100;
 
     private readonly float maxTimer = .05f;
-    private readonly float maxNadeCD = 4f;
+    private readonly float maxNadeCD = 2.6f;
     private float timer = .0f;
-    private float nadeCD = .0f;
+    private float nadeCD = 2.6f;
     private bool standardActive = true;
     private bool nadeActive = false;
 
@@ -80,8 +83,6 @@ public class PlayerPainting : MonoBehaviour
         currentColor = Colors[ActiveColor];
 
         // Shooting
-        /*if (Input.GetMouseButton(1) && PlayerUpgrades.Lazer)
-            Lazer();*/
         if (timer < maxTimer && standardActive)
             timer += Time.deltaTime;
         else if (Input.GetMouseButton(0) && ammo > 0 && !reloading && !mustReload && !nadeActive)
@@ -94,7 +95,7 @@ public class PlayerPainting : MonoBehaviour
             }
         }
         else if (Input.GetMouseButton(0) && nadeActive && nadeCD >= maxNadeCD)
-            ThrowNade();
+            StartCoroutine(nameof(ThrowNade));
 
         // Nade cd
         if (nadeCD < maxNadeCD)
@@ -210,22 +211,6 @@ public class PlayerPainting : MonoBehaviour
             splatter.Send(currentColor, force * 1.15f, scale);
     }
 
-    private void ThrowNade()
-    {
-        GameObject thrownNade = Instantiate(nadePrefab, nadeSpawn.position, Quaternion.identity);
-        thrownNade.GetComponent<Nade>().SetNade(currentColor, mainCam.rotation);
-        nadeCD = .0f;
-        PlayerUpgrades.Grenades--;
-
-        if (PlayerUpgrades.Grenades == 0)
-            ChangeGun(0);
-    }
-
-    private void Lazer()
-    {
-
-    }
-
     private void NextColor()
     {
         if (!mustReload)
@@ -321,7 +306,7 @@ public class PlayerPainting : MonoBehaviour
 
         if (accuracyIndex == 1 && !PlayerUpgrades.SmallerSpray)
             accuracyIndex++;
-        else if (accuracyIndex == 2 && !PlayerUpgrades.WiderSpray)
+        if (accuracyIndex == 2 && !PlayerUpgrades.WiderSpray)
             accuracyIndex = 0;
     }
 
@@ -343,7 +328,7 @@ public class PlayerPainting : MonoBehaviour
 
     private IEnumerator Reload()
     {
-        animator.SetBool("Reloading", true);
+        standardAnimator.SetBool("Reloading", true);
         preReloadAmmo = ammo;
         reloadFirstFrame = true;
         reloading = true;
@@ -355,6 +340,21 @@ public class PlayerPainting : MonoBehaviour
         mustReload = false;
         barEmptyStart = false;
         startedEmpty = false;
-        animator.SetBool("Reloading", false);
+        standardAnimator.SetBool("Reloading", false);
+    }
+
+    private IEnumerator ThrowNade()
+    {
+        nadeAnimator.SetBool("Throw", true);
+        nadeCD = .0f;
+        PlayerUpgrades.Grenades--;
+        yield return new WaitForSeconds(.7f);
+        GameObject thrownNade = Instantiate(nadePrefab, nadeSpawn.position, Quaternion.identity);
+        thrownNade.GetComponent<Nade>().SetNade(currentColor, mainCam.rotation);
+        yield return new WaitForSeconds(1.9f);
+        nadeAnimator.SetBool("Throw", false);
+
+        if (PlayerUpgrades.Grenades == 0)
+            ChangeGun(0);
     }
 }

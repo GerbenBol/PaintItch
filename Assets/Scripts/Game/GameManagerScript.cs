@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
@@ -7,13 +8,17 @@ public class GameManagerScript : MonoBehaviour
     [SerializeField] private GameObject canvas;
 
     public static int CurrentLevel = -1;
+    public static bool ReadyToLeave = false;
 
     private readonly static Dictionary<int, Level> levels = new();
+    private static GameObject leaveBus;
 
     private void Start()
     {
         Time.timeScale = 1f;
         Application.targetFrameRate = 30;
+        leaveBus = GameObject.Find("LeaveBus");
+        leaveBus.SetActive(false);
     }
 
     private void Update()
@@ -24,6 +29,9 @@ public class GameManagerScript : MonoBehaviour
             Time.timeScale = 0;
             canvas.SetActive(true);
         }
+
+        if (Input.GetKeyDown(KeyCode.L))
+            CompleteGame();
     }
 
     public static void AddLevel(int id, Level level)
@@ -56,6 +64,18 @@ public class GameManagerScript : MonoBehaviour
         levels[level].CompleteObject(index);
     }
 
+    public static void CompleteLevel()
+    {
+        bool allCompleted = true;
+
+        foreach (KeyValuePair<int, Level> kvp in levels)
+            if (!kvp.Value.Completed)
+                allCompleted = false;
+
+        if (allCompleted)
+            CompleteGame();
+    }
+
     public static void OpenLevel(int level)
     {
         // Check if any fences are open
@@ -65,5 +85,11 @@ public class GameManagerScript : MonoBehaviour
         // Open new level
         levels[level].StartLevel();
         CurrentLevel = level;
+    }
+
+    private static void CompleteGame()
+    {
+        ReadyToLeave = true;
+        leaveBus.SetActive(true);
     }
 }

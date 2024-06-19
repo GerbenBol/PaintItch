@@ -7,11 +7,12 @@ public class EndScreen : MonoBehaviour
 {
     public void OnMainMenuButton()
     {
-        SceneManager.LoadScene("Temp Main Menu");
+        SceneManager.LoadSceneAsync("Temp Main Menu");
     }
 
     public void OnRetryButton()
     {
-        SceneManager.LoadScene("Main Scene");
+        GameManagerScript.RestartGame();
+        SceneManager.LoadSceneAsync("Main Scene");
     }
 }

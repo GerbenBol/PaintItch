@@ -15,10 +15,6 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private GameObject trampTxt;
     [SerializeField] private Trampoline trampoline;
 
-    private void Start()
-    {
-
-    }
     private void Update()
     {
         // Open the shop
@@ -57,12 +53,14 @@ public class PlayerInteract : MonoBehaviour
             {
                 returnedToSize = true;
                 lvl.OriginalSize();
-            } 
-           else if (hitObj.name == "Unpaintable Trampo" || hitObj.name == "Underside")
+            }
+            else if (hitObj.name == "Unpaintable Trampo" || hitObj.name == "Underside")
             {
                 if (Input.GetKeyDown(KeyCode.E))
                     OnPickUp();
             }
+            else if (hitObj.name == "LeaveBus" && Input.GetKeyDown(KeyCode.E))
+                GameManagerScript.StartFinalCamera();
         }
         else if (!returnedToSize)
         {

@@ -37,6 +37,7 @@ public class PlayerPainting : MonoBehaviour
 
     [Header("Animators")]
     [SerializeField] private Animator standardAnimator;
+    [SerializeField] private Animator miniAnimator;
     [SerializeField] private Animator nadeAnimator;
 
     [Header("Spawnpoints")]
@@ -118,12 +119,15 @@ public class PlayerPainting : MonoBehaviour
             mustReload = true;
 
         // Gun changing
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            ChangeGun(0);
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-            ChangeGun(1);
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-            ChangeGun(2);
+        if (!reloading)
+        {
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+                ChangeGun(0);
+            else if (Input.GetKeyDown(KeyCode.Alpha2))
+                ChangeGun(1);
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+                ChangeGun(2);
+        }
 
         // Spray modifier
         if (Input.GetKeyDown(KeyCode.Q))
@@ -328,7 +332,14 @@ public class PlayerPainting : MonoBehaviour
 
     private IEnumerator Reload()
     {
-        standardAnimator.SetBool("Reloading", true);
+        Animator anim;
+
+        if (standardActive)
+            anim = standardAnimator;
+        else
+            anim = miniAnimator;
+
+        anim.SetBool("Reloading", true);
         preReloadAmmo = ammo;
         reloadFirstFrame = true;
         reloading = true;
@@ -340,7 +351,7 @@ public class PlayerPainting : MonoBehaviour
         mustReload = false;
         barEmptyStart = false;
         startedEmpty = false;
-        standardAnimator.SetBool("Reloading", false);
+        anim.SetBool("Reloading", false);
     }
 
     private IEnumerator ThrowNade()

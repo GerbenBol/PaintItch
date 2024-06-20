@@ -89,6 +89,9 @@ public class Level : MonoBehaviour
 
         // Set objects price
         objPrice = Price / objects.Count;
+
+        // Change accept quest text
+        Quest.StartQuest(levelID);
     }
 
     public void StopLevel()

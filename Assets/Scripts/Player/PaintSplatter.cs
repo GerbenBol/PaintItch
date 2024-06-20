@@ -64,7 +64,6 @@ public class PaintSplatter : MonoBehaviour
         foreach (RaycastHit hit in hits)
             if (hit.collider.gameObject.name == otherName)
             {
-                Debug.Log(hit.collider.gameObject.name);
                 PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
                 Vector2 textureCoord = hit.textureCoord;
 

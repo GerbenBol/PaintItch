@@ -54,7 +54,7 @@ public class PlayerInteract : MonoBehaviour
                 returnedToSize = true;
                 lvl.OriginalSize();
             }
-            else if (hitObj.name == "Unpaintable Trampo" || hitObj.name == "Underside")
+            else if (hitObj.name == "P_Trampo" || hitObj.name == "Underside")
             {
                 if (Input.GetKeyDown(KeyCode.E))
                     OnPickUp();

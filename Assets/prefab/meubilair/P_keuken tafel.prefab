@@ -67,5 +67,57 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b8468b165ad5b46439e412828000b83f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 907000819796128949}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b8468b165ad5b46439e412828000b83f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -313402342794647570}
   m_SourcePrefab: {fileID: 100100000, guid: b8468b165ad5b46439e412828000b83f, type: 3}
+--- !u!1 &3877356567256604523 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b8468b165ad5b46439e412828000b83f, type: 3}
+  m_PrefabInstance: {fileID: 4111305495910195770}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &907000819796128949
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3877356567256604523}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8663075526944845553, guid: b8468b165ad5b46439e412828000b83f, type: 3}
+--- !u!114 &-313402342794647570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3877356567256604523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9efeef742149f4cbbfd0b21c525dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  required: 0
+  ExtraObject: 0
+  ExtraColor: {r: 0, g: 0, b: 0, a: 0}
+  completionPercentage: 1
+  completedPercentage: 0
+  MainTexture: {fileID: 0}
+  aoTexture: {fileID: 0}

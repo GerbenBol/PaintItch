@@ -26,7 +26,7 @@ public class PaintSplatter : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (!other.CompareTag("Splatter") && !other.CompareTag("Arrows"))
+         if (!other.CompareTag("Splatter") && !other.CompareTag("Arrows"))
         {
             Vector3 collisionPoint = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
 
@@ -55,7 +55,7 @@ public class PaintSplatter : MonoBehaviour
 
     private void Paint(Vector3 collisionPoint)
     {
-        Vector3 pos = transform.position - rb.velocity.normalized;
+        Vector3 pos = transform.position - rb.velocity;
         Vector3 heading = collisionPoint - pos;
         float distance = heading.magnitude;
         Vector3 dir = heading / distance;

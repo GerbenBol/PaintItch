@@ -48,13 +48,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6407635193903502835, guid: 769bbc148f111f446a17bebe276be288, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d17682ccefbc6d4da68ecc5d396b65e, type: 2}
     - target: {fileID: -6196129646125099211, guid: 769bbc148f111f446a17bebe276be288, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d17682ccefbc6d4da68ecc5d396b65e, type: 2}
+    - target: {fileID: -161407904993035422, guid: 769bbc148f111f446a17bebe276be288, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0d17682ccefbc6d4da68ecc5d396b65e, type: 2}
     - target: {fileID: 919132149155446097, guid: 769bbc148f111f446a17bebe276be288, type: 3}
       propertyPath: m_Name
-      value: Minigun vasthouden (1)
+      value: P_Minigun vasthouden (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2856747282671142568, guid: 769bbc148f111f446a17bebe276be288, type: 3}
       propertyPath: m_Materials.Array.data[0]

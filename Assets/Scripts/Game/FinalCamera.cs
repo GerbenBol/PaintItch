@@ -8,6 +8,7 @@ public class FinalCamera : MonoBehaviour
     [SerializeField] private float speed;
 
     private int targetIndex = 0;
+    private bool firstRotationDone = false;
     private Transform previousCheck;
     private Transform targetCheck;
 
@@ -38,12 +39,18 @@ public class FinalCamera : MonoBehaviour
 
     private void TargetNextCheckpoint()
     {
+        if (firstRotationDone)
+            speed = 3;
+
         previousCheck = targetCheck;
 
         if (targetIndex + 1 < checkpoints.Count)
             targetIndex++;
         else
+        {
+            firstRotationDone = true;
             targetIndex = 0;
+        }
 
         targetCheck = checkpoints[targetIndex];
         elapsedTime = .0f;

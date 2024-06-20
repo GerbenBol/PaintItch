@@ -19,7 +19,7 @@ public class GameManagerScript : MonoBehaviour
 
     private void Awake()
     {
-        //RestartGame();
+        StartGame();
     }
 
     private void Update()
@@ -37,9 +37,14 @@ public class GameManagerScript : MonoBehaviour
 
     public static void RestartGame()
     {
-        //levels.Clear();
-        //CurrentLevel = -1;
-        //ReadyToLeave = false;
+        levels.Clear();
+        StartGame();
+    }
+
+    public static void StartGame()
+    {
+        CurrentLevel = -1;
+        ReadyToLeave = false;
         Time.timeScale = 1f;
         Application.targetFrameRate = 30;
         leaveBus = GameObject.Find("LeaveBus");

@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class Shop : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class Shop : MonoBehaviour
 
     public static void OpenShop()
     {
+        GameManagerScript.InMenu = true;
         gO.SetActive(true);
         UpdateMoney();
         Time.timeScale = 0;
@@ -35,6 +37,7 @@ public class Shop : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         gO.SetActive(false);
+        GameManagerScript.InMenu = false;
     }
 
     public void BuyItem(BuyableItem item)

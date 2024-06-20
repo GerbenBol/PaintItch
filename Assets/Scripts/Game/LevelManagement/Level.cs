@@ -23,7 +23,7 @@ public class Level : MonoBehaviour
     private readonly float maxTimer = .2f;
     private float timer = .0f;
     private double objPrice;
-    public bool completed = false;
+    private bool completed = false;
     private FenceOpen levelFence;
     private FenceOpen secondFence;
     private PaintableObject vio;

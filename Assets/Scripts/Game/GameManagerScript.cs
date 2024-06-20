@@ -8,6 +8,7 @@ public class GameManagerScript : MonoBehaviour
 
     public static int CurrentLevel = -1;
     public static bool ReadyToLeave = false;
+    public static bool InMenu = false;
 
     private readonly static Dictionary<int, Level> levels = new();
     private static GameObject leaveBus;
@@ -17,18 +18,19 @@ public class GameManagerScript : MonoBehaviour
     private static GameObject standardUI;
     private static GameObject endUI;
 
-    private void Awake()
+    private void Start()
     {
         StartGame();
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !InMenu)
         {
             Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0;
             canvas.SetActive(true);
+            InMenu = true;
         }
 
         if (Input.GetKeyDown(KeyCode.L))
@@ -45,6 +47,7 @@ public class GameManagerScript : MonoBehaviour
     {
         CurrentLevel = -1;
         ReadyToLeave = false;
+        InMenu = false;
         Time.timeScale = 1f;
         Application.targetFrameRate = 30;
         leaveBus = GameObject.Find("LeaveBus");
@@ -118,11 +121,13 @@ public class GameManagerScript : MonoBehaviour
         bus.SetActive(false);
         player.SetActive(false);
         standardUI.SetActive(false);
+        InMenu = true;
     }
 
     private static void CompleteGame()
     {
         ReadyToLeave = true;
         leaveBus.SetActive(true);
+        leaveBus.transform.GetChild(0).gameObject.SetActive(true);
     }
 }

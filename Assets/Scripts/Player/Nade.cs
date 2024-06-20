@@ -6,6 +6,7 @@ using UnityEngine;
 public class Nade : MonoBehaviour
 {
     [SerializeField] private List<GameObject> paintPrefabs;
+    [SerializeField] private AudioClip explosion;
 
     private Rigidbody rb;
     private Color color;
@@ -35,6 +36,7 @@ public class Nade : MonoBehaviour
         transform.rotation = newRotation;
         GetComponent<Rigidbody>().AddRelativeForce(transform.forward * 600);
         Destroy(gameObject, 2);
+        StartCoroutine(nameof(PlaySound));
     }
 
     private void Explode()
@@ -69,5 +71,11 @@ public class Nade : MonoBehaviour
         Vector3 scale = new(randomScale, randomScale, randomScale);
 
         splatter.Send(color, force, scale);
+    }
+
+    private IEnumerator PlaySound()
+    {
+        yield return new WaitForSeconds(1.5f);
+        AudioSource.PlayClipAtPoint(explosion, transform.position);
     }
 }

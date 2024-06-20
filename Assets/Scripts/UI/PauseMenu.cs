@@ -12,15 +12,11 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         canvas.SetActive(false);
         Time.timeScale = 1.0f;
+        GameManagerScript.InMenu = false;
     }
 
     public void OnMainMenuButton()
     {
         SceneManager.LoadScene("Temp Main Menu");
-    }
-
-    public void OnQuitButton()
-    {
-        Application.Quit();
     }
 }

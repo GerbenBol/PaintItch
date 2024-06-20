@@ -53,6 +53,7 @@ public class Level : MonoBehaviour
             Extra += name[..1].ToUpper() + name[1..] +
                 $" to be painted {player.ColorNames[color]}.";
             LevelColor = player.Colors[color];
+            completed = true;
         }
     }
 

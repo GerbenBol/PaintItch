@@ -18,7 +18,7 @@ public class PlayerInteract : MonoBehaviour
     private void Update()
     {
         // Open the shop
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && !GameManagerScript.InMenu)
             Shop.OpenShop();
 
         Level lvl;

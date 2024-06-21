@@ -40,6 +40,11 @@ public class PlayerMovement : MonoBehaviour
         if (Cursor.lockState == CursorLockMode.Locked)
             LookAround();
 
+        // Fix sound
+        if (walkingSound.time >= 1)
+            walkingSound.time = 0;
+        if (GameManagerScript.InMenu && walkingSound.isPlaying)
+            walkingSound.Stop();
 
         //Makes the player move with [W,A,S,D]
         if (isGrounded)

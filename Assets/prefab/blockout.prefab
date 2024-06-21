@@ -30669,6 +30669,66 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4006856111066821264}
     m_Modifications:
+    - target: {fileID: 70436697070184752, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 179544865983183929, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: wall outside
+      objectReference: {fileID: 0}
+    - target: {fileID: 466577127765889632, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Door outside 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546719173682661545, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Deur kaal 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1556129661540516759, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2445747169261956585, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Outside wall 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3379379581501821931, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4171478809600242366, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Door inside 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4555700999390361635, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Muur plain lang
+      objectReference: {fileID: 0}
+    - target: {fileID: 4611898641226354889, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Door outside 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706031758132861485, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: kale muur kort 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5166285278625653468, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5235057236863524062, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Outside wall 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065619242930155658, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: kale muur kort
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228121142551234836, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Muur plain lang
+      objectReference: {fileID: 0}
     - target: {fileID: 7122529916152963637, guid: f68d28724812b574ab5000de01dccea9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.8
@@ -30709,9 +30769,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7335429592236753307, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Outside wall 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7679800824138825929, guid: f68d28724812b574ab5000de01dccea9, type: 3}
       propertyPath: m_Name
       value: Bungalow
+      objectReference: {fileID: 0}
+    - target: {fileID: 7823839307823180510, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Deur kaal 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119682515087551292, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Outside wall 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8494472945047394500, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Inside Wall 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8860431941362394822, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Outside wall 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9195591698101776407, guid: f68d28724812b574ab5000de01dccea9, type: 3}
+      propertyPath: m_Name
+      value: Door inside 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

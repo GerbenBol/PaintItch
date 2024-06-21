@@ -451,6 +451,7 @@ MonoBehaviour:
   playerCollider: {fileID: 8432165704593599431}
   playerTrigger: {fileID: 7703079208780979570}
   walkingSound: {fileID: 4695680891290790697}
+  boingOingTrampolineSound: {fileID: 8300000, guid: 0cae4a65d9299be40bd43e64dfec219d, type: 3}
 --- !u!114 &4861099138357988166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,6 +511,7 @@ MonoBehaviour:
   currentColor: {r: 0, g: 0, b: 0, a: 0}
   wheels: []
   fillBar: {fileID: 0}
+  crosshair: {fileID: 0}
   ammo: 8
   paintPrefabs:
   - {fileID: 6564777485078711757, guid: 8187bee2a2009c7439d0dac29d986e2e, type: 3}
@@ -519,6 +521,8 @@ MonoBehaviour:
   mainCam: {fileID: 7367132984253578729}
   minimumDistance: 0
   reloadPrompt: {fileID: 0}
+  shootSound: {fileID: 8300000, guid: b8ca0900dafa4aa43ae4cf7ceb9e87f1, type: 3}
+  emptySound: {fileID: 8300000, guid: 1e7a7d24bff392e4a914580884abe6f5, type: 3}
   ammoBar: 0
   standard: {fileID: 7461483930444778115}
   mini: {fileID: 982719341599626083}
@@ -604,9 +608,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: fc5279513092c3e4c806ad31e1963b0f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d09f11f11c9063648beefa1d40aebb00, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

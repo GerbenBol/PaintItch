@@ -7,6 +7,6 @@ public class LoadingScreen : MonoBehaviour
 {
     private void Start()
     {
-        SceneManager.LoadScene("Main Scene");
+        SceneManager.LoadSceneAsync("Main Scene");
     }
 }

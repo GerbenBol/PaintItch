@@ -34,7 +34,7 @@ public class PlayerInteract : MonoBehaviour
             GameObject hitObj = hitInfo.transform.gameObject;
 
             // Check of we naar een quest kijken (voorkomt error messages)
-            if (hitObj.name[..5] == "Level")
+            if (hitObj.name.Length > 4 && hitObj.name[..5] == "Level")
             {
                 if (returnedToSize)
                 {

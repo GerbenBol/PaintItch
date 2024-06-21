@@ -27,6 +27,8 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private Transform mainCam;
     [SerializeField] private float minimumDistance;
     [SerializeField] private GameObject reloadPrompt;
+    [SerializeField] private AudioClip shootSound;
+    [SerializeField] private AudioClip emptySound;
 
     public float ammoBar;
 
@@ -86,13 +88,22 @@ public class PlayerPainting : MonoBehaviour
         // Shooting
         if (timer < maxTimer && standardActive)
             timer += Time.deltaTime;
-        else if (Input.GetMouseButton(0) && ammo > 0 && !reloading && !mustReload && !nadeActive)
+        else if (Input.GetMouseButton(0) && !nadeActive)
         {
-            // Check if we're too close to an object
-            if (!Physics.Raycast(mainCam.position, mainCam.forward, minimumDistance))
+            if (ammo > 0 && !reloading && !mustReload)
             {
-                Shoot();
+                // Check if we're too close to an object
+                if (!Physics.Raycast(mainCam.position, mainCam.forward, minimumDistance))
+                {
+                    Shoot();
+                    AudioSource.PlayClipAtPoint(shootSound, transform.position);
+                    timer = .0f;
+                }
+            }
+            else if (!reloading)
+            {
                 timer = .0f;
+                AudioSource.PlayClipAtPoint(emptySound, transform.position, .07f);
             }
         }
         else if (Input.GetMouseButton(0) && nadeActive && nadeCD >= maxNadeCD)

@@ -41,8 +41,6 @@ public class PlayerMovement : MonoBehaviour
             LookAround();
 
         // Fix sound
-        if (walkingSound.time >= 1)
-            walkingSound.time = 0;
         if (GameManagerScript.InMenu && walkingSound.isPlaying)
             walkingSound.Stop();
 

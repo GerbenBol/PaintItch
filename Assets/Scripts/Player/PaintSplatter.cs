@@ -43,7 +43,7 @@ public class PaintSplatter : MonoBehaviour
             }
 
             System.Random rand = new();
-            AudioSource.PlayClipAtPoint(hitSounds[rand.Next(0, hitSounds.Count)], transform.position);
+            AudioSource.PlayClipAtPoint(hitSounds[rand.Next(0, hitSounds.Count)], transform.position, .1f);
             Destroy(gameObject);
         }
     }
@@ -65,7 +65,7 @@ public class PaintSplatter : MonoBehaviour
         RaycastHit[] hits = Physics.RaycastAll(pos, dir, distance + 1, paintableLayer, QueryTriggerInteraction.Ignore);
 
         foreach (RaycastHit hit in hits)
-            if (hit.collider.gameObject.name == otherName && hit.collider.gameObject.layer == paintableLayer)
+            if (hit.collider.gameObject.name == otherName)
             {
                 PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
                 Vector2 textureCoord = hit.textureCoord;

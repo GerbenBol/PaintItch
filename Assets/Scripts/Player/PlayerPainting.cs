@@ -27,7 +27,7 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private Transform mainCam;
     [SerializeField] private float minimumDistance;
     [SerializeField] private GameObject reloadPrompt;
-    [SerializeField] private AudioClip shootSound;
+    [SerializeField] private List<AudioClip> shootSounds;
     [SerializeField] private AudioClip emptySound;
 
     public float ammoBar;
@@ -96,7 +96,8 @@ public class PlayerPainting : MonoBehaviour
                 if (!Physics.Raycast(mainCam.position, mainCam.forward, minimumDistance))
                 {
                     Shoot();
-                    AudioSource.PlayClipAtPoint(shootSound, transform.position);
+                    System.Random rand = new();
+                    AudioSource.PlayClipAtPoint(shootSounds[rand.Next(0, shootSounds.Count)], transform.position, .2f);
                     timer = .0f;
                 }
             }

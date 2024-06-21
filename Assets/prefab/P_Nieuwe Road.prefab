@@ -122,6 +122,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -183,6 +191,14 @@ PrefabInstance:
     - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
       propertyPath: m_Name
       value: P_SideWalkTile (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -246,6 +262,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -307,6 +331,14 @@ PrefabInstance:
     - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
       propertyPath: m_Name
       value: P_SideWalkTile (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -370,6 +402,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -432,6 +472,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -451,12 +499,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 285775776986906104}
     m_Modifications:
     - target: {fileID: 1104750097075007090, guid: 6342075c18aed73448de427312811dd5, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104750097075007090, guid: 6342075c18aed73448de427312811dd5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a66ffeec9aed0a141be9dc45a45c8172, type: 2}
     - target: {fileID: 1464831152607219623, guid: 6342075c18aed73448de427312811dd5, type: 3}
       propertyPath: m_Name
       value: P_Asphalt 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464831152607219623, guid: 6342075c18aed73448de427312811dd5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2242775574175290653, guid: 6342075c18aed73448de427312811dd5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -560,6 +616,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -621,6 +685,14 @@ PrefabInstance:
     - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
       propertyPath: m_Name
       value: P_SideWalkTile (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -684,6 +756,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -746,6 +826,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -767,6 +855,10 @@ PrefabInstance:
     - target: {fileID: 4686627373832232990, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_Name
       value: P_AsphaltTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686627373832232990, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5350819965309303460, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -807,6 +899,10 @@ PrefabInstance:
     - target: {fileID: 5350819965309303460, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488212292424679883, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -870,6 +966,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -891,6 +995,10 @@ PrefabInstance:
     - target: {fileID: 4686627373832232990, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_Name
       value: P_AsphaltTile (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686627373832232990, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5350819965309303460, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -931,6 +1039,10 @@ PrefabInstance:
     - target: {fileID: 5350819965309303460, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488212292424679883, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -994,6 +1106,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1015,6 +1135,10 @@ PrefabInstance:
     - target: {fileID: 4686627373832232990, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_Name
       value: P_AsphaltTile (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686627373832232990, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5350819965309303460, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1055,6 +1179,10 @@ PrefabInstance:
     - target: {fileID: 5350819965309303460, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488212292424679883, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1118,6 +1246,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1180,6 +1316,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1201,6 +1345,10 @@ PrefabInstance:
     - target: {fileID: 2784746142534681583, guid: d8bc9466172145e469f77641ae771296, type: 3}
       propertyPath: m_Name
       value: P_SideWalk2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784746142534681583, guid: d8bc9466172145e469f77641ae771296, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3309784469402753365, guid: d8bc9466172145e469f77641ae771296, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1241,6 +1389,10 @@ PrefabInstance:
     - target: {fileID: 3309784469402753365, guid: d8bc9466172145e469f77641ae771296, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442127774563754554, guid: d8bc9466172145e469f77641ae771296, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4442127774563754554, guid: d8bc9466172145e469f77641ae771296, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1308,6 +1460,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1369,6 +1529,14 @@ PrefabInstance:
     - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
       propertyPath: m_Name
       value: P_SideWalkTile (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1432,6 +1600,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1494,6 +1670,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1515,6 +1699,10 @@ PrefabInstance:
     - target: {fileID: 2784746142534681583, guid: d8bc9466172145e469f77641ae771296, type: 3}
       propertyPath: m_Name
       value: P_SideWalk2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784746142534681583, guid: d8bc9466172145e469f77641ae771296, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 3309784469402753365, guid: d8bc9466172145e469f77641ae771296, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1555,6 +1743,10 @@ PrefabInstance:
     - target: {fileID: 3309784469402753365, guid: d8bc9466172145e469f77641ae771296, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442127774563754554, guid: d8bc9466172145e469f77641ae771296, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4442127774563754554, guid: d8bc9466172145e469f77641ae771296, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1622,6 +1814,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1683,6 +1883,14 @@ PrefabInstance:
     - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
       propertyPath: m_Name
       value: P_SideWalkTile (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1746,6 +1954,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1808,6 +2024,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1829,6 +2053,10 @@ PrefabInstance:
     - target: {fileID: 4686627373832232990, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_Name
       value: P_AsphaltTile (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686627373832232990, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5350819965309303460, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1869,6 +2097,10 @@ PrefabInstance:
     - target: {fileID: 5350819965309303460, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488212292424679883, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1932,6 +2164,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1994,6 +2234,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2013,12 +2261,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 285775776986906104}
     m_Modifications:
     - target: {fileID: 1104750097075007090, guid: 6342075c18aed73448de427312811dd5, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1104750097075007090, guid: 6342075c18aed73448de427312811dd5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a66ffeec9aed0a141be9dc45a45c8172, type: 2}
     - target: {fileID: 1464831152607219623, guid: 6342075c18aed73448de427312811dd5, type: 3}
       propertyPath: m_Name
       value: P_Asphalt 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464831152607219623, guid: 6342075c18aed73448de427312811dd5, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2242775574175290653, guid: 6342075c18aed73448de427312811dd5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2122,6 +2378,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2143,6 +2407,10 @@ PrefabInstance:
     - target: {fileID: 4686627373832232990, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_Name
       value: P_AsphaltTile (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4686627373832232990, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5350819965309303460, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2183,6 +2451,10 @@ PrefabInstance:
     - target: {fileID: 5350819965309303460, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488212292424679883, guid: 9fa843fc097aa6043a7257feb62164ef, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2246,6 +2518,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2307,6 +2587,14 @@ PrefabInstance:
     - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
       propertyPath: m_Name
       value: P_SideWalkTile (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2370,6 +2658,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2432,6 +2728,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_SideWalkTile (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2493,6 +2797,14 @@ PrefabInstance:
     - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
       propertyPath: m_Name
       value: P_SideWalkTile (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018845950065765370, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379041217451674159, guid: cdd1e5b4635525e46b54fb62c997551e, type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

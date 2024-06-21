@@ -29,23 +29,23 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5418602960396334796}
-  - {fileID: 3058391042621449764}
-  - {fileID: 1429139505736441101}
-  - {fileID: 4938880040029941748}
-  - {fileID: 5452814335745680655}
-  - {fileID: 5911910185816071856}
-  - {fileID: 2406239901825760888}
-  - {fileID: 7574392479233139054}
   - {fileID: 9205268055768693504}
-  - {fileID: 3159479536234468437}
+  - {fileID: 7574392479233139054}
+  - {fileID: 4938880040029941748}
   - {fileID: 843440928524658598}
   - {fileID: 4529799572384522810}
+  - {fileID: 3159479536234468437}
+  - {fileID: 3808960085815877479}
+  - {fileID: 7604278907029769098}
+  - {fileID: 2406239901825760888}
+  - {fileID: 5418602960396334796}
+  - {fileID: 1429139505736441101}
+  - {fileID: 3058391042621449764}
+  - {fileID: 5452814335745680655}
+  - {fileID: 5911910185816071856}
   - {fileID: 2557033242993203334}
   - {fileID: 3587009093525691577}
   - {fileID: 5843766785540942508}
-  - {fileID: 7604278907029769098}
-  - {fileID: 3808960085815877479}
   - {fileID: 5920413089146941192}
   - {fileID: 2518415921086135324}
   - {fileID: 4893185965732372957}
@@ -360,7 +360,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: P_Muur lang (8)
+      value: Wall 5
       objectReference: {fileID: 0}
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -408,7 +408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: Outside Wall 11
+      value: Outside Wall 5
       objectReference: {fileID: 0}
     - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -428,7 +428,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: Inside Wall 13
+      value: Inside Wall 5
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -458,7 +458,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 621760744299842395, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_Name
-      value: Inside Wall 3
+      value: Inside doorway 2
       objectReference: {fileID: 0}
     - target: {fileID: 621760744299842395, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_TagString
@@ -466,7 +466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1090649793421228297, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_Name
-      value: Inside Wall 4
+      value: Inside Doorway 3
       objectReference: {fileID: 0}
     - target: {fileID: 1090649793421228297, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_TagString
@@ -514,7 +514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4145479949738938015, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_Name
-      value: P_Deurgang (1)
+      value: Doorway 2
       objectReference: {fileID: 0}
     - target: {fileID: 4145479949738938015, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_TagString
@@ -612,7 +612,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 193864794733858248, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_Name
-      value: P_Muur kort
+      value: Wall 8
       objectReference: {fileID: 0}
     - target: {fileID: 193864794733858248, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_TagString
@@ -620,7 +620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_Name
-      value: Inside Wall 16
+      value: Inside Wall 8
       objectReference: {fileID: 0}
     - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_TagString
@@ -640,7 +640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_Name
-      value: Outside Wall 14
+      value: Outside Wall 8
       objectReference: {fileID: 0}
     - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_TagString
@@ -718,7 +718,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: P_Muur lang (6)
+      value: Wall 9
       objectReference: {fileID: 0}
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -816,7 +816,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: P_Muur lang (7)
+      value: Wall 6
       objectReference: {fileID: 0}
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -864,7 +864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: Outside Wall 9
+      value: Outside Wall 6
       objectReference: {fileID: 0}
     - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -872,7 +872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: Inside Wall 11
+      value: Inside Wall 6
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -1722,7 +1722,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 621760744299842395, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_Name
-      value: Inside Wall 2
+      value: Inside doorway 3
       objectReference: {fileID: 0}
     - target: {fileID: 621760744299842395, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_TagString
@@ -1730,7 +1730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1090649793421228297, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_Name
-      value: Outside Wall 2
+      value: Outside doorway 3
       objectReference: {fileID: 0}
     - target: {fileID: 1090649793421228297, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_TagString
@@ -1778,7 +1778,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4145479949738938015, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_Name
-      value: P_Deurgang (2)
+      value: Doorway 3
       objectReference: {fileID: 0}
     - target: {fileID: 4145479949738938015, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_TagString
@@ -1888,7 +1888,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: P_Muur lang (1)
+      value: Wall 4
       objectReference: {fileID: 0}
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -1936,7 +1936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: Outside Wall 10
+      value: Outside Wall 4
       objectReference: {fileID: 0}
     - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -1944,7 +1944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: Inside Wall 12
+      value: Inside Wall 4
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -2242,7 +2242,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 193864794733858248, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_Name
-      value: P_Muur kort (1)
+      value: Wall 7
       objectReference: {fileID: 0}
     - target: {fileID: 193864794733858248, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_TagString
@@ -2250,7 +2250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_Name
-      value: Inside Wall 17
+      value: Inside Wall 7
       objectReference: {fileID: 0}
     - target: {fileID: 501894609782029037, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_TagString
@@ -2270,7 +2270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_Name
-      value: Outside Wall 15
+      value: Outside Wall 7
       objectReference: {fileID: 0}
     - target: {fileID: 1364521801956040035, guid: 4e69a8f1e8c699e45beff615db8f3711, type: 3}
       propertyPath: m_TagString
@@ -2336,7 +2336,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: P_Muur lang (3)
+      value: Wall 1
       objectReference: {fileID: 0}
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -2384,7 +2384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: Outside Wall 8
+      value: Outside Wall 1
       objectReference: {fileID: 0}
     - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -2392,7 +2392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: Inside Wall 10
+      value: Inside Wall 1
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -2570,7 +2570,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 621760744299842395, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_Name
-      value: Inside Wall 1
+      value: Inside doorway 1
       objectReference: {fileID: 0}
     - target: {fileID: 621760744299842395, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_TagString
@@ -2578,7 +2578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1090649793421228297, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_Name
-      value: Outside Wall 1
+      value: Outside doorway 1
       objectReference: {fileID: 0}
     - target: {fileID: 1090649793421228297, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_TagString
@@ -2626,7 +2626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4145479949738938015, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_Name
-      value: P_Deurgang
+      value: Doorway 1
       objectReference: {fileID: 0}
     - target: {fileID: 4145479949738938015, guid: e8633244fde9a65438bf40fa79e5f5fc, type: 3}
       propertyPath: m_TagString
@@ -2860,7 +2860,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: P_Muur lang (2)
+      value: Wall 2
       objectReference: {fileID: 0}
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -2908,7 +2908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: Outside Wall 7
+      value: Outside Wall 2
       objectReference: {fileID: 0}
     - target: {fileID: 5844419246981809671, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -2916,7 +2916,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: Inside Wall 9
+      value: Inside Wall 2
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -3592,7 +3592,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: P_Muur lang
+      value: Wall 3
       objectReference: {fileID: 0}
     - target: {fileID: 2489452436305673550, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString
@@ -3648,7 +3648,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_Name
-      value: Inside Wall 5
+      value: Inside Wall 3
       objectReference: {fileID: 0}
     - target: {fileID: 8511911028116831752, guid: 60ddf0b299b0fb34c96bc6102b3323f2, type: 3}
       propertyPath: m_TagString

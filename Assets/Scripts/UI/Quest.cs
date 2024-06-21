@@ -14,6 +14,9 @@ public class Quest : MonoBehaviour
     [SerializeField] private Image levelImage;
     [SerializeField] private List<GameObject> cameras;
 
+    [SerializeField] private TextMeshProUGUI objectiveText;
+    [SerializeField] private TextMeshProUGUI extraText;
+
     private static bool openNextFrame = false;
     private static bool closeNextFrame = false;
     private static int lastLevel = 0;
@@ -26,9 +29,14 @@ public class Quest : MonoBehaviour
     private static Color activeColor;
     private static GameObject thisObj;
 
+    private static TextMeshProUGUI objective;
+    private static TextMeshProUGUI extra;
+
     private void Start()
     {
         thisObj = gameObject;
+        objective = objectiveText;
+        extra = extraText;
         thisObj.SetActive(false);
     }
 
@@ -69,10 +77,15 @@ public class Quest : MonoBehaviour
         closeNextFrame = true;
     }
 
-    public static void StartQuest(int levelID)
+    public static void StartQuest(int levelID, string name, string _extra, Color color)
     {
         activeButtonText = "Quest Accepted!";
         activeLevel = levelID;
+        objective.text = name;
+        extra.text = _extra;
+        extra.color = color;
+        objective.gameObject.SetActive(true);
+        extra.gameObject.SetActive(true);
         openNextFrame = true;
     }
 

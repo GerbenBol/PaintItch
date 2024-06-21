@@ -9,8 +9,9 @@ public class PaintSplatter : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private new Renderer renderer;
     [SerializeField] private LayerMask paintableLayer;
+    [SerializeField] private List<AudioClip> hitSounds;
 
-    private int paintingLayer = 6;
+    private readonly int paintingLayer = 6;
 
     private void Start()
     {
@@ -26,7 +27,7 @@ public class PaintSplatter : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-         if (!other.CompareTag("Splatter") && !other.CompareTag("Arrows"))
+        if (!other.CompareTag("Splatter") && !other.CompareTag("Arrows"))
         {
             Vector3 collisionPoint = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
             
@@ -40,7 +41,9 @@ public class PaintSplatter : MonoBehaviour
                 if (other.gameObject.layer == paintingLayer)
                     Paint(collisionPoint, other.name);
             }
-            
+
+            System.Random rand = new();
+            AudioSource.PlayClipAtPoint(hitSounds[rand.Next(0, hitSounds.Count)], transform.position);
             Destroy(gameObject);
         }
     }
@@ -62,7 +65,7 @@ public class PaintSplatter : MonoBehaviour
         RaycastHit[] hits = Physics.RaycastAll(pos, dir, distance + 1, paintableLayer, QueryTriggerInteraction.Ignore);
 
         foreach (RaycastHit hit in hits)
-            if (hit.collider.gameObject.name == otherName)
+            if (hit.collider.gameObject.name == otherName && hit.collider.gameObject.layer == paintableLayer)
             {
                 PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
                 Vector2 textureCoord = hit.textureCoord;

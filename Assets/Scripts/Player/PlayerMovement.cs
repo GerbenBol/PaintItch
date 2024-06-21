@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float movementSpeed;  //10000
     [SerializeField] private int sensitivity;      //5
-    private int camAngleXLimit = 85;
+    private readonly int camAngleXLimit = 85;
     private float playerXRotation;
 
     public bool isGrounded = true;
@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Collider playerCollider;
     [SerializeField] private Collider playerTrigger;
+    [SerializeField] private AudioSource walkingSound;
 
     private bool crouched;
 
@@ -53,12 +54,21 @@ public class PlayerMovement : MonoBehaviour
                 rigidBody.AddForce(transform.right * (Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime));
                 rigidBody.AddForce(transform.forward * (Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime));
             }
+
+            // SFX
+            if (rigidBody.velocity != Vector3.zero && !walkingSound.isPlaying)
+                walkingSound.Play();
+            else if (rigidBody.velocity == Vector3.zero && walkingSound.isPlaying)
+                walkingSound.Stop();
         }
 
         if (!isGrounded && !crouched)
         {
             rigidBody.AddForce(transform.right * (Input.GetAxis("Horizontal") * (movementSpeed / 25f) * Time.deltaTime));
             rigidBody.AddForce(transform.forward * (Input.GetAxis("Vertical") * (movementSpeed / 25f) * Time.deltaTime));
+
+            if (walkingSound.isPlaying)
+                walkingSound.Stop();
         }
 
         //Allows the player to jump with [SPACE]

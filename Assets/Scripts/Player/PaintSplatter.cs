@@ -26,19 +26,19 @@ public class PaintSplatter : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (!other.CompareTag("Splatter") && !other.CompareTag("Arrows"))
+         if (!other.CompareTag("Splatter") && !other.CompareTag("Arrows"))
         {
             Vector3 collisionPoint = other.gameObject.GetComponent<Collider>().ClosestPointOnBounds(transform.position);
-
+            
             if (HoveredObject.isFocused)
             {
                 if (other.gameObject.layer == paintingLayer && HoveredObject.focusedObject == other.gameObject)
-                    Paint(collisionPoint);
+                    Paint(collisionPoint, other.name);
             }
             else
             {
                 if (other.gameObject.layer == paintingLayer)
-                    Paint(collisionPoint);
+                    Paint(collisionPoint, other.name);
             }
             
             Destroy(gameObject);
@@ -53,7 +53,7 @@ public class PaintSplatter : MonoBehaviour
         transform.localScale = scale;
     }
 
-    private void Paint(Vector3 collisionPoint)
+    private void Paint(Vector3 collisionPoint, string otherName)
     {
         Vector3 pos = transform.position - rb.velocity.normalized;
         Vector3 heading = collisionPoint - pos;
@@ -62,7 +62,7 @@ public class PaintSplatter : MonoBehaviour
         RaycastHit[] hits = Physics.RaycastAll(pos, dir, distance + 1, paintableLayer, QueryTriggerInteraction.Ignore);
 
         foreach (RaycastHit hit in hits)
-            if (hit.collider.gameObject.layer == paintingLayer)
+            if (hit.collider.gameObject.name == otherName)
             {
                 PaintableObject obj = hit.transform.GetComponent<PaintableObject>();
                 Vector2 textureCoord = hit.textureCoord;

@@ -23,7 +23,7 @@ public class Level : MonoBehaviour
     private readonly float maxTimer = .2f;
     private float timer = .0f;
     private double objPrice;
-    public bool completed = false;
+    private bool completed = false;
     private FenceOpen levelFence;
     private FenceOpen secondFence;
     private PaintableObject vio;
@@ -53,6 +53,7 @@ public class Level : MonoBehaviour
             Extra += name[..1].ToUpper() + name[1..] +
                 $" to be painted {player.ColorNames[color]}.";
             LevelColor = player.Colors[color];
+            completed = true;
         }
     }
 
@@ -88,6 +89,9 @@ public class Level : MonoBehaviour
 
         // Set objects price
         objPrice = Price / objects.Count;
+
+        // Change accept quest text
+        Quest.StartQuest(levelID);
     }
 
     public void StopLevel()

@@ -7,25 +7,25 @@ public class Trampoline : MonoBehaviour
 {
     private bool beingHeld;
     private bool pickedUp;
-    //private bool changed;
+    private bool changed;
 
     private Rigidbody rb;
-    /*private BoxCollider topBox;
+    private BoxCollider topBox;
     private BoxCollider botBox;
-    private MeshCollider mesh;*/
+    private MeshCollider mesh;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        /*topBox = GetComponent<BoxCollider>();
+        topBox = GetComponent<BoxCollider>();
         botBox = transform.GetChild(0).GetComponent<BoxCollider>();
-        mesh = GetComponent<MeshCollider>();*/
+        mesh = GetComponent<MeshCollider>();
     }
 
     void Update()
     {
-        /*if (!changed)
-            ChangeTrampTag();*/
+        if (!changed)
+            ChangeTrampTag();
 
         // Verander positie van tramp als we niet op de juiste plek zijn
         if (beingHeld && Vector3.Distance(transform.position, transform.parent.position) > .1f)
@@ -37,13 +37,13 @@ public class Trampoline : MonoBehaviour
             Drop();
         pickedUp = false;
 
-        /*if (rb != null && rb.velocity == new Vector3(0, 0, 0) && !beingHeld)
+        if (rb != null && rb.velocity == new Vector3(0, 0, 0) && !beingHeld)
         {
             Destroy(rb);
             mesh.enabled = true;
             topBox.enabled = false;
             botBox.enabled = false;
-        }*/
+        }
     }
 
     public void Interact(GameObject trampHolder = null)
@@ -57,13 +57,13 @@ public class Trampoline : MonoBehaviour
     private void Pickup(GameObject trampHolder)
     {
         // Oppakken van de tramp
-        /*topBox.enabled = true;
+        topBox.enabled = true;
         botBox.enabled = true;
         if (rb != null)
             rb = GetComponent<Rigidbody>();
         else
             rb = gameObject.AddComponent(typeof(Rigidbody)) as Rigidbody;
-        mesh.enabled = false;*/
+        mesh.enabled = false;
         transform.SetParent(trampHolder.transform);
         transform.localPosition = new(0, 0, transform.localScale.z + 1);
         transform.rotation = Quaternion.identity;
@@ -83,10 +83,10 @@ public class Trampoline : MonoBehaviour
         beingHeld = false;
     }
 
-    /*private IEnumerator ChangeTrampTag()
+    private IEnumerator ChangeTrampTag()
     {
         gameObject.tag = "Trampoline";
         changed = true;
         yield return new WaitForSeconds(1);
-    }*/
+    }
 }

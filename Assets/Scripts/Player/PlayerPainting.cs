@@ -21,13 +21,14 @@ public class PlayerPainting : MonoBehaviour
 
     [SerializeField] private List<ColorWheelGun> wheels;
     [SerializeField] Image fillBar;
+    [SerializeField] private Image crosshair;
     [SerializeField] private float ammo;
     [SerializeField] private List<GameObject> paintPrefabs;
     [SerializeField] private GameObject nadePrefab;
     [SerializeField] private Transform mainCam;
     [SerializeField] private float minimumDistance;
     [SerializeField] private GameObject reloadPrompt;
-    [SerializeField] private List<AudioClip> shootSounds;
+    [SerializeField] private AudioClip shootSound;
     [SerializeField] private AudioClip emptySound;
 
     public float ammoBar;
@@ -97,7 +98,7 @@ public class PlayerPainting : MonoBehaviour
                 {
                     Shoot();
                     System.Random rand = new();
-                    AudioSource.PlayClipAtPoint(shootSounds[rand.Next(0, shootSounds.Count)], transform.position, .2f);
+                    AudioSource.PlayClipAtPoint(shootSound, transform.position, .2f);
                     timer = .0f;
                 }
             }
@@ -171,6 +172,7 @@ public class PlayerPainting : MonoBehaviour
                 currentColor = Colors[upcomingColor];
                 currentColor.a = 1;
                 fillBar.color = currentColor;
+                crosshair.color = currentColor;
 
                 if (!startedEmpty)
                     ammo += maxAmmo * Time.deltaTime / 1.1f;

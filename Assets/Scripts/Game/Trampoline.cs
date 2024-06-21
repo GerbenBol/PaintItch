@@ -25,7 +25,9 @@ public class Trampoline : MonoBehaviour
     void Update()
     {
         if (!changed)
-            ChangeTrampTag();
+        {
+            StartCoroutine(nameof(ChangeTrampTag));
+        }
 
         // Verander positie van tramp als we niet op de juiste plek zijn
         if (beingHeld && Vector3.Distance(transform.position, transform.parent.position) > .1f)
@@ -85,8 +87,8 @@ public class Trampoline : MonoBehaviour
 
     private IEnumerator ChangeTrampTag()
     {
+        yield return new WaitForSeconds(1);
         gameObject.tag = "Trampoline";
         changed = true;
-        yield return new WaitForSeconds(1);
     }
 }

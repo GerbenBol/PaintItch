@@ -19,8 +19,10 @@ public class PlayerPainting : MonoBehaviour
     };
     public static int brushIndex = 0;
 
-    [SerializeField] private List<ColorWheelGun> wheels;
-    [SerializeField] Image fillBar;
+    [SerializeField] private Image colorWheel;
+    private ColorWheelGun wheel;
+    [SerializeField] private Image fillBarGun;
+    [SerializeField] private Image fillBarMiniGun;
     [SerializeField] private Image crosshair;
     [SerializeField] private float ammo;
     [SerializeField] private List<GameObject> paintPrefabs;
@@ -80,6 +82,7 @@ public class PlayerPainting : MonoBehaviour
     {
         ammo = maxAmmo;
         spawnpoint = standardSpawn;
+        wheel = colorWheel.GetComponent<ColorWheelGun>();
     }
 
     private void Update()
@@ -171,7 +174,8 @@ public class PlayerPainting : MonoBehaviour
             {
                 currentColor = Colors[upcomingColor];
                 currentColor.a = 1;
-                fillBar.color = currentColor;
+                fillBarGun.color = currentColor;
+                fillBarMiniGun.color = currentColor;
                 crosshair.color = currentColor;
 
                 if (!startedEmpty)
@@ -241,7 +245,6 @@ public class PlayerPainting : MonoBehaviour
 
         mustReload = true;
 
-        foreach (ColorWheelGun wheel in wheels)
             wheel.RotateWheel(1);
 
         if (mustReload && lastUsedColor == Colors[upcomingColor])
@@ -260,7 +263,6 @@ public class PlayerPainting : MonoBehaviour
 
         mustReload = true;
 
-        foreach (ColorWheelGun wheel in wheels)
             wheel.RotateWheel(-1);
 
         if (mustReload && lastUsedColor == Colors[upcomingColor])

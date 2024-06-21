@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Collider playerCollider;
     [SerializeField] private Collider playerTrigger;
     [SerializeField] private AudioSource walkingSound;
+    [SerializeField] private AudioClip boingOingTrampolineSound;
 
     private bool crouched;
 
@@ -78,7 +79,10 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && Input.GetKeyDown(KeyCode.Space) && !crouched)
         {
             if (onTramp)
+            {
+                AudioSource.PlayClipAtPoint(boingOingTrampolineSound, transform.position);
                 jumpHeight += trampJumpMod;
+            }
 
             rigidBody.AddForce(transform.up * jumpHeight);
 

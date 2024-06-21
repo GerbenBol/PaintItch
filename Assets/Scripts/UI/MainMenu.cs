@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject controlsScreen;
     [SerializeField] private GameObject normalScreen;
+    [SerializeField] private GameObject controlsScreen;
+    [SerializeField] private GameObject creditsScreen;
+
+    private bool controlsActive;
 
     public void OnStartButton()
     {
@@ -17,11 +20,25 @@ public class MainMenu : MonoBehaviour
     {
         controlsScreen.SetActive(true);
         normalScreen.SetActive(false);
+        controlsActive = true;
+    }
+
+    public void OnCreditsButton()
+    {
+        creditsScreen.SetActive(true);
+        normalScreen.SetActive(false);
     }
 
     public void OnBackButton()
     {
         normalScreen.SetActive(true);
-        controlsScreen.SetActive(false);
+
+        if (controlsActive)
+        {
+            controlsActive = false;
+            controlsScreen.SetActive(false);
+        }
+        else
+            creditsScreen.SetActive(false);
     }
 }

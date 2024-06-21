@@ -129,6 +129,12 @@ MonoBehaviour:
   paintableLayer:
     serializedVersion: 2
     m_Bits: 64
+  hitSounds:
+  - {fileID: 8300000, guid: fe230e61b11d16141a31608b53c46697, type: 3}
+  - {fileID: 8300000, guid: fa2f357e170f78d468f2d3606fa731b8, type: 3}
+  - {fileID: 8300000, guid: 8804e5fc1283db74c85f336eaaaca189, type: 3}
+  - {fileID: 8300000, guid: 5d905346c636f0c47befc50bd333b8bb, type: 3}
+  - {fileID: 8300000, guid: c63085b32b1d10a40bafd2dd45b400c5, type: 3}
 --- !u!65 &6632962042031259670
 BoxCollider:
   m_ObjectHideFlags: 0

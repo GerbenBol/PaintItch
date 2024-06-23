@@ -25,6 +25,7 @@ public class GameManagerScript : MonoBehaviour
 
     private void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape) && !InMenu)
         {
             Cursor.lockState = CursorLockMode.None;
@@ -32,6 +33,14 @@ public class GameManagerScript : MonoBehaviour
             canvas.SetActive(true);
             InMenu = true;
         }
+        else if (canvas.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Time.timeScale = 1;
+            canvas.SetActive(false);
+            InMenu = false;
+        }
+        
 
         if (Input.GetKeyDown(KeyCode.L))
             CompleteGame();

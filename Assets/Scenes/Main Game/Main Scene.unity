@@ -1044,6 +1044,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Level0
       objectReference: {fileID: 0}
+    - target: {fileID: 1189766587592677651, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_Name
+      value: Hedge
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189766587592677651, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1189766587592677651, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
     - target: {fileID: 1217360138520453780, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: required
       value: 1
@@ -1265,6 +1277,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: 3cb1996424bb41c4094c861f1f3010f0, type: 3}
     - target: {fileID: 3793558376410520642, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_TagString
+      value: Level0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808623875888308654, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_Name
+      value: Hedge
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808623875888308654, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3808623875888308654, guid: b647b760d5321c74b806d66cbba7f1ca, type: 3}
       propertyPath: m_TagString
       value: Level0
       objectReference: {fileID: 0}
@@ -2337,7 +2361,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7878438514442998882, guid: a09ba40f2371ad54b83acdb3f2f45e00, type: 3}
   m_PrefabInstance: {fileID: 227943524}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1377520705}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -3667,6 +3691,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3112112379204302781, guid: f968513389ec6f04c9f7e69fa4c01b97, type: 3}
   m_PrefabInstance: {fileID: 5713216569585701825}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1377520705 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2458097260473493160, guid: a09ba40f2371ad54b83acdb3f2f45e00, type: 3}
+  m_PrefabInstance: {fileID: 227943524}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1397251873
 GameObject:
   m_ObjectHideFlags: 0
@@ -4118,6 +4147,10 @@ PrefabInstance:
       propertyPath: colorWheel
       value: 
       objectReference: {fileID: 227943525}
+    - target: {fileID: 4861099138357988166, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
+      propertyPath: gOcrosshair
+      value: 
+      objectReference: {fileID: 1377520705}
     - target: {fileID: 4861099138357988166, guid: 57e107d95c3c6614caaf094233cb4940, type: 3}
       propertyPath: reloadPrompt
       value: 

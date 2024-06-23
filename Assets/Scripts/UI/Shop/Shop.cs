@@ -21,6 +21,12 @@ public class Shop : MonoBehaviour
         CloseShop();
     }
 
+    private void Update()
+    {
+        if (gO.activeInHierarchy && Input.GetKeyDown(KeyCode.Escape) || gO.activeInHierarchy && Input.GetKeyDown(KeyCode.Tab))
+            CloseShop();
+    }
+
     public static void OpenShop()
     {
         GameManagerScript.InMenu = true;

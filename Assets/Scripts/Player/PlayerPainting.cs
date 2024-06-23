@@ -24,6 +24,7 @@ public class PlayerPainting : MonoBehaviour
     [SerializeField] private Image fillBarGun;
     [SerializeField] private Image fillBarMiniGun;
     [SerializeField] private Image crosshair;
+    [SerializeField] private GameObject gOcrosshair;
     [SerializeField] private float ammo;
     [SerializeField] private List<GameObject> paintPrefabs;
     [SerializeField] private GameObject nadePrefab;
@@ -123,10 +124,14 @@ public class PlayerPainting : MonoBehaviour
             StartCoroutine(nameof(Reload));
 
         // Color scroll
-        if (Input.mouseScrollDelta.y > 0 && !reloading)
-            NextColor();
-        else if (Input.mouseScrollDelta.y < 0 && !reloading)
-            PrevColor();
+        if (!GameManagerScript.InMenu)
+        {
+            if (Input.mouseScrollDelta.y > 0 && !reloading)
+                NextColor();
+            else if (Input.mouseScrollDelta.y < 0 && !reloading)
+                PrevColor();
+        }
+        
 
         // Update float for visuals for ammo bar and reload prompt
         ammoBar = ammo / maxAmmo;
@@ -191,6 +196,12 @@ public class PlayerPainting : MonoBehaviour
             reloadPrompt.SetActive(true);
         else
             reloadPrompt.SetActive(false);
+
+        if (GameManagerScript.InMenu)
+            gOcrosshair.SetActive(false);
+        else
+            gOcrosshair.SetActive(true);
+            
     }
 
     private void Shoot()

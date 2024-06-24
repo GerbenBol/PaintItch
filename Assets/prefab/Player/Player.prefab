@@ -705,6 +705,7 @@ MonoBehaviour:
   playerCollider: {fileID: 8432165704593599431}
   playerTrigger: {fileID: 7703079208780979570}
   walkingSound: {fileID: 4695680891290790697}
+  boingOingTrampolineSound: {fileID: 8300000, guid: 0cae4a65d9299be40bd43e64dfec219d, type: 3}
 --- !u!114 &4861099138357988166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -766,6 +767,7 @@ MonoBehaviour:
   fillBarGun: {fileID: 5546171776901552311}
   fillBarMiniGun: {fileID: 5613715765966695453}
   crosshair: {fileID: 0}
+  gOcrosshair: {fileID: 0}
   ammo: 8
   paintPrefabs:
   - {fileID: 6564777485078711757, guid: 8187bee2a2009c7439d0dac29d986e2e, type: 3}

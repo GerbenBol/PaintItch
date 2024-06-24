@@ -1,10 +1,9 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.Timeline;
 
 public class Shop : MonoBehaviour
 {
-    public static double Money = 500;
+    public static double Money = 50;
 
     [SerializeField] private TextMeshProUGUI moneyText;
     [SerializeField] private GameObject mainShop;

@@ -37,6 +37,7 @@ public class GameManagerScript : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
+            canvas.GetComponent<PauseMenu>().OnBackButton();
             canvas.SetActive(false);
             InMenu = false;
         }
@@ -58,7 +59,6 @@ public class GameManagerScript : MonoBehaviour
         ReadyToLeave = false;
         InMenu = false;
         Time.timeScale = 1f;
-        Application.targetFrameRate = 30;
         leaveBus = GameObject.Find("LeaveBus");
         bus = GameObject.Find("P_Bus");
         player = GameObject.Find("Player");

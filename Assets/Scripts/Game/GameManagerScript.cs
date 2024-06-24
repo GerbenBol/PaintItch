@@ -9,6 +9,7 @@ public class GameManagerScript : MonoBehaviour
     public static int CurrentLevel = -1;
     public static bool ReadyToLeave = false;
     public static bool InMenu = false;
+    public static bool HasStarted = false;
 
     private readonly static Dictionary<int, Level> levels = new();
     private static GameObject leaveBus;
@@ -59,12 +60,18 @@ public class GameManagerScript : MonoBehaviour
         ReadyToLeave = false;
         InMenu = false;
         Time.timeScale = 1f;
-        leaveBus = GameObject.Find("LeaveBus");
-        bus = GameObject.Find("P_Bus");
-        player = GameObject.Find("Player");
-        finalCamera = GameObject.Find("FinalCamera");
-        standardUI = GameObject.Find("IngameUI");
-        endUI = GameObject.Find("EndUI");
+
+        if (!HasStarted)
+        {
+            leaveBus = GameObject.Find("LeaveBus");
+            bus = GameObject.Find("P_Bus");
+            player = GameObject.Find("Player");
+            finalCamera = GameObject.Find("FinalCamera");
+            standardUI = GameObject.Find("IngameUI");
+            endUI = GameObject.Find("EndUI");
+            HasStarted = true;
+        }
+
         leaveBus.SetActive(false);
         endUI.SetActive(false);
         finalCamera.SetActive(false);

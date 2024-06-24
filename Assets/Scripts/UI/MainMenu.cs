@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
 
     public void OnStartButton()
     {
+        GameManagerScript.HasStarted = false;
         SceneManager.LoadScene("LoadingScreen");
     }
 

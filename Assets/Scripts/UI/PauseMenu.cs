@@ -31,6 +31,7 @@ public class PauseMenu : MonoBehaviour
 
     public void OnMainMenuButton()
     {
+        GameManagerScript.RestartGame();
         SceneManager.LoadScene("Temp Main Menu");
     }
 }

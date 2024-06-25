@@ -42,4 +42,9 @@ public class MainMenu : MonoBehaviour
         else
             creditsScreen.SetActive(false);
     }
+
+    public void OnQuitButton()
+    {
+        Application.Quit();
+    }
 }

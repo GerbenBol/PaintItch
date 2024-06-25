@@ -113,14 +113,23 @@ public class Level : MonoBehaviour
         // Check if all objects in this level are completed
         foreach (KeyValuePair<int, bool> kvp in completedObjects)
             if (!kvp.Value)
+            {
                 allCompleted = false;
+                break;
+            }
 
-        if (allCompleted)
+        if (allCompleted && LevelID != 0)
         {
             vink.SetActive(true);
             completed = true;
             GameManagerScript.CompleteLevel();
         }
+    }
+
+    public void ForceComplete()
+    {
+        for (int i = 0; i < completedObjects.Count; i++)
+            CompleteObject(i);
     }
 
     public void Enlarge()

@@ -54,12 +54,12 @@ public class PlayerInteract : MonoBehaviour
                 returnedToSize = true;
                 lvl.OriginalSize();
             }
-            else if (hitObj.name == "P_Trampo" || hitObj.name == "Underside")
+            else if (hitObj.name == "Trampoline" || hitObj.name == "Underside")
             {
                 if (Input.GetKeyDown(KeyCode.E))
                     OnPickUp();
             }
-            else if (hitObj.name == "LeaveBus" && Input.GetKeyDown(KeyCode.E))
+            else if (hitObj.name == "Bus" && Input.GetKeyDown(KeyCode.E))
                 GameManagerScript.StartFinalCamera();
         }
         else if (!returnedToSize)

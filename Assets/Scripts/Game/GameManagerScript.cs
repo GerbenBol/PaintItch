@@ -43,9 +43,13 @@ public class GameManagerScript : MonoBehaviour
             InMenu = false;
         }
         
-
         if (Input.GetKeyDown(KeyCode.L))
+        {
+            foreach (KeyValuePair<int, Level> kvp in levels)
+                kvp.Value.ForceComplete();
+
             CompleteGame();
+        }
     }
 
     public static void RestartGame()
@@ -64,7 +68,7 @@ public class GameManagerScript : MonoBehaviour
         if (!HasStarted)
         {
             leaveBus = GameObject.Find("LeaveBus");
-            bus = GameObject.Find("P_Bus");
+            bus = GameObject.Find("Bus");
             player = GameObject.Find("Player");
             finalCamera = GameObject.Find("FinalCamera");
             standardUI = GameObject.Find("IngameUI");
@@ -132,6 +136,8 @@ public class GameManagerScript : MonoBehaviour
 
     public static void StartFinalCamera()
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         endUI.SetActive(true);
         finalCamera.SetActive(true);
         bus.SetActive(false);

@@ -39,7 +39,7 @@ public class TextureControl : MonoBehaviour
     private void StartNextCalc()
     {
         PaintableObject obj;
-        int checkAmount = 25000;
+        int checkAmount = 50000;
         int returner;
 
         while (index < ToCalculate.Count)

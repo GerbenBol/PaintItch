@@ -120,21 +120,6 @@ public class PaintableObject : MonoBehaviour
 
     private void CheckExtra()
     {
-        /*int correctColor = 0;
-
-        for (int x = 0; x < MainTexture.width; x++)
-            for (int y = 0; y < MainTexture.height; y++)
-            {
-                if (MainTexture.GetPixel(x, y) == ExtraColor)
-                    correctColor++;
-                else
-                    Debug.Log(MainTexture.GetPixel(x, y));
-            }
-
-        if (correctColor >= textureSize * completionPercentage * .65f)
-            Debug.Log($"correct color, {correctColor}, {textureSize * completionPercentage * .65f}");
-        else
-            Debug.Log($"incorrect color, {correctColor}, {textureSize * completionPercentage * .65f}");*/
         if (player.Colors[player.ActiveColor] == ExtraColor)
             Shop.Money += GameManagerScript.GetPrice(level) * level;
     }

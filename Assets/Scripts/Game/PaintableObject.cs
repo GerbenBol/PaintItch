@@ -93,6 +93,9 @@ public class PaintableObject : MonoBehaviour
                     break;
             }
 
+            if (currentChecked >= checkAmount || indexTotal >= textureSize)
+                break;
+
             pixelIndexY = 0;
             pixelIndexX++;
         }

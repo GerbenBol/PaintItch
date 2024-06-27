@@ -53,7 +53,7 @@ public class Level : MonoBehaviour
             Extra += name[..1].ToUpper() + name[1..] +
                 $" to be painted {player.ColorNames[color]}.";
             LevelColor = player.Colors[color];
-            completed = true;
+            objPrice = Price / objects.Count;
         }
     }
 
@@ -86,9 +86,6 @@ public class Level : MonoBehaviour
 
         if (secondFence != null)
             secondFence.Open();
-
-        // Set objects price
-        objPrice = Price / objects.Count;
 
         // Change accept quest text
         Quest.StartQuest(levelID, Name, vio.name, LevelColor);

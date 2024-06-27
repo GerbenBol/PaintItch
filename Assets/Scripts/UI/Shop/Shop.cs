@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -89,6 +90,6 @@ public class Shop : MonoBehaviour
 
     private static void UpdateMoney()
     {
-        mText.text = Money.ToString();
+        mText.text = decimal.Round(Convert.ToDecimal(Money), 2).ToString();
     }
 }

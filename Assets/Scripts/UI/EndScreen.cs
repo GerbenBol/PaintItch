@@ -13,6 +13,6 @@ public class EndScreen : MonoBehaviour
     public void OnRetryButton()
     {
         GameManagerScript.RestartGame();
-        SceneManager.LoadSceneAsync("Main Scene");
+        SceneManager.LoadSceneAsync("Main 2");
     }
 }

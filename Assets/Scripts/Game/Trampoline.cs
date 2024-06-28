@@ -78,6 +78,7 @@ public class Trampoline : MonoBehaviour
     private void Drop()
     {
         // Laat tramp vallen
+        rb.velocity = new Vector3(0, -1, 0);
         transform.parent = null;
         rb.useGravity = true;
         rb.freezeRotation = false;

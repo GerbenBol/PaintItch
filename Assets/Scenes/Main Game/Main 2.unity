@@ -22712,9 +22712,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1043400428522779282, guid: 7b6b8e6cf7e56a1478dd8e97bad028d7, type: 3}
+      propertyPath: minMaxHeight.x
+      value: 29.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043400428522779282, guid: 7b6b8e6cf7e56a1478dd8e97bad028d7, type: 3}
+      propertyPath: minMaxHeight.y
+      value: 30.46
+      objectReference: {fileID: 0}
     - target: {fileID: 2191384950148492447, guid: 7b6b8e6cf7e56a1478dd8e97bad028d7, type: 3}
       propertyPath: m_TagString
       value: Level0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946729014678267396, guid: 7b6b8e6cf7e56a1478dd8e97bad028d7, type: 3}
+      propertyPath: minMaxHeight.x
+      value: 29.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946729014678267396, guid: 7b6b8e6cf7e56a1478dd8e97bad028d7, type: 3}
+      propertyPath: minMaxHeight.y
+      value: 30.46
       objectReference: {fileID: 0}
     - target: {fileID: 4053002398672569902, guid: 7b6b8e6cf7e56a1478dd8e97bad028d7, type: 3}
       propertyPath: m_Name
@@ -22800,9 +22816,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8591422810146330407, guid: 7b6b8e6cf7e56a1478dd8e97bad028d7, type: 3}
+      propertyPath: minMaxHeight.x
+      value: 29.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591422810146330407, guid: 7b6b8e6cf7e56a1478dd8e97bad028d7, type: 3}
+      propertyPath: minMaxHeight.y
+      value: 30.46
+      objectReference: {fileID: 0}
     - target: {fileID: 8934965720039373604, guid: 7b6b8e6cf7e56a1478dd8e97bad028d7, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076393040253375041, guid: 7b6b8e6cf7e56a1478dd8e97bad028d7, type: 3}
+      propertyPath: minMaxHeight.x
+      value: 29.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076393040253375041, guid: 7b6b8e6cf7e56a1478dd8e97bad028d7, type: 3}
+      propertyPath: minMaxHeight.y
+      value: 30.46
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
